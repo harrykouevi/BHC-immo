@@ -83,7 +83,7 @@
                     <div class="col-xl-10">
                         <div class="bg-white p-8 border-radius-6px box-shadow-double-large">
                             <div class="row">
-                                <div class="col-9">
+                                <div class="col-8">
                                     <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px mb-50px xs-mb-35px">Comment pouvons-nous vous aider ?</h3>
                                 </div>
                                 <div class="col-3 text-end" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
