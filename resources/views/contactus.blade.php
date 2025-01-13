@@ -12,6 +12,12 @@
 
         <!-- start page title -->
         <section class="top-space-margin page-title-big-typography cover-background magic-cursor round-cursor" style="background-image: url({{ asset('images/banner-001.jpg') }}">
+         @if (Session::has('status'))
+            <div class="alert alert-success">
+                {{Session::get('status')}}
+            
+             </div>
+        @endif
             <div class="container">
                 <div class="row extra-very-small-screen align-items-center">
                     <div class="col-lg-5 col-sm-8 position-relative page-title-extra-small" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-30, 0], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -82,10 +88,16 @@
                 <div class="row row-cols-md-1 justify-content-center">
                     <div class="col-xl-10">
                         <div class="bg-white p-8 border-radius-6px box-shadow-double-large">
+                        @if (Session::has('status'))
+                            <div class="alert alert-success">
+                                {{Session::get('status')}}
+                            
+                             </div>
+                        @endif
                             <div class="row">
-                                <div class="col-8">
-                                    <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px mb-50px xs-mb-35px">Comment pouvons-nous vous aider ?</h3>
-                                </div>
+                                 <div class="col-12 mb-4">
+        <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px">Comment pouvons-nous vous aider ?</h3>
+    </div>
                                 <div class="col-3 text-end" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
                                     <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
 
@@ -103,38 +115,32 @@
                                 </div>
                             </div>
                             <!-- start contact form -->
-                            <form  action="{{ route('send-message') }}"  method="post" class="contact-form-style-03">
+                            <form  action="{{ url("/contacts/send_message") }}"  method="post" class="contact-form-style-03">
                                 @csrf
                                 <div class="row justify-content-center" data-anime='{ "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                                     <div class="col-md-6">
-                                        <label for="exampleInputEmail1" class="form-label fw-600 text-dark-gray mb-0">Saisissez votre nom ici *</label>
+                                        <label for="exampleInputEmail1" " class="form-label fw-600 text-dark-gray mb-0">Saisissez votre nom ici *</label>
                                         <div class="position-relative form-group mb-25px">
                                             <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
-                                            <input class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control required" id="exampleInputEmail1" type="text" name="name" placeholder="Veuillez entrer votre nom" />
+                                            <input  class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control required" id="exampleInputEmail1" type="text" name="nom" placeholder="Veuillez entrer votre nom" />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="exampleInputEmail1" class="form-label fw-600 text-dark-gray mb-0">Addresse Email*</label>
+                                        <label for="exampleInputEmail1"  class="form-label fw-600 text-dark-gray mb-0">Addresse Email*</label>
                                         <div class="position-relative form-group mb-25px">
                                             <span class="form-icon"><i class="bi bi-envelope"></i></span>
                                             <input class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control required" id="exampleInputEmail2" type="email" name="email" placeholder="Veuillez entrer votre address email " />
                                         </div>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="exampleInputEmail1" class="form-label fw-600 text-dark-gray mb-0">Numéro de téléphone</label>
+                                        <label for="exampleInputEmail1"  class="form-label fw-600 text-dark-gray mb-0">Numéro de téléphone</label>
                                         <div class="position-relative form-group mb-25px">
                                             <span class="form-icon"><i class="bi bi-telephone"></i></span>
-                                            <input class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control" id="exampleInputEmail3" type="tel" name="phone" placeholder="Veuillez entrer votre numéro de téléphone" />
+                                            <input  class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control" id="exampleInputEmail3" type="tel" name="tel" placeholder="Veuillez entrer votre numéro de téléphone" />
                                         </div>
                                     </div>
+                                  
                                     <div class="col-md-6">
-                                        <label for="exampleInputEmail1" class="form-label fw-600 text-dark-gray mb-0">Suject</label>
-                                        <div class="position-relative form-group mb-25px">
-                                            <span class="form-icon"><i class="bi bi-journals"></i></span>
-                                            <input class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control" id="exampleInputEmail4" type="text" name="subject" placeholder="Comment pouvons-nous vous être utiles ?" />
-                                        </div>
-                                    </div>
-                                    <div class="col-12 mb-4">
                                         <label for="exampleInputEmail1" class="form-label fw-600 text-dark-gray mb-0">Méssage</label>
                                         <div class="position-relative form-group form-textarea mb-0">
                                             <textarea class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control" name="message" placeholder="Pouvez-vous décrire vos besoins ?" rows="4"></textarea>
