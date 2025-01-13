@@ -1,199 +1,227 @@
-<!doctype html>
-<html class="no-js" lang="fr">
-    <head>
-        <title>Business Help Conulting - Admin - @yield('title')</title>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="author" content="ThemeZaa">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-        <meta name="description" content="Elevate your online presence with Crafto - a modern, versatile, multipurpose Bootstrap 5 responsive HTML5, SCSS template using highly creative 52+ ready demos.">
-        <!-- favicon icon -->
-        <link rel="shortcut icon" href="{{ asset('images/favicon.png') }}">
-        <link rel="apple-touch-icon"href="{{ asset('images/apple-touch-icon-57x57.png') }}">
-        <link rel="apple-touch-icon" sizes="72x72"href="{{ asset('images/apple-touch-icon-72x72.png') }}">
-        <link rel="apple-touch-icon" sizes="114x114"href="{{ asset('images/apple-touch-icon-114x114.png') }}">
-        <!-- google fonts preconnect -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <!-- style sheets and font icons  -->
-        <link rel="stylesheet" href="{{ asset('css/vendors.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('css/icon.min.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('css/style.css') }}"/>
-        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}"/>
-        @livewireStyles
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="Description" content="Bootstrap Responsive Admin Web Dashboard HTML5 Template">
+		<meta name="Author" content="Spruko Technologies Private Limited">
+		<meta name="Keywords" content="admin,admin dashboard,admin dashboard template,admin panel template,admin template,admin theme,bootstrap 4 admin template,bootstrap 4 dashboard,bootstrap admin,bootstrap admin dashboard,bootstrap admin panel,bootstrap admin template,bootstrap admin theme,bootstrap dashboard,bootstrap form template,bootstrap panel,bootstrap ui kit,dashboard bootstrap 4,dashboard design,dashboard html,dashboard template,dashboard ui kit,envato templates,flat ui,html,html and css templates,html dashboard template,html5,jquery html,premium,premium quality,sidebar bootstrap 4,template admin bootstrap 4"/>
+
+		<!-- Title -->
+		<title> Valex -  Premium dashboard ui bootstrap rwd admin html5 template </title>
+
+		<!-- Favicon -->
+		<link rel="icon" href="{{ asset('img/brand/favicon.png') }}" type="image/x-icon"/>
+
+		<!-- Icons css -->
+		<link href="{{ asset('admin/css/icons.css') }}" rel="stylesheet">
+
+		<!-- Internal Select2 css -->
+		<link href="{{ asset('admin/plugins/select2/css/select2.min.css') }}" rel="stylesheet">
+
+		<!--  Right-sidemenu css -->
+		<link href="{{ asset('admin/plugins/sidebar/sidebar.css') }}" rel="stylesheet">
+
+		<!--  Custom Scroll bar-->
+		<link href="{{ asset('admin/plugins/mscrollbar/jquery.mCustomScrollbar.css') }}" rel="stylesheet"/>
+
+		<!--  Left-Sidebar css -->
+		<link rel="stylesheet" href="{{ asset('admin/css/sidemenu.css') }}">
+
+		<!--- Style css --->
+		<link href="{{ asset('admin/css/style.css') }}" rel="stylesheet">
+
+		<!--- Dark-mode css --->
+		<link href="{{ asset('admin/css/style-dark.css') }}" rel="stylesheet">
+
+		<!---Skinmodes css-->
+		<link href="{{ asset('admin/css/skin-modes.css') }}" rel="stylesheet" />
+
+		<!--- Animations css-->
+		<link href="{{ asset('admin/css/animate.css') }}" rel="stylesheet">
         @stack('css')
 
-    </head>
-    <body data-mobile-nav-style="classic" class="custom-cursor">
-        <!-- start cursor -->
-        <div class="cursor-page-inner">
-            <div class="circle-cursor circle-cursor-inner"></div>
-            <div class="circle-cursor circle-cursor-outer"></div>
-        </div>
-        <!-- end cursor -->
-        <!-- start header -->
-        <header class="header-with-topbar">
-            <!-- start header top bar -->
-            <div class="header-top-bar top-bar-dark bg-very-light-gray">
-                <div class="container-fluid">
-                    <div class="row h-45px xs-h-auto align-items-center m-0 xs-pt-5px xs-pb-5px">
-                        <div class="col-lg-6 col-md-7 text-center text-md-start xs-px-0">
-                            <div class="fs-15 text-dark-gray fw-500">Our accounting experts waiting for you! <a href="demo-accounting-contact.html" class="text-dark-gray text-decoration-line-bottom fw-600">Contact now</a></div>
-                        </div>
-                        <div class="col-lg-6 col-md-5 text-end d-none d-md-flex">
-                            <div class="widget fs-15 fw-500 me-35px lg-me-25px md-me-0 text-dark-gray"><a href="tel:02228899900"><i class="feather icon-feather-phone-call"></i>0222 8899900</a></div>
-                            <div class="widget fs-15 fw-500 text-dark-gray d-none d-lg-inline-block"><i class="feather icon-feather-map-pin"></i>Broadway, 24th Floor, San Francisco</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end header top bar -->
-            <!-- start navigation -->
-            <nav class="navbar navbar-expand-lg header-light bg-white responsive-sticky">
-                <div class="container-fluid">
-                    <div class="col-auto col-lg-2 me-lg-0 me-auto">
-                        <a class="navbar-brand" href="demo-accounting.html">
-                            <img src="{{ asset('images/demo-corporate-logo-black.png') }}" data-at2x="{{ asset('images/demo-accounting-logo-black@2x.png') }}" alt="" class="default-logo">
-                            <img src="{{ asset('images/demo-corporate-logo-black.png') }}" data-at2x="{{ asset('images/demo-accounting-logo-black@2x.png') }}" alt="" class="alt-logo">
-                            <img src="{{ asset('images/demo-corporate-logo-black.png') }}" data-at2x="{{ asset('images/demo-accounting-logo-black@2x.png') }}" alt="" class="mobile-logo">
-                        </a>
-                    </div>
-                    <div class="col-auto menu-order position-static">
-                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+        @livewireStyles
+	</head>
 
-                        </div>
-                    </div>
-                    <div class="col-auto col-lg-2 text-end d-none d-sm-flex">
-                        <div class="header-icon">
-                            <div class="header-button">
-                                <a href="{{ route('accueil') }}" class="btn btn-small btn-rounded btn-base-color btn-box-shadow">Sortir</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- end navigation -->
-        </header>
-        <!-- end header -->
-        <!-- start page title -->
-        <section class="top-space-margin page-title-big-typography cover-background magic-cursor round-cursor" style="background-image: url(https://via.placeholder.com/1920x500)">
-            <div class="container">
-                <div class="row extra-very-small-screen align-items-center">
-                    <div class="col-lg-5 col-sm-8 position-relative page-title-extra-small" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-30, 0], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h1 class="mb-20px xs-mb-20px text-white text-shadow-medium"><span class="w-30px h-2px bg-yellow d-inline-block align-middle position-relative top-minus-2px me-10px"></span>Investment consulting</h1>
-                        <h2 class="text-white text-shadow-medium fw-500 ls-minus-2px mb-0">Admin Dashboard</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- end page title -->
-        <!-- start section -->
-        <section>
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-4 pe-5 order-2 order-lg-1 lg-pe-3 md-pe-15px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                        <div class="bg-very-light-gray border-radius-6px p-45px lg-p-25px mb-25px">
-                            <span class="fs-20 ls-minus-05px alt-font text-dark-gray fw-600 mb-20px d-inline-block">Accounting services</span>
-                            <ul class="p-0 m-0 list-style-02">
-                                <li class="pb-10px mb-10px border-bottom border-color-transparent-dark text-dark-gray" ><a href="{{ route('admin.articles.create')}}">Création d'article</a><i class="feather icon-feather-arrow-right ms-auto"></i></li>
-                                <li class="pb-10px mb-10px border-bottom border-color-transparent-dark text-dark-gray"><a href="{{ route('admin.articles.index')}}" class="text-dark-gray text-dark-gray-hover">Les articles</a><i class="feather icon-feather-arrow-right ms-auto"></i></li>
-                                <li class="pb-10px mb-10px border-bottom border-color-transparent-dark"><a href="demo-accounting-services-details.html">Online consulting</a><i class="feather icon-feather-arrow-right ms-auto"></i></li>
-                                <li class="pb-10px mb-10px border-bottom border-color-transparent-dark"><a href="demo-accounting-services-details.html">Investment consulting</a><i class="feather icon-feather-arrow-right ms-auto"></i></li>
-                                <li><a href="demo-accounting-services-details.html">Banking and financing</a><i class="feather icon-feather-arrow-right lh-32 ms-auto"></i></li>
-                            </ul>
-                        </div>
-                        <div class="bg-dark-gray border-radius-6px ps-35px pb-25px pt-25px lg-ps-25px mb-25px">
-                            <div class="feature-box feature-box-left-icon-middle">
-                                <div class="feature-box-icon feature-box-icon-rounded w-65px h-65px me-20px lg-me-15px rounded-circle bg-yellow rounded-box">
-                                    <i class="bi bi-telephone-outbound icon-extra-medium text-white"></i>
-                                </div>
-                                <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="fs-19 lh-22 mb-5px d-block text-white opacity-6 fw-300">Customer care?</span>
-                                    <a href="tel:12345678910" class="text-white fs-20 fw-500 lh-22">+1 234 567 8910</a>
-                                </div>
-                            </div>
-                        </div>
+	<body class="main-body app sidebar-mini">
 
-                    </div>
-                    <div class="col-lg-8 order-1 order-lg-2 md-mb-50px" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                        @yield('content') <!-- Contenu spécifique à chaque page -->
+		<!-- Loader -->
+		<div id="global-loader">
+			<img src="{{ asset('admin/img/loader.svg') }}" class="loader-img" alt="Loader">
+		</div>
+		<!-- /Loader -->
+
+		<!-- Page -->
+		<div class="page">
+
+			<!-- main-sidebar -->
+			<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
+			<aside class="app-sidebar sidebar-scroll">
+				<div class="main-sidebar-header active">
+					<a class="desktop-logo logo-light active" href="#"><img src="{{ asset('admin/img/brand/logo.png') }}" class="main-logo" alt="logo"></a>
+					<a class="desktop-logo logo-dark active" href="#"><img src="{{ asset('admin/img/brand/logo-white.png') }}" class="main-logo dark-theme" alt="logo"></a>
+					<a class="logo-icon mobile-logo icon-light active" href="#"><img src="{{ asset('admin/img/brand/favicon.png') }}" class="logo-icon" alt="logo"></a>
+					<a class="logo-icon mobile-logo icon-dark active" href="#"><img src="{{ asset('admin/img/brand/favicon-white.png') }}" class="logo-icon dark-theme" alt="logo"></a>
+				</div>
+				<div class="main-sidemenu">
+
+					<ul class="side-menu">
+						<li class="side-item side-item-category">Main</li>
+						<li class="slide">
+							<a class="side-menu__item" href="{{ route('admin')}}"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M5 5h4v6H5zm10 8h4v6h-4zM5 17h4v2H5zM15 5h4v2h-4z" opacity=".3"/><path d="M3 13h8V3H3v10zm2-8h4v6H5V5zm8 16h8V11h-8v10zm2-8h4v6h-4v-6zM13 3v6h8V3h-8zm6 4h-4V5h4v2zM3 21h8v-6H3v6zm2-4h4v2H5v-2z"/></svg><span class="side-menu__label">Index</span><span class="badge badge-success side-badge">1</span></a>
+						</li>
 
 
-                    </div>
-                </div>
+						<li class="side-item side-item-category">Ressources</li>
+						<li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 11V4H4v8.17l.59-.58.58-.59H6z" opacity=".3"/><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-5 7c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10zM4.59 11.59l-.59.58V4h11v7H5.17l-.58.59z"/></svg><span class="side-menu__label">Annonces</span><i class="angle fe fe-chevron-down"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item" href="{{ route('admin.annonces.index')}}">Gérer les annonces</a></li>
+								<li><a class="slide-item" href="{{ route('admin.annonces.create')}}">Nouvelle annonce</a></li>
+							</ul>
+						</li>
+                        <li class="slide">
+							<a class="side-menu__item" data-toggle="slide" href="#"><svg xmlns="http://www.w3.org/2000/svg" class="side-menu__icon" viewBox="0 0 24 24" ><path d="M0 0h24v24H0V0z" fill="none"/><path d="M15 11V4H4v8.17l.59-.58.58-.59H6z" opacity=".3"/><path d="M21 6h-2v9H6v2c0 .55.45 1 1 1h11l4 4V7c0-.55-.45-1-1-1zm-5 7c.55 0 1-.45 1-1V3c0-.55-.45-1-1-1H3c-.55 0-1 .45-1 1v14l4-4h10zM4.59 11.59l-.59.58V4h11v7H5.17l-.58.59z"/></svg><span class="side-menu__label">Catégories</span><i class="angle fe fe-chevron-down"></i></a>
+							<ul class="slide-menu">
+								<li><a class="slide-item" href="{{ route('admin.categories.index')}}">Gérer les categories</a></li>
+								<li><a class="slide-item" href="{{ route('admin.categories.create')}}">Nouvelle categorie</a></li>
+							</ul>
+						</li>
 
-            </div>
-        </section>
-        <!-- end section -->
-        <!-- start footer -->
-        <footer class="footer-dark bg-dark-gray pt-10px pb-10px sm-pt-35px sm-pb-35px lg-pb-35px">
+					</ul>
+				</div>
+			</aside>
+			<!-- main-sidebar -->
 
-            <div class="container">
-                <div class="row  fs-17 fw-300 mt-2  md-mt-10px md-mb-10px xs-mt-35px xs-mb-35px">
-                    <!-- start footer column -->
-                    <div class="col-6 col-lg-4 order-sm-1 md-mb-40px xs-mb-30px last-paragraph-no-margin">
-                        <a href="demo-accounting.html" class="footer-logo mb-15px d-inline-block"><img src="{{ asset('images/demo-accounting-logo-white.png') }}" data-at2x="images/demo-accounting-logo-white@2x.png') }}" alt=""></a>
-                        <div class="elements-social social-icon-style-02 mt-20px lg-mt-20px">
-                            <ul class="small-icon light">
-                                <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li>
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- end footer column -->
+			<!-- main-content -->
+			<div class="main-content app-content">
+
+				<!-- main-header -->
+				<div class="main-header sticky side-header nav nav-item">
+					<div class="container-fluid">
+						<div class="main-header-left ">
+							<div class="responsive-logo">
+								<a href="#"><img src="{{ asset('admin/img/brand/logo.png') }}" class="logo-1" alt="logo"></a>
+								<a href="#"><img src="{{ asset('admin/img/brand/logo-white.png') }}" class="dark-logo-1" alt="logo"></a>
+								<a href="#"><img src="{{ asset('admin/img/brand/favicon.png') }}" class="logo-2" alt="logo"></a>
+								<a href="#"><img src="{{ asset('admin/img/brand/favicon.png') }}" class="dark-logo-2" alt="logo"></a>
+							</div>
+							<div class="app-sidebar__toggle" data-toggle="sidebar">
+								<a class="open-toggle" href="#"><i class="header-icon fe fe-align-left" ></i></a>
+								<a class="close-toggle" href="#"><i class="header-icons fe fe-x"></i></a>
+							</div>
+
+						</div>
+						<div class="main-header-right">
+
+							<div class="nav nav-item  navbar-nav-right ml-auto">
 
 
-                    <!-- start footer column -->
-                    <div class="col-6 col-lg-2  col-sm-4 xs-mb-30px order-sm-5 order-lg-4">
-                        <span class="fs-18 fw-400 d-block text-white mb-5px">Get in touch</span>
-                        <p class="mb-5px">Customer care?</p>
-                        <a href="tel:12345678910" class="text-white lh-16 d-block">+1 234 567 8910</a>
-                    </div>
-                    <!-- end footer column -->
+								<div class="dropdown main-profile-menu nav nav-item nav-link">
+									<a class="profile-user d-flex" href="#"><img alt="" src="{{ asset('admin/img/faces/6.jpg') }}"></a>
+									{{-- <div class="dropdown-menu">
+										<div class="main-header-profile bg-primary p-3">
+											<div class="d-flex wd-100p">
+												<div class="main-img-user"><img alt="" src="{{ asset('admin/img/faces/6.jpg') }}" class=""></div>
+												<div class="ml-3 my-auto">
+													<h6>Petey Cruiser</h6><span>Premium Member</span>
+												</div>
+											</div>
+										</div>
+										<a class="dropdown-item" href=""><i class="bx bx-user-circle"></i>Profile</a>
+										<a class="dropdown-item" href=""><i class="bx bx-cog"></i> Edit Profile</a>
+										<a class="dropdown-item" href=""><i class="bx bxs-inbox"></i>Inbox</a>
+										<a class="dropdown-item" href=""><i class="bx bx-envelope"></i>Messages</a>
+										<a class="dropdown-item" href=""><i class="bx bx-slider-alt"></i> Account Settings</a>
+										<a class="dropdown-item" href="page-signin.html"><i class="bx bx-log-out"></i> Sign Out</a>
+									</div> --}}
+								</div>
 
-                    <div class="col-6 col-lg-2 offset-lg-2 col-sm-4 xs-mb-30px order-sm-5 order-lg-4">
-                    </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /main-header -->
 
-                </div>
-                <div class="row align-items-center fs-16 fw-300">
-                    <!-- start copyright -->
-                    <div class="col-md-4 last-paragraph-no-margin order-2 order-md-1 text-center text-md-start"><p>&COPY; Copyright 2024 <a href="index.html" target="_blank" class="text-decoration-line-bottom text-white">Crafto</a></p></div>
-                    <!-- end copyright -->
-                    <!-- start footer menu -->
-                    <div class="col-md-8 text-md-end order-1 order-md-2 text-center text-md-end sm-mb-5px">
-                        <ul class="footer-navbar sm-lh-normal">
-                            <li><a href="#" class="nav-link">Privacy policy</a></li>
-                            <li><a href="#" class="nav-link">Terms and conditions</a></li>
-                            <li><a href="#" class="nav-link">Copyright</a></li>
-                        </ul>
-                    </div>
-                    <!-- end footer menu -->
-                </div>
-            </div>
-        </footer>
-        <!-- end footer -->
-         <!-- start scroll progress -->
-        <div class="scroll-progress d-none d-xxl-block">
-          <a href="#" class="scroll-top" aria-label="scroll">
-            <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
-          </a>
-        </div>
-        <!-- end scroll progress -->
-        <!-- javascript libraries -->
-        <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
+				<!-- container -->
+				<div class="container-fluid">
 
+                    @yield('content') <!-- Contenu spécifique à chaque page -->
+
+				</div>
+				<!-- Container closed -->
+			</div>
+			<!-- main-content closed -->
+
+
+
+			<!-- Footer opened -->
+			<div class="main-footer ht-40">
+				<div class="container-fluid pd-t-0-f ht-100p">
+					<span>Copyright © 2020 <a href="#">Valex</a>. Designed by <a href="#">Spruko</a> All rights reserved.</span>
+				</div>
+			</div>
+			<!-- Footer closed -->
+
+		</div>
+		<!-- End Page -->
+
+		<!-- Back-to-top -->
+		<a href="#top" id="back-to-top"><i class="las la-angle-double-up"></i></a>
+
+		<!-- JQuery min js -->
+		<script src="{{ asset('admin/plugins/jquery/jquery.min.js') }}"></script>
+
+		<!-- Bootstrap Bundle js -->
+		<script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+
+		<!--Internal  Chart.bundle js -->
+		<script src="{{ asset('admin/plugins/chart.js/Chart.bundle.min.js') }}"></script>
+
+		<!-- Ionicons js -->
+		<script src="{{ asset('admin/plugins/ionicons/ionicons.js') }}"></script>
+
+		<!-- Moment js -->
+		<script src="{{ asset('admin/plugins/moment/moment.js') }}"></script>
+
+		<!-- P-scroll js -->
+		<script src="{{ asset('admin/plugins/perfect-scrollbar/perfect-scrollbar.min.js') }}"></script>
+		<script src="{{ asset('admin/plugins/perfect-scrollbar/p-scroll.js') }}"></script>
+
+		<!-- Sticky js -->
+		<script src="{{ asset('admin/js/sticky.js') }}"></script>
+
+		<!-- Rating js-->
+		<script src="{{ asset('admin/plugins/rating/jquery.rating-stars.js') }}"></script>
+		<script src="{{ asset('admin/plugins/rating/jquery.barrating.js') }}"></script>
+
+		<!-- Internal Select2.min js -->
+		<script src="{{ asset('admin/plugins/select2/js/select2.min.js') }}"></script>
+		<script src="{{ asset('admin/js/select2.js') }}"></script>
+
+		<!-- Custom Scroll bar Js-->
+		<script src="{{ asset('admin/plugins/mscrollbar/jquery.mCustomScrollbar.concat.min.js') }}"></script>
+
+		<!-- Sidebar js -->
+		<script src="{{ asset('admin/plugins/side-menu/sidemenu.js') }}"></script>
+
+		<!-- Right-sidebar js -->
+		<script src="{{ asset('admin/plugins/sidebar/sidebar.js') }}"></script>
+		<script src="{{ asset('admin/plugins/sidebar/sidebar-custom.js') }}"></script>
+
+		<!-- eva-icons js -->
+		<script src="{{ asset('admin/js/eva-icons.min.js') }}"></script>
+
+		<!-- custom js -->
+		<script src="{{ asset('admin/js/custom.js') }}"></script>
+
+        @livewireScripts
+		
         @stack('scripts') <!-- Définir une stack pour les scripts -->
 
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
-        @livewireScripts
-    </body>
+        
+	</body>
 </html>

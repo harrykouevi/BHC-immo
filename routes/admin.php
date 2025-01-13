@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\AdminController;
-use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\AnnonceController;
+use App\Http\Controllers\Admin\CategoryController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -10,14 +11,18 @@ Route::middleware(['auth'])->group(function () {
 
 
     Route::get('/dashboard', [AdminController::class, 'index'])->name('admin');
-    Route::get('/articles', [ArticleController::class, 'index'])->name('admin.articles.index');
-    Route::get('/articles/create', [ArticleController::class, 'create'])->name('admin.articles.create');
-    // Route::post('/articles/store', [ArticleController::class, 'store'])->name('admin.articles.store');
+    Route::get('/annonces', [AnnonceController::class, 'index'])->name('admin.annonces.index');
+    Route::get('/annonces/create', [AnnonceController::class, 'create'])->name('admin.annonces.create');
+    // Route::post('/annonces/store', [AnnonceController::class, 'store'])->name('admin.annonces.store');
+
+    Route::get('/categories', [CategoryController::class, 'index'])->name('admin.categories.index');
+    Route::get('/categories/create', [CategoryController::class, 'create'])->name('admin.categories.create');
+
     // Route to show a single article
-   Route::get('/articles/{id}', [ArticleController::class, 'show'])->name('admin.articles.show');
-   Route::post('/upload-image', [ArticleController::class, 'uploadImage'])->name('admin.uploadImage');
+   Route::get('/annonces/{id}', [AnnonceController::class, 'show'])->name('admin.annonces.show');
+   Route::post('/upload-image', [AnnonceController::class, 'uploadImage'])->name('admin.uploadImage');
    // Route to edit an existing article (show the form)
-   Route::get('/articles/{id}/edit', [ArticleController::class, 'edit'])->name('admin.articles.edit');
+   Route::get('/annonces/{id}/edit', [AnnonceController::class, 'edit'])->name('admin.annonces.edit');
 
 });
 

@@ -9,7 +9,7 @@ use App\Models\Article;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail; // Make sure to import your Mailable class
-use App\Services\PostService;
+use App\Services\AnnonceService;
 use Google\Client;
 use Google\Service\Gmail;
 use Illuminate\Support\Facades\Auth;
@@ -33,7 +33,7 @@ Route::get('/login', function () {
 })->name('login') ;
 
 Route::get('/', function () {
-    $featuredPosts = ( new Postservice ())->getFeaturedPosts();
+    $featuredPosts = ( new AnnonceService())->getFeatured();
     $posts = $featuredPosts->map(function($featuredPost){  return $featuredPost->post ; }) ;
 
     return view('welcome',['articles'=>$posts]);
@@ -48,16 +48,16 @@ Route::get('/blogs', function () {
     return view('blog');
 })->name('blogs.index') ;
 
-Route::get('/blogs/{id}', function ($id) {
+Route::get('/posts/{id}', function ($id) {
     $post = new stdClass();
     if (is_numeric($id)) {
-        $post = ( new Postservice ())->getPost($id);
+        $post = ( new AnnonceService())->get($id);
     }
-    $featuredPosts = ( new Postservice ())->getFeaturedPosts();
+    $featuredPosts = ( new AnnonceService())->getFeatured();
     $posts = $featuredPosts->map(function($featuredPost){  return $featuredPost->post ; }) ;
 
-    return view('blog-single',['article'=>$post , 'articles'=>$posts ]);
-})->name('blogs.show');
+    return view('post-single',['article'=>$post , 'articles'=>$posts ]);
+})->name('posts.show');
 
 
 Route::get('/A7d3F9kL2qX1', function () {

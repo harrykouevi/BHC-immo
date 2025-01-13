@@ -65,7 +65,7 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav fw-600">
-                                <li class="nav-item"><a href="demo-accounting.html" class="nav-link">Home</a></li>
+                                <li class="nav-item"><a href="demo-accounting.html" class="nav-link">Accueil</a></li>
                                 <li class="nav-item"><a href="demo-accounting-company.html" class="nav-link">Company</a></li>
                                 <li class="nav-item dropdown dropdown-with-icon-style02">
                                     <a href="demo-accounting-services.html" class="nav-link">Services</a>
