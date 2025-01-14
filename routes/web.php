@@ -45,6 +45,10 @@ Route::get('/contacts', function () {
     return view('contactus');
 })->name('contact') ;
 
+Route::get('/location', function () {
+    return view('location');
+})->name('location') ;
+
 
 Route::post('/contacts/send_message',[PagesController::class,'sendMessage'],'send-message');
 
