@@ -49,6 +49,7 @@ Route::get('/location', function () {
     return view('location');
 })->name('location') ;
 
+Route::get('/search',[PagesController::class,"search"] );
 
 Route::post('/contacts/send_message',[PagesController::class,'sendMessage'],'send-message');
 

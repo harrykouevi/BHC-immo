@@ -7,207 +7,7 @@
 @endpush
 
 @section('content')
-    <body data-mobile-nav-style="classic">
-        <!-- start header -->
-        <header>
-            <!-- start navigation -->
-            <nav class="navbar navbar-expand-lg header-light bg-white border-bottom border-color-extra-medium-gray header-reverse" data-header-hover="light">
-                <div class="container-fluid"> 
-                    <div class="col-auto">
-                        <a class="navbar-brand" href="demo-real-estate.html">
-                            <img src="images/demo-real-estate-logo-black.png" data-at2x="images/demo-real-estate-logo-black@2x.png" alt="" class="default-logo">
-                            <img src="images/demo-real-estate-logo-black.png" data-at2x="images/demo-real-estate-logo-black@2x.png" alt="" class="alt-logo">
-                            <img src="images/demo-real-estate-logo-black.png" data-at2x="images/demo-real-estate-logo-black@2x.png" alt="" class="mobile-logo">
-                        </a>
-                    </div>
-                    <div class="col-auto menu-order left-nav ps-60px lg-ps-20px">
-                        <button class="navbar-toggler float-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                            <span class="navbar-toggler-line"></span>
-                        </button>
-                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                            <ul class="navbar-nav alt-font">
-                                <li class="nav-item"><a href="demo-real-estate.html" class="nav-link">Home</a></li> 
-                                <li class="nav-item"><a href="demo-real-estate-about.html" class="nav-link">About</a></li>
-                                <li class="nav-item dropdown submenu">
-                                    <a href="demo-real-estate-rent.html" class="nav-link">Rent</a>
-                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1"> 
-                                        <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-15px">
-                                            <div class="row row-cols-2 row-cols-lg-5 row-cols-sm-3 w-100 mx-0 align-items-center justify-content-center">
-                                                <div class="col md-mb-30px">
-                                                    <a href="demo-real-estate-rent.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-apartment.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">20K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Apartment</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col md-mb-30px">
-                                                    <a href="demo-real-estate-rent.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-condominium.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">18K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Condominium</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col md-mb-30px">
-                                                    <a href="demo-real-estate-rent.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-home.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">10K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Home</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col xs-mb-30px">
-                                                    <a href="demo-real-estate-rent.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-office.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">17K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Office</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="demo-real-estate-rent.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-shop.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">09K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Shop</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown submenu">
-                                    <a href="demo-real-estate-sell.html" class="nav-link">Sell<span class="label bg-light-red text-red border-radius-26px">Hot</span></a>
-                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink2"> 
-                                        <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-15px">
-                                            <div class="row row-cols-2 row-cols-lg-5 row-cols-sm-3 w-100 mx-0 align-items-center justify-content-center">
-                                                <div class="col md-mb-30px">
-                                                    <a href="demo-real-estate-sell.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-apartment.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">20K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Apartment</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col md-mb-30px">
-                                                    <a href="demo-real-estate-sell.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-condominium.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">18K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Condominium</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col md-mb-30px">
-                                                    <a href="demo-real-estate-sell.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-home.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">10K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Home</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col xs-mb-30px">
-                                                    <a href="demo-real-estate-sell.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-office.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">17K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Office</span>
-                                                    </a>
-                                                </div>
-                                                <div class="col">
-                                                    <a href="demo-real-estate-sell.html" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
-                                                            <img src="images/demo-real-estate-icon-shop.svg" class="w-50px" alt="">
-                                                            <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">09K</span>
-                                                        </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Shop</span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </li>
-                                <li class="nav-item dropdown dropdown-with-icon">
-                                    <a href="demo-real-estate-agents.html" class="nav-link">Agents</a>
-                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-                                        <li>
-                                            <a href="demo-real-estate-agent-details.html"><img src="https://via.placeholder.com/148x148" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Evan thomson</span>
-                                                    <p>I'm Evan, Expert in sales executive.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="demo-real-estate-agent-details.html"><img src="https://via.placeholder.com/148x148" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Bryan jonhson</span>
-                                                    <p>I'm Bryan, Expert in property broker.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="demo-real-estate-agent-details.html"><img src="https://via.placeholder.com/148x148" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Jemmy watson</span>
-                                                    <p>I'm Jemmy, Expert in property lawyer.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="demo-real-estate-agent-details.html"><img src="https://via.placeholder.com/200x200" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Jeremy dupont</span>
-                                                    <p>I'm Jeremy, Expert in property broker.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="demo-real-estate-agents.html" class="btn btn-dark-gray btn-round-edge align-self-center text-center text-white">All view agents</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="demo-real-estate-blog.html" class="nav-link">Blog</a></li>
-                                <li class="nav-item"><a href="demo-real-estate-contact.html" class="nav-link">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-auto ms-auto ps-lg-0 d-none d-sm-flex"> 
-                        <div class="d-none d-xl-flex me-25px">
-                            <div class="d-flex align-items-center widget-text fw-600 alt-font"><a href="tel:1234567890" class="d-inline-block"><span class="d-inline-block align-middle me-10px bg-base-color-transparent h-45px w-45px text-center rounded-circle fs-16 lh-46 text-base-color"><i class="feather icon-feather-phone-outgoing"></i></span><span class="d-none d-xxl-inline-block">123-456-7890</span></a></div>
-                        </div>
-                        <div class="header-icon">
-                            <div class="header-button">
-                                <a href="demo-real-estate-sell.html" class="btn btn-base-color btn-small btn-round-edge btn-hover-animation-switch">
-                                    <span> 
-                                        <span class="btn-text">Buy property</span> 
-                                        <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
-                                        <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
-                                    </span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-            <!-- end navigation -->
-        </header>
-        <!-- end header -->
+    
         <!-- start page title -->
         <section class="cover-background page-title-big-typography ipad-top-space-margin">
     <div class="container">
@@ -221,6 +21,7 @@
                     "duration": 600, 
                     "delay": 0, 
                     "staggervalue": 300, 
+
                     "easing": "easeOutQuad" 
                 }'>
                 <h1 class="text-base-color">Rent your dream property</h1>
@@ -369,323 +170,71 @@
             </span>
         </h3>
         <!-- Barre de recherche ajoutée ici -->
-        <div class="search-bar mt-4">
-            <form action="/search" method="GET" class="d-flex justify-content-center">
-                <input type="text" name="query" class="form-control w-50" placeholder="Search for properties..." />
-                <button type="submit" class="btn btn-primary ms-2">Search</button>
-            </form>
-        </div>
+      <div class="search-bar mt-4">
+    <form action="{{ url('/search') }}" method="GET" class="d-flex justify-content-center">
+        <input type="text" name="critere" class="form-control w-50" placeholder="Rechercher par prix, description, titre..." required />
+        <button type="submit" class="btn btn-primary ms-2">Rechercher</button>
+    </form>
+</div>
     </div>
 </div>
-
-                <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> 
-                    <!-- start box item -->
-                    <div class="col mb-30px">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="demo-real-estate-property-details.html">
-                                    <img src="https://via.placeholder.com/600x415" alt="">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                            </div> 
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                                    <div class="d-flex align-items-center">
-                                        <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Luxury villa in Texas</a>
-                                    </div>
-                                    <p class="mb-20px">982 Monroe ave, rochester</p>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">04</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">05</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">360m<sup>2</sup></span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$6,89,000</span>
-                                    </div> 
-                                </div> 
-                            </div>
-                        </div>
+                    <!-- start box item -->             
+                    @if(session('results') && session('results')->isNotEmpty())
+    <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> 
+        <!-- Boucle sur les résultats -->
+        @foreach(session('results') as $result)
+            <div class="col mb-30px">
+                <div class="border-radius-6px overflow-hidden box-shadow-large">
+                    <div class="image position-relative">
+                        <a href="#">
+                            <!-- Image Dynamique ou Placeholder -->
+                            <img src="{{  $result->images->first()->path ?? 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $result->titre }}">
+                        </a>
+                        <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
                     </div> 
-                    <!-- end box item -->
-                    <!-- start box item -->
-                    <div class="col mb-30px">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="demo-real-estate-property-details.html">
-                                    <img src="https://via.placeholder.com/600x415" alt="">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                            </div> 
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                                    <div class="d-flex align-items-center">
-                                        <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Modern villa in Oregon</a>
-                                    </div>
-                                    <p class="mb-20px">1261 Sampson street senver</p>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">05</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">05</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">780m<sup>2</sup></span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$8,50,000</span>
-                                    </div> 
-                                </div> 
+                    <div class="bg-white">
+                        <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
+                            <div class="d-flex align-items-center">
+                                <!-- Titre Dynamique -->
+                                <a href="#" class="alt-font text-dark-gray fw-700 fs-22 me-10px">{{ $result->titre }}</a>
                             </div>
-                        </div>
-                    </div> 
-                    <!-- end box item -->
-                    <!-- start box item -->
-                    <div class="col mb-30px">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="demo-real-estate-property-details.html">
-                                    <img src="https://via.placeholder.com/600x415" alt="">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                            </div> 
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
+                            <!-- Adresse Dynamique -->
+                            <p class="mb-20px">{{ $result->adresse }}</p>
+                            <div class="row g-0">
+                                <div class="col">
                                     <div class="d-flex align-items-center">
-                                        <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Ranch style in Florida</a>
+                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
+                                        <span class="fw-600 alt-font text-dark-gray">{{ $result->surface }} m<sup>2</sup></span>
                                     </div>
-                                    <p class="mb-20px">2814 Hampton meadows</p>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">04</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">04</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">260m<sup>2</sup></span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
-                                        </div>
+                                    <span class="d-block lh-18 fs-15">Surface</span> 
+                                </div>
+                                <div class="col">
+                                    <div class="d-flex align-items-center">
+                                        <img src="images/demo-real-estate-icon-price-small.svg" class="me-5px h-20px" alt="">
+                                        <span class="fw-600 alt-font text-dark-gray">${{ $result->prix }}</span>
                                     </div>
-                                </div> 
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$6,50,000</span>
-                                    </div> 
+                                    <span class="d-block lh-18 fs-15">Prix</span> 
                                 </div>
                             </div>
-                        </div>
-                    </div>  
-                    <!-- end box item -->
-                    <!-- start box item -->
-                    <div class="col lg-mb-30px">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="demo-real-estate-property-details.html">
-                                    <img src="https://via.placeholder.com/600x415" alt="">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                            </div> 
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                                    <div class="d-flex align-items-center">
-                                        <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Ranch style in Illinois</a>
-                                    </div>
-                                    <p class="mb-20px">4403 Pick street pleasant view</p>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">03</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">05</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">250m<sup>2</sup></span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$6,00,000</span>
-                                    </div> 
-                                </div>
+                        </div> 
+                        <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
+                            <div class="col">
+                                <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
                             </div>
-                        </div>
-                    </div>  
-                    <!-- end box item -->
-                    <!-- start box item -->
-                    <div class="col sm-mb-30px">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="demo-real-estate-property-details.html">
-                                    <img src="https://via.placeholder.com/600x415" alt="">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
+                            <div class="col text-end">
+                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ $result->prix }}</span>
                             </div> 
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                                    <div class="d-flex align-items-center">
-                                        <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Cottage in Oklahoma</a>
-                                    </div>
-                                    <p class="mb-20px">1151 Bungalow road norfolk</p>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">03</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">03</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">300m<sup>2</sup></span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$5,50,000</span>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div> 
-                    <!-- end box item -->
-                    <!-- start box item -->
-                    <div class="col">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="demo-real-estate-property-details.html">
-                                    <img src="https://via.placeholder.com/600x415" alt="">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                            </div> 
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                                    <div class="d-flex align-items-center">
-                                        <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Modern house in Texas</a>
-                                    </div>
-                                    <p class="mb-20px">3259 Filbert street bethlehem</p>
-                                    <div class="row g-0">
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">04</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">04</span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                        </div>
-                                        <div class="col">
-                                            <div class="d-flex align-items-center">
-                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">620m<sup>2</sup></span>
-                                            </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$6,95,000</span>
-                                    </div> 
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <!-- end box item -->   
-                </div> 
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        @endforeach
+    </div>
+@else
+    <!-- Message Aucun Résultat -->
+    <p class="text-center mt-4">Aucun résultat trouvé.</p>
+@endif
+ 
                 <div class="row">
                     <div class="mt-5 xs-mt-10 d-flex justify-content-center" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
                         <!-- start pagination -->
