@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Http\Request;
 use App\Models\Contact;
 use App\Models\Annonce;
+use App\Models\Image;
+use App\Models\Category;
 
 class PagesController extends Controller
 {
@@ -60,18 +62,16 @@ class PagesController extends Controller
             return redirect('/location')->with('error', 'Le critère de recherche est requis');
         }
     
-        // Effectuer la recherche en incluant les relations
-        $results = Annonce::with(['category', 'images']) // Charger les relations
-            ->where('titre', 'LIKE', "%{$critere}%")
-            ->orWhere('description', 'LIKE', "%{$critere}%")
-            ->orWhere('adresse', 'LIKE', "%{$critere}%")
-            ->orWhere('prix', 'LIKE', "%{$critere}%")
-            ->orWhere('surface', 'LIKE', "%{$critere}%")
-            ->orWhereHas('category', function ($query) use ($critere) {
-                $query->where('nom', 'LIKE', "%{$critere}%");
-            })
-            ->get();
-    
+        $results = Annonce::with(['Category', 'images']) // Charger les relations
+    ->where('titre', 'LIKE', "%{$critere}%")
+    ->orWhere('description', 'LIKE', "%{$critere}%")
+    ->orWhere('adresse', 'LIKE', "%{$critere}%")
+    ->orWhere('prix', 'LIKE', "%{$critere}%")
+    ->orWhere('surface', 'LIKE', "%{$critere}%")
+    ->orWhereHas('Category', function ($query) use ($critere) {
+        $query->where('nom', 'LIKE', "%{$critere}%");
+    })
+    ->get();
         // Vérifier si des résultats ont été trouvés
         if ($results->isEmpty()) {
             return redirect('/location')->with('error', 'Aucune annonce trouvée pour ce critère');

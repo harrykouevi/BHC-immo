@@ -98,10 +98,9 @@
                                  <div class="col-12 mb-4">
         <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px">Comment pouvons-nous vous aider ?</h3>
     </div>
-                                <div class="col-3 text-end" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                    <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
-
-                                </div>
+                               <div class="col-3 text-start" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+    <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
+</div>
                                 <div class="col-12">
                                     @if ($errors->any())
                                         <div class="alert alert-danger">
