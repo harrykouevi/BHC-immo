@@ -52,7 +52,7 @@ Route::get('/location', function () {
 Route::get('/search',[PagesController::class,"search"] );
 
 Route::post('/contacts/send_message',[PagesController::class,'sendMessage'],'send-message');
-
+Route::get('/apropos',[PagesController::class,'apropos'],'apropos');
 Route::get('/blogs', function () {
     return view('blog');
 })->name('blogs.index') ;

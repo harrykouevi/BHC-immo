@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\Models\Annonce;
 use App\Models\Image;
 use App\Models\Category;
+use App\Models\Avis;
 
 class PagesController extends Controller
 {
@@ -62,7 +63,7 @@ class PagesController extends Controller
             return redirect('/location')->with('error', 'Le critère de recherche est requis');
         }
     
-        $results = Annonce::with(['Category', 'images']) // Charger les relations
+        $results = Annonce::with(['Category', 'images']) // Chargement des relations
     ->where('titre', 'LIKE', "%{$critere}%")
     ->orWhere('description', 'LIKE', "%{$critere}%")
     ->orWhere('adresse', 'LIKE', "%{$critere}%")
@@ -72,13 +73,19 @@ class PagesController extends Controller
         $query->where('nom', 'LIKE', "%{$critere}%");
     })
     ->get();
-        // Vérifier si des résultats ont été trouvés
+        // Vérification des résultats
         if ($results->isEmpty()) {
             return redirect('/location')->with('error', 'Aucune annonce trouvée pour ce critère');
         }
     
         // Rediriger avec les résultats
         return redirect('/location')->with('results', $results);
+    }
+    public function apropos(){
+
+        $avis = Avis::all();
+
+        return view('apropos', compact('avis'));
     }
     
     
