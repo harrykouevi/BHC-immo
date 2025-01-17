@@ -31,4 +31,18 @@ class Annonce extends Model
     {
         return $this->belongsTo(User::class); // Relation avec l'utilisateur (administrateur)
     }
+
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::deleting(function ($annonce) {
+            // Supprimer les images associées
+            $annonce->images()->delete();
+
+            // Supprimer les historiques associés
+            //AnnonceHistory::where('annonce_id', $annonce->id)->delete();
+        });
+    }
+
 }

@@ -203,14 +203,18 @@
                             </div>
                             <div class="text-center mt-4">
                                 <a href="{{ route('admin.annonces.edit', $annonce->id) }}" class="btn btn-primary btn-block">Modifier</a>
-                                <a href="#" class="btn btn-warning btn-block">Supprimer</a>
+                                <form action="{{ route('admin.annonces.destroy', $annonce->id) }}" method="POST" style="display: inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-warning btn-block" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cette annonce ?');">Supprimer</button>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
                 @endforeach
                 <div class="col-lg-12">
-             
+
                     <!-- Pagination Links -->
                     {{ $annonces->links('custom-pagination') }}
                 </div>

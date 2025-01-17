@@ -24,8 +24,8 @@ Route::middleware(['auth'])->group(function () {
     // Route to edit an existing article (show the form)
     Route::get('/annonces/{id}/edit', [AnnonceController::class, 'edit'])->name('admin.annonces.edit');
 
-    //Route pour supprimer un article
-    Route::delete('/admin/annonces/{id}', [AnnonceController::class, 'destroy'])->name('admin.annonces.destroy');
+    //Route pour supprimer une annonce
+    Route::delete('annonces/{id}', [AnnonceController::class, 'destroy'])->name('admin.annonces.destroy');
 
 });
 

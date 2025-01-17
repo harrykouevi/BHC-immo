@@ -27,7 +27,7 @@ class AnnonceController extends Controller
     public function show($id)
     {
         // Display a single post using the service
-        return view('admin.annonces.show', ['post' => $this->annonceService->get($id)]);
+        return view('admin.annonces.index', ['post' => $this->annonceService->get($id)]);
     }
 
     public function edit($post)
@@ -58,4 +58,17 @@ class AnnonceController extends Controller
         return view('annonces.index', compact('featuredannonces'));
 
     }
+
+    // Fnction pour supprimer une annonce
+    public function destroy($id)
+    {
+        try {
+            $this->annonceService->delete($id);
+            return redirect()->route('admin.annonces.index')->with('success', 'Annonce supprimée avec succès.');
+        } catch (Exception $e) {
+            dd($e);
+            // return redirect()->route('admin.annonces.index')->with('error', 'Erreur lors de la suppression de l\'annonce : ' . $e->getMessage());
+        }
+    }
+
 }

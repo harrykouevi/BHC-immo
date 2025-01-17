@@ -15,7 +15,7 @@ class FeaturedAnnonce extends Model
     ];
 
     // Relation avec l'utilisateur (si applicable)
-    public function post()
+    public function annonce()
     {
         return $this->belongsTo(Annonce::class);
     }
