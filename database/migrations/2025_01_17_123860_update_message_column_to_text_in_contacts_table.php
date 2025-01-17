@@ -11,15 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contacts', function (Blueprint $table) {
-            $table->id();
-            $table->string("nom");
-            $table->string("email");
-            $table->integer("tel");
-            $table->text("message");
-        
-
-            $table->timestamps();
+        Schema::table('contacts', function (Blueprint $table) {
+            // Modifier la colonne `message` pour utiliser le type TEXT
+            $table->text('message')->change();
         });
     }
 
@@ -28,6 +22,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contacts');
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->text('message')->change();
+        });
     }
 };

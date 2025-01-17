@@ -19,7 +19,7 @@ class PagesController extends Controller
             'nom' => 'required|string|max:255',
             'email' => 'required|email',
             'tel' => 'nullable|string|max:20',
-            'message' => 'required|string',
+            'message' => 'required|string|max:10000',
         ]);
 
         // Sauvegarde
