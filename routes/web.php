@@ -36,7 +36,10 @@ Route::get('/', function () {
     $featuredPosts = ( new AnnonceService())->getFeatured();
     $posts = $featuredPosts->map(function($featuredPost){  return $featuredPost->post ; }) ;
 
-    return view('welcome',['articles'=>$posts]);
+    $annonceService = new AnnonceService();
+    $annonces = $annonceService->getAll(); // Utilise la méthode pour récupérer les annonces avec leurs catégories
+
+    return view('welcome',['articles'=>$posts, 'annonces' => $annonces]);
 })->name('accueil');
 
 
@@ -49,14 +52,17 @@ Route::get('/blogs', function () {
 })->name('blogs.index') ;
 
 Route::get('/posts/{id}', function ($id) {
-    $post = new stdClass();
-    if (is_numeric($id)) {
-        $post = ( new AnnonceService())->get($id);
-    }
-    $featuredPosts = ( new AnnonceService())->getFeatured();
-    $posts = $featuredPosts->map(function($featuredPost){  return $featuredPost->post ; }) ;
+    // Créer une instance du service Annonce
+    $annonceService = new AnnonceService();
 
-    return view('post-single',['article'=>$post , 'articles'=>$posts ]);
+    // Récupérer les annonces mises en avant
+    $post = $annonceService->get($id);
+
+    // Retourner la vue avec les données
+    return view('post-single', [
+        'post' => $post,
+
+    ]);
 })->name('posts.show');
 
 
@@ -147,3 +153,4 @@ $email->setRaw($rawMessage);
 
 // Inclure les routes admin
 require __DIR__ . '/admin.php';
+
