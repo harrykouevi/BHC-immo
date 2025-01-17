@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::table('annonces', function (Blueprint $table) {
             $table->text('content_')->nullable(); // Description détaillée
             $table->text('contacts_')->nullable(); // Description détaillée
-            $table->string('phone_number')->nullable(); // Permettre les valeurs nulles
+            $table->string('phonenumber')->nullable(); // Permettre les valeurs nulles
         });
     }
 
@@ -24,7 +24,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('annonces', function (Blueprint $table) {
-            $table->dropColumn(['content_','contacts_','phone_number']);
+            $table->dropColumn(['content_','contacts_','phonenumber']);
         });
     }
 };

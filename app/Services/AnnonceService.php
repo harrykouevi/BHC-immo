@@ -34,7 +34,7 @@ class AnnonceService
         }else{
             return Annonce::findOrFail($id);
         }
-        
+
     }
 
     public function create(array $data)
@@ -44,8 +44,13 @@ class AnnonceService
         $annonce->titre = $data['titre'];
         $annonce->description = $data['description'];
         $annonce->prix = $data['prix'];
-        $annonce->surface = $data['surface'];
+        $annonce->nbpieces = $data['nbpieces'];
+        $annonce->nbsalon = $data['nbsalon'];
+        $annonce->wcdouche = $data['wcdouche'];
         $annonce->adresse = $data['adresse'];
+        $annonce->phonenumber = $data['phonenumber'];
+        $annonce->content_ = $data['content_'];
+        $annonce->contacts_ = $data['contacts_'];
         $annonce->category_id = $data['category_id'];
         $annonce->user_id = auth()->id(); // ID de l'utilisateur connecté
         $annonce->save();
