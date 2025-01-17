@@ -13,6 +13,7 @@ use App\Services\AnnonceService;
 use Google\Client;
 use Google\Service\Gmail;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\PagesController;
 
 
 /*
@@ -47,6 +48,14 @@ Route::get('/contacts', function () {
     return view('contactus');
 })->name('contact') ;
 
+Route::get('/location', function () {
+    return view('location');
+})->name('location') ;
+
+Route::get('/search',[PagesController::class,"search"])->name('search');
+
+Route::post('/contacts/send_message',[PagesController::class,'sendMessage'])->name('send-message');
+Route::get('/apropos',[PagesController::class,'apropos'])->name('apropos');;
 Route::get('/blogs', function () {
     return view('blog');
 })->name('blogs.index') ;

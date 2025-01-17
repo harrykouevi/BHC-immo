@@ -59,10 +59,10 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                             <ul class="navbar-nav alt-font">
-                                <li class="nav-item"><a href="#" class="nav-link">Accueil</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">A propos</a></li>
+                                <li class="nav-item"><a href="{{route('accueil')}}" class="nav-link">Accueil</a></li>
+                                <li class="nav-item"><a href="{{route('apropos')}}" class="nav-link">A propos</a></li>
                                 <li class="nav-item dropdown submenu">
-                                    <a href="#" class="nav-link">Location</a>
+                                    <a href="{{route('location')}}" class="nav-link">Location</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                     <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
                                         <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-15px">
@@ -217,7 +217,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
-                                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                                <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
                             </ul>
                         </div>
                     </div>
