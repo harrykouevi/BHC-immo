@@ -121,8 +121,6 @@
         </div>
 </div>
 @endforeach
-                                <!-- end text slider item -->
-                                <!-- start text slider item -->
                                
                                 <!-- end text slider item -->
                                 
