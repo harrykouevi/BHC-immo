@@ -19,10 +19,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/categories/create', [CategoryController::class, 'create'])->name('admin.categories.create');
 
     // Route to show a single article
-   Route::get('/annonces/{id}', [AnnonceController::class, 'show'])->name('admin.annonces.show');
-   Route::post('/upload-image', [AnnonceController::class, 'uploadImage'])->name('admin.uploadImage');
-   // Route to edit an existing article (show the form)
-   Route::get('/annonces/{id}/edit', [AnnonceController::class, 'edit'])->name('admin.annonces.edit');
+    Route::get('/annonces/{id}', [AnnonceController::class, 'show'])->name('admin.annonces.show');
+    Route::post('/upload-image', [AnnonceController::class, 'uploadImage'])->name('admin.uploadImage');
+    // Route to edit an existing article (show the form)
+    Route::get('/annonces/{id}/edit', [AnnonceController::class, 'edit'])->name('admin.annonces.edit');
+
+    //Route pour supprimer un article
+    Route::delete('/admin/annonces/{id}', [AnnonceController::class, 'destroy'])->name('admin.annonces.destroy');
 
 });
 
