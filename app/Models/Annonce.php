@@ -11,7 +11,17 @@ class Annonce extends Model
 
      // Définir les attributs qui peuvent être assignés en masse
     protected $fillable = [
-        'titre', 'description', 'prix', 'surface', 'adresse', 'category_id', 'user_id',
+        //use in view
+        'titre','prix', 'description','adresse',
+        'nbsalon',   'nbpieces','phonenumber',
+        'wcdouche','content_',
+        'category_id','user_id',
+        //not use in view yet
+         'surface',
+        'contacts_',
+
+
+
         'draft', // Si vous souhaitez gérer les brouillons
     ];
 

@@ -12,9 +12,9 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('annonces', function (Blueprint $table) {
-            $table->integer('nb_pieces')->nullable();
-            $table->integer('nb_salon')->nullable();
-            $table->boolean('wc_douche')->default(false);
+            $table->integer('nbpieces')->nullable();
+            $table->integer('nbsalon')->nullable();
+            $table->boolean('wcdouche')->default(false);
 
 
             $table->text('description')->nullable()->change(); // Description détaillée
@@ -31,7 +31,7 @@ return new class extends Migration
     {
         Schema::table('annonces', function (Blueprint $table) {
             //
-            $table->dropColumn(['nb_pieces', 'nb_salon', 'wc_douche']);
+            $table->dropColumn(['nbpieces', 'nbsalon', 'wcdouche']);
         });
     }
 };
