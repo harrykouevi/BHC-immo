@@ -114,7 +114,7 @@
                                 </div>
                             </div>
                             <!-- start contact form -->
-                            <form  action="{{ url("/contacts/send_message") }}"  method="post" class="contact-form-style-03">
+                            <form  action="{{ route('send-message')}}"  method="post" class="contact-form-style-03">
                                 @csrf
                                 <div class="row justify-content-center" data-anime='{ "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                                     <div class="col-md-6">

@@ -49,10 +49,10 @@ Route::get('/location', function () {
     return view('location');
 })->name('location') ;
 
-Route::get('/search',[PagesController::class,"search"] );
+Route::get('/search',[PagesController::class,"search"])->name('search');
 
-Route::post('/contacts/send_message',[PagesController::class,'sendMessage'],'send-message');
-Route::get('/apropos',[PagesController::class,'apropos'],'apropos');
+Route::post('/contacts/send_message',[PagesController::class,'sendMessage'])->name('send-message');
+Route::get('/apropos',[PagesController::class,'apropos'])->name('apropos');;
 Route::get('/blogs', function () {
     return view('blog');
 })->name('blogs.index') ;

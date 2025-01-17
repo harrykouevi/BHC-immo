@@ -171,7 +171,7 @@
         </h3>
         <!-- Barre de recherche ajoutée ici -->
       <div class="search-bar mt-4">
-    <form action="{{ url('/search') }}" method="GET" class="d-flex justify-content-center">
+    <form action="{{route('search')}}" method="GET" class="d-flex justify-content-center">
         <input type="text" name="critere" class="form-control w-50" placeholder="Rechercher par prix, description, titre..." required />
         <button type="submit" class="btn btn-primary ms-2">Rechercher</button>
     </form>
@@ -188,7 +188,10 @@
                     <div class="image position-relative">
                         <a href="#">
                             <!-- Image Dynamique ou Placeholder -->
-                           <img src="storage/app/public/annonces/{{ $result->images->first()->path ?? 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $result->titre }}">
+                         <img src="{{ $result->images->first() ? asset('storage/' . $result->images->first()->path) : 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $result->titre }}">
+
+
+
 
                         </a>
                         <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
