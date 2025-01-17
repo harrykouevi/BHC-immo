@@ -59,7 +59,7 @@
                         </button>
                         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                             <ul class="navbar-nav alt-font">
-                                <li class="nav-item"><a href="#" class="nav-link">Accueil</a></li>
+                                <li class="nav-item"><a href="{{route('accueil')}}" class="nav-link">Accueil</a></li>
                                 <li class="nav-item"><a href="{{route('apropos')}}" class="nav-link">A propos</a></li>
                                 <li class="nav-item dropdown submenu">
                                     <a href="{{route('location')}}" class="nav-link">Location</a>
