@@ -48,9 +48,8 @@ Route::get('/contacts', function () {
     return view('contactus');
 })->name('contact') ;
 
-Route::get('/location', function () {
-    return view('location');
-})->name('location') ;
+Route::get('/location',[PagesController::class,"getAnnonces"])->name('location');
+
 
 Route::get('/search',[PagesController::class,"search"])->name('search');
 

@@ -44,7 +44,7 @@ class PagesController extends Controller
                  ->subject('Un message du site Immo');
         });
 
-        // Envoi =l'utilisateur
+        // Envoi à l'utilisateur
         Mail::raw('Merci de nous avoir contacté. Votre message a été bien envoyé.', function ($mail) use ($request) {
             $mail->from(config('mail.from.address'), config('mail.from.name'))
                  ->to($request->email)  // Envoi à l'utilisateur
@@ -82,10 +82,15 @@ class PagesController extends Controller
         return redirect('/location')->with('results', $results);
     }
     public function apropos(){
-
         $avis = Avis::all();
 
+
         return view('apropos', compact('avis'));
+    }
+
+    public function getAnnonces(){
+        $annonces = Annonce::with(['Category', 'images'])->get();
+        return view('location', compact('annonces'));
     }
     
     
