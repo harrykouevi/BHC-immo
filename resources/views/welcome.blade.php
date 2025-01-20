@@ -12,7 +12,7 @@
         <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
             <div class="swiper-wrapper">
                 <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('images/banner-001.jpg') }}');">
+                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
                             <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -50,7 +50,7 @@
                 </div>
                 <!-- end slider item -->
                 <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('images/banner-001.jpg') }}');">
+                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
                             <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -88,7 +88,7 @@
                 </div>
                 <!-- end slider item -->
                 <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('images/banner-001.jpg') }}');">
+                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
                             <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>

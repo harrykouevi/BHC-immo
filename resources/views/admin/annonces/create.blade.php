@@ -5,13 +5,96 @@
 @push('css')
     {{-- <meta name="csrf-token" content="{{ csrf_token() }}"> --}}
 
-  
+
     <!---Internal Fileupload css-->
     <link href="{{ asset('admin/plugins/fileuploads/css/fileupload.css')}}" rel="stylesheet" type="text/css"/>
-   
+
     <!---Internal Fancy uploader css-->
     <link href="{{ asset('admin/plugins/fancyuploder/fancy_fileupload.css')}}" rel="stylesheet" />
 
+    <style>
+        .ff_fileupload_uploads .ff_fileupload_summary {
+            padding: 0 0 0 1em;
+            font-size: 0.9em;
+            white-space: normal;
+            color: #7a8082;
+        }
+
+        .ff_fileupload_uploads div {
+            /* vertical-align: top; */
+            padding: 5px;
+            /* white-space: nowrap;
+            line-height: normal; */
+        }
+        .ff_fileupload_uploads .ff_fileupload_preview .ff_fileupload_preview_image {
+            display: block;
+            box-sizing: border-box;
+            border: 0 none;
+            padding: 0;
+            background-color: #DDDDDD;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            opacity: 0.75;
+            text-align: center;
+            font-size: 12px;
+            font-weight: bold;
+            color: #222222;
+            overflow: hidden;
+            outline: none;
+            cursor: default;
+        }
+
+        .ff_fileupload_uploads .ff_fileupload_summary .ff_fileupload_filename input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0.3em;
+            margin-bottom: 0.1em;
+            font-size: 1.0em;
+            font-weight: normal;
+            line-height: normal;
+            border: 0px solid #e8ebf3;
+            border-radius: 0;
+            box-shadow: none;
+            color: #080e1b;
+            font-weight: 600;
+        }
+
+        .ff_fileupload_uploads .ff_fileupload_actions button.ff_fileupload_start_upload {
+            margin-right: 0.5em;
+        }
+
+        .ff_fileupload_uploads .ff_fileupload_actions button {
+            display: inline-block;
+            vertical-align: top;
+            width: 26px;
+            height: 26px;
+            box-sizing: border-box;
+            border: 1px solid #efecec;
+            border-radius: 3px;
+            padding: 0;
+            background-color: #e8ebf3;
+            background-repeat: no-repeat;
+            background-position: center center;
+            opacity: 0.85;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .ff_fileupload_uploads .ff_fileupload_summary .ff_fileupload_progress_background {
+            margin-top: 0.5em;
+            background-color: #CCCCCC;
+            height: 2px;
+        }
+
+        .ff_fileupload_uploads .ff_fileupload_summary .ff_fileupload_errors {
+            color: #A94442;
+            font-weight: bold;
+        }
+    </style>
 
 @endpush
 
@@ -33,7 +116,7 @@
 @endsection
 
 @push('scripts')
-   
+
     <!--Internal Fileuploads js-->
     <script src="{{ asset('admin/plugins/fileuploads/js/fileupload.js')}}"></script>
     {{-- <script src="{{ asset('admin/plugins/fileuploads/js/file-upload.js')}}"></script> --}}
@@ -62,7 +145,7 @@
             // Initialize File Uploads
              initFileUpload();
 
-           
+
         });
 
          // Listen for Livewire updates if necessary
