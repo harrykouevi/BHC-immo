@@ -1151,7 +1151,7 @@ proto.ontransitionend = function( event ) {
   delete _transition.ingProperties[ propertyName ];
   // check if any properties are still transitioning
   if ( isEmptyObj( _transition.ingProperties ) ) {
-    // all properties have completed transitioning
+    // Tout propriété have completed transitioning
     this.disableTransition();
   }
   // clean style

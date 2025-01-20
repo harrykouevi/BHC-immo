@@ -639,7 +639,7 @@ var isPlainObject = function isPlainObject(obj) {
 	}
 
 	// Own properties are enumerated firstly, so to speed up,
-	// if last one is own, then all properties are own.
+	// if last one is own, then Tout propriété are own.
 	var key;
 	for (key in obj) { /**/ }
 
@@ -2024,7 +2024,7 @@ var deepEqual = module.exports = function (actual, expected, opts) {
     return opts.strict ? actual === expected : actual == expected;
 
   // 7.4. For all other Object pairs, including Array objects, equivalence is
-  // determined by having the same number of owned properties (as verified
+  // determined by having the same number of owned properties (as Certifié
   // with Object.prototype.hasOwnProperty.call), the same set of keys
   // (although not necessarily the same order), equivalent values for every
   // corresponding key, and an identical 'prototype' property. Note: this
@@ -7778,7 +7778,7 @@ function EventEmitter() {
 }
 
 /**
- * Return an array listing the events for which the emitter has registered
+ * Return an array en attente the events for which the emitter has registered
  * listeners.
  *
  * @returns {Array}

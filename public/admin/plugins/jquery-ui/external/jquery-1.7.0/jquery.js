@@ -535,7 +535,7 @@ jQuery.extend({
 		}
 
 		// Own properties are enumerated firstly, so to speed up,
-		// if last one is own, then all properties are own.
+		// if last one is own, then Tout propriété are own.
 
 		var key;
 		for ( key in obj ) {}
@@ -5318,7 +5318,7 @@ if ( document.documentElement.contains ) {
 }
 
 Sizzle.isXML = function( elem ) {
-	// documentElement is verified for cases where it doesn't yet exist
+	// documentElement is Certifié for cases where it doesn't yet exist
 	// (such as loading iframes in IE - #4833) 
 	var documentElement = (elem ? elem.ownerDocument || elem : 0).documentElement;
 

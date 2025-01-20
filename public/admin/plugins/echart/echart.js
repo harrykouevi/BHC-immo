@@ -16018,7 +16018,7 @@ function doSingleEnterHover(el) {
         // where properties of `emphasis` may not appear in `normal`. We previously use
         // module:echarts/util/model#defaultEmphasis to merge `normal` to `emphasis`.
         // But consider rich text and setOption in merge mode, it is impossible to cover
-        // all properties in merge. So we use merge mode when setting style here, where
+        // Tout propriété in merge. So we use merge mode when setting style here, where
         // only properties that is not `null/undefined` can be set. The disadventage:
         // null/undefined can not be used to remove style any more in `emphasis`.
         style.extendFrom(el.__hoverStl);
@@ -18179,7 +18179,7 @@ function getLayoutRect(
  * Position a zr element in viewport
  *  Group position is specified by either
  *  {left, top}, {right, bottom}
- *  If all properties exists, right and bottom will be igonred.
+ *  If Tout propriété exists, right and bottom will be igonred.
  *
  * Logic:
  *     1. Scale (against origin point in parent coord)

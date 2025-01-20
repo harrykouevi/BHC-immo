@@ -77,7 +77,7 @@
                             <!-- start features box item -->
                             <div class="feature-box feature-box-left-icon-middle text-start">
                                 <div class="feature-box-content">
-                                    <span class="d-block alt-font fw-600 text-base-color ls-05px">Apartment</span>
+                                    <span class="d-block alt-font fw-600 text-base-color ls-05px">Appartement</span>
                                     <h4 class="d-inline-block text-dark-gray fw-800 ls-minus-1px alt-font mb-0 d-inline-block">8215</h4>
                                 </div>
                                 <div class="feature-box-icon me-0">
@@ -88,7 +88,7 @@
                             <div class="border-top border-1 border-color-extra-medium-gray pt-10px mt-15px">
                                 <a href="#rentals" class="btn btn-extra-large btn-link btn-hover-animation-switch text-dark-gray text-uppercase-inherit section-link">
                                     <span>
-                                        <span class="btn-text">View all property</span>
+                                        <span class="btn-text">Voir toutes les propriétés</span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                     </span> 
@@ -101,7 +101,7 @@
                             <!-- start features box item -->
                             <div class="feature-box feature-box-left-icon-middle text-start">
                                 <div class="feature-box-content">
-                                    <span class="d-block alt-font fw-600 text-base-color ls-05px">Home</span>
+                                    <span class="d-block alt-font fw-600 text-base-color ls-05px">Maison</span>
                                     <h4 class="d-inline-block text-dark-gray fw-800 ls-minus-1px me-5px alt-font mb-0 d-inline-block">9235</h4>
                                 </div>
                                 <div class="feature-box-icon me-0">
@@ -112,7 +112,7 @@
                             <div class="border-top border-1 border-color-extra-medium-gray pt-10px mt-15px">
                                 <a href="#rentals" class="btn btn-extra-large btn-link btn-hover-animation-switch text-dark-gray text-uppercase-inherit section-link">
                                     <span>
-                                        <span class="btn-text">View all property</span>
+                                        <span class="btn-text">Voir toutes les propriétés</span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                     </span> 
@@ -122,7 +122,7 @@
                     </div>
                     <div class="col transition-inner-all xs-mb-30px">
                         <div class="bg-base-color h-100 box-shadow-quadruple-large box-shadow-medium-hover border-radius-6px pt-35px pb-35px ps-40px pe-40px lg-ps-25px lg-pe-25px">
-                            <span class="fs-24 lh-26 d-inline-block alt-font text-white fw-500 mb-0"><span class="fw-700 d-block fs-45 mb-10px">18,350</span> Newly listed properties</span>
+                            <span class="fs-24 lh-26 d-inline-block alt-font text-white fw-500 mb-0"><span class="fw-700 d-block fs-45 mb-10px">18,350</span> Propriétés nouvellement listées</span>
                         </div>
                     </div>
                     <div class="col transition-inner-all">
@@ -130,7 +130,7 @@
                             <!-- start features box item -->
                             <div class="feature-box feature-box-left-icon-middle text-start">
                                 <div class="feature-box-content">
-                                    <span class="d-block alt-font fw-600 text-base-color ls-05px">Office</span>
+                                    <span class="d-block alt-font fw-600 text-base-color ls-05px">Bureau</span>
                                     <h4 class="d-inline-block text-dark-gray fw-800 ls-minus-1px me-5px alt-font mb-0 d-inline-block">4413</h4>
                                 </div>
                                 <div class="feature-box-icon me-0">
@@ -141,7 +141,7 @@
                             <div class="border-top border-1 border-color-extra-medium-gray pt-10px mt-15px">
                                 <a href="#rentals" class="btn btn-extra-large btn-link btn-hover-animation-switch text-dark-gray text-uppercase-inherit section-link">
                                     <span>
-                                        <span class="btn-text">View all property</span>
+                                        <span class="btn-text">Voir toutes les propriétés</span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                     </span> 
@@ -172,7 +172,7 @@
       <div class="search-bar mt-4">
     <form action="{{route('search')}}" method="GET" class="d-flex justify-content-center">
         <input type="text" name="critere" class="form-control w-50" placeholder="Rechercher par prix, description, titre..." required />
-        <button type="submit" class="btn btn-primary ms-2">Rechercher</button>
+        <button type="submit" class="btn btn-primary ms-2 " style="background-color:green;">Rechercher</button>
     </form>
 </div>
     </div>
@@ -200,22 +200,29 @@
                             <!-- Adresse Dynamique -->
                             <p class="mb-20px">{{ $result->adresse }}</p>
                             <div class="row g-0">
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">{{ $result->surface }} m<sup>2</sup></span>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $result->nb_pieces }} </span>
+                                            </div>
+                                            <span class="d-block lh-18 fs-15">Chambres</span> 
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $result->wc_douche }}</span>
+                                            </div>
+                                            <span class="d-block lh-18 fs-15">WC douche</span> 
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $result->surface }}m<sup>2</sup></span>
+                                            </div>
+                                            <span class="d-block lh-18 fs-15">Living area</span> 
+                                        </div>
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Surface</span> 
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-price-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">${{ $result->prix }}</span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Prix</span> 
-                                </div>
-                            </div>
-                        </div> 
+                                </div> 
                         <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                             <div class="col">
                                 <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
@@ -250,22 +257,29 @@
                             <!-- Adresse Dynamique -->
                             <p class="mb-20px">{{ $annonce->adresse }}</p>
                             <div class="row g-0">
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">{{ $annonce->surface }} m<sup>2</sup></span>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->nb_pieces }} </span>
+                                            </div>
+                                            <span class="d-block lh-18 fs-15">Chambres</span> 
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->wc_douche }}</span>
+                                            </div>
+                                            <span class="d-block lh-18 fs-15">WC douche</span> 
+                                        </div>
+                                        <div class="col">
+                                            <div class="d-flex align-items-center">
+                                                <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->surface }}m<sup>2</sup></span>
+                                            </div>
+                                            <span class="d-block lh-18 fs-15">Living area</span> 
+                                        </div>
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Surface</span> 
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-price-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">${{ $annonce->prix }}</span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Prix</span> 
-                                </div>
-                            </div>
-                        </div> 
+                                </div> 
                         <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                             <div class="col">
                                 <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>

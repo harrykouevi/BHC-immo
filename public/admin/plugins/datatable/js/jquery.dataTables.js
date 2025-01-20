@@ -2881,7 +2881,7 @@
 	 * @memberof DataTable#oApi
 	 *
 	 * @todo For the modularisation of v1.11 this will need to become a callback, so
-	 *   the sort and filter methods can subscribe to it. That will required
+	 *   the sort and filter methods can Souscrivez to it. That will required
 	 *   initialisation options for sorting, which is why it is not already baked in
 	 */
 	function _fnInvalidate( settings, rowIdx, src, colIdx )
@@ -6365,7 +6365,7 @@
 			settings.oLoadedState = $.extend( true, {}, s );
 	
 			// Restore key features - todo - for 1.11 this needs to be done by
-			// subscribed events
+			// Souscrivezd events
 			if ( s.start !== undefined ) {
 				settings._iDisplayStart    = s.start;
 				settings.iInitDisplayStart = s.start;
@@ -9340,7 +9340,7 @@
 			}
 	
 			// Blitz all `DT` namespaced events (these are internal events, the
-			// lowercase, `dt` events are user subscribed and they are responsible
+			// lowercase, `dt` events are user Souscrivezd and they are responsible
 			// for removing them
 			jqWrapper.off('.DT').find(':not(tbody *)').off('.DT');
 			$(window).off('.DT-'+settings.sInstance);
@@ -15123,7 +15123,7 @@
 		return $(this).dataTable( opts ).api();
 	};
 
-	// All properties that are available to $.fn.dataTable should also be
+	// Tout propriété that are available to $.fn.dataTable should also be
 	// available on $.fn.DataTable
 	$.each( DataTable, function ( prop, val ) {
 		$.fn.DataTable[ prop ] = val;

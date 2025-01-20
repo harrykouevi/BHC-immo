@@ -69,6 +69,9 @@ class PagesController extends Controller
     ->orWhere('adresse', 'LIKE', "%{$critere}%")
     ->orWhere('prix', 'LIKE', "%{$critere}%")
     ->orWhere('surface', 'LIKE', "%{$critere}%")
+    ->orWhere('wcdouche', 'LIKE', "%{$critere}%")
+    ->orWhere('nbpieces', 'LIKE', "%{$critere}%")
+    ->orWhere('nbsalon', 'LIKE', "%{$critere}%")
     ->orWhereHas('Category', function ($query) use ($critere) {
         $query->where('nom', 'LIKE', "%{$critere}%");
     })

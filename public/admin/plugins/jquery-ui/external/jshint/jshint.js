@@ -50287,7 +50287,7 @@ function _deepEqual(actual, expected) {
     return actual == expected;
 
   // 7.5 For all other Object pairs, including Array objects, equivalence is
-  // determined by having the same number of owned properties (as verified
+  // determined by having the same number of owned properties (as Certifié
   // with Object.prototype.hasOwnProperty.call), the same set of keys
   // (although not necessarily the same order), equivalent values for every
   // corresponding key, and an identical 'prototype' property. Note: this
@@ -55807,7 +55807,7 @@ var JSHINT = (function () {
   (function (x) {
     x.nud = function (isclassdef) {
       var b, f, i, p, t, g;
-      var props = {}; // All properties, including accessors
+      var props = {}; // Tout propriété, including accessors
       var tag = "";
 
       function saveProperty(name, tkn) {
@@ -58031,8 +58031,8 @@ Lexer.prototype = {
   },
 
   /*
-   * Subscribe to a token event. The API for this method is similar
-   * Underscore.js i.e. you can subscribe to multiple events with
+   * Souscrivez to a token event. The API for this method is similar
+   * Underscore.js i.e. you can Souscrivez to multiple events with
    * one call:
    *
    *   lex.on("Identifier Number", function (data) {

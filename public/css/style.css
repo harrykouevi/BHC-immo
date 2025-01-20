@@ -13234,15 +13234,15 @@ button.mfp-close:active:before {
   position: relative;
 }
 /* Auto newsletter popup */
-.subscribe-popup .mfp-close,
-.subscribe-popup .mfp-close:active {
+.Souscrivez-popup .mfp-close,
+.Souscrivez-popup .mfp-close:active {
   background-color: transparent;
   font-size: 13px;
   line-height: 30px;
   top: 20px;
   right: 20px;
 }
-.subscribe-popup .mfp-close.mfp-close-btn {
+.Souscrivez-popup .mfp-close.mfp-close-btn {
   bottom: 0;
   top: inherit;
   position: relative;
@@ -13251,16 +13251,16 @@ button.mfp-close:active:before {
   height: auto;
   font-size: 14px;
 }
-.subscribe-popup .mfp-close.mfp-close-btn:before {
+.Souscrivez-popup .mfp-close.mfp-close-btn:before {
   display: none;
 }
-.subscribe-popup .mfp-close:before {
+.Souscrivez-popup .mfp-close:before {
   color: var(--dark-gray);
 }
-.subscribe-popup .newsletter-style-02 input {
+.Souscrivez-popup .newsletter-style-02 input {
   padding-right: 70px;
 }
-.subscribe-popup .newsletter-style-02 .btn {
+.Souscrivez-popup .newsletter-style-02 .btn {
   padding: 6px 25px 9px 25px;
 }
 .newsletter-popup label {
