@@ -300,7 +300,7 @@
                 </div>
                 <div class="col-md-4" data-anime='{ "translateX": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <div class="d-flex justify-content-center justify-content-md-end">
-                        <a href="#" class="fw-600 alt-font text-dark-gray text-dark-gray-hover d-flex align-items-center">Voir toutes les annonces<span class="d-flex align-items-center justify-content-center bg-dark-gray h-40px w-40px text-center rounded-circle fs-16 text-white ms-10px"><i class="feather icon-feather-arrow-right"></i></span></a>
+                        <a href="{{route('location')}}" class="fw-600 alt-font text-dark-gray text-dark-gray-hover d-flex align-items-center">Voir toutes les annonces<span class="d-flex align-items-center justify-content-center bg-dark-gray h-40px w-40px text-center rounded-circle fs-16 text-white ms-10px"><i class="feather icon-feather-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
