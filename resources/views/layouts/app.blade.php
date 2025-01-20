@@ -289,7 +289,7 @@
                     <div class="col-auto d-flex flex-column flex-md-row align-items-center text-center text-md-start">
                         <div class="text-dark-gray fs-28 alt-font fw-500">1M+ Propriété prête à<span class="fw-700 text-decoration-line-bottom">acheter et à louer.</span></div>
                         <div class="bg-white border-radius-50px d-flex align-items-center p-10px ps-35px ms-20px md-ps-20px md-ms-15px box-shadow-medium sm-m-20px">
-                            <a href="#" class="text-dark-gray fs-22 alt-font fw-500 me-10px overflow-hidden">Say, <span class="fw-700 w-65px text-start d-inline-block" data-fancy-text='{ "effect": "rotate", "string": ["Hello!", "Salve!", "Hallå!"] }'></span></a>
+                            <a href="#" class="text-dark-gray fs-22 alt-font fw-500 me-10px overflow-hidden">Dire, <span class="fw-700 w-65px text-start d-inline-block" data-fancy-text='{ "effect": "rotate", "string": ["Hello!", "Salve!", "Hallå!"] }'></span></a>
                             <span class="text-dark-gray h-45px w-45px text-center d-flex align-items-center justify-content-center border-radius-100 bg-base-color-transparent fs-20">&#128075;</span>
                         </div>
                     </div>
@@ -312,43 +312,43 @@
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3 sm-mb-25px">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Company</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Entreprise</span>
                         <ul>
-                            <li><a href="#">A propos us</a></li>
-                            <li><a href="#">Our agent</a></li>
-                            <li><a href="#">Latest blog</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">A propos de nous</a></li>
+                            <li><a href="#">Nos agents</a></li>
+                            <li><a href="#">Dernièrs blog</a></li>
+                            <li><a href="#">Contact </a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3 sm-mb-25px">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Resources</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Ressources</span>
                         <ul>
-                            <li><a href="#">Location a home</a></li>
-                            <li><a href="#">Vente a home</a></li>
-                            <li><a href="#">Ready to move</a></li>
-                            <li><a href="#">Budget homes</a></li>
+                            <li><a href="#">Louez une maison</a></li>
+                            <li><a href="#">Vendre une maison</a></li>
+                            <li><a href="#">Prêt a faire le pas</a></li>
+                            <li><a href="#">Budgets</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Customer</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Client</span>
                         <ul>
-                            <li><a href="#">Client support</a></li>
-                            <li><a href="#">Help center</a></li>
-                            <li><a href="#">System status</a></li>
-                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Support client</a></li>
+                            <li><a href="#">Centre d'aide</a></li>
+                            <li><a href="#">Status</a></li>
+                            <li><a href="#">Retour</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-10px">Say hello</span>
-                        <span class="d-block lh-normal">Need support?</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-10px">Faire un coucou</span>
+                        <span class="d-block lh-normal">Besoin de support?</span>
                         <a href="mailto:info@domain.com" class="text-dark-gray text-decoration-line-bottom lh-22 d-inline-block mb-20px">info@domain.com</a>
-                        <span class="d-block lh-normal">Customer care</span>
+                        <span class="d-block lh-normal">Assurance client</span>
                         <a href="tel:12345678910" class="text-dark-gray text-decoration-line-bottom lh-22 d-inline-block">+1 234 567 8910</a>
                     </div>
                     <!-- end footer column -->
