@@ -7,6 +7,8 @@ use Intervention\Image\Laravel\Facades\Image;
 use Illuminate\Http\Request;
 use App\Models\Article;
 
+use App\Http\Controllers\ReviewController;
+
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail; // Make sure to import your Mailable class
 use App\Services\AnnonceService;
@@ -74,6 +76,11 @@ Route::get('/posts/{id}', function ($id) {
     ]);
 })->name('posts.show');
 
+// Route pour afficher le formulaire de soumission d'avis
+Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews');
+
+// Route pour stocker un nouvel avis
+Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 Route::get('/A7d3F9kL2qX1', function () {
     return view('a-upload');
