@@ -46,6 +46,20 @@
         right: 10px;
     }
 
+    .image-container {
+    width: 300px; /* Largeur fixe */
+    height: 300px; /* Hauteur fixe */
+    overflow: hidden; /* Pour éviter que l'image déborde du conteneur */
+    position: relative; /* Nécessaire pour le positionnement des images si besoin */
+    }
+
+    .responsive-image {
+        width: 100%; /* L'image prendra toute la largeur du conteneur */
+        height: 100%; /* L'image prendra toute la hauteur du conteneur */
+        object-fit: cover; /* Ajuste l'image pour remplir le conteneur tout en conservant son ratio */
+    }
+
+
 </style>
 
 @endpush
@@ -59,12 +73,12 @@
     <div class="container">
         <div class="row align-items-center align-items-lg-end justify-content-center extra-very-small-screen g-0">
             <div class="col-xl-7 col-lg-8 position-relative page-title-extra-small md-mb-30px md-mt-auto" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <h3 class="alt-font fw-600 text-dark-gray mb-15px ls-minus-1px">Vacation cottage in brownsville</h3>
-                <h1 class="mb-0 d-flex"><i class="feather icon-feather-map-pin icon-extra-medium text-base-color me-5px"></i>4403 Pick street plensant view, New york</h1>
+                <h3 class="alt-font fw-600 text-dark-gray mb-15px ls-minus-1px">{{ $post?->titre  }}</h3>
+                <h1 class="mb-0 d-flex"><i class="feather icon-feather-map-pin icon-extra-medium text-base-color me-5px"></i>{{ $post?->adresse }}</h1>
             </div>
             <div class="col-lg-3 offset-xl-2 offset-lg-1 border-start border-2 border-color-base-color ps-40px sm-ps-25px md-mb-auto">
-                <h4 class="text-dark-gray fw-700 alt-font mb-5px">$5,40,000</h4>
-                <span class="fw-500 fs-18">$3,700 - Per sq. ft.</span>
+                <h4 class="text-dark-gray fw-700 alt-font mb-5px">{{$post?->prix}} FCFA</h4>
+                {{-- <span class="fw-500 fs-18">$3,700 - Per sq. ft.</span> --}}
             </div>
         </div>
     </div>
@@ -124,16 +138,16 @@
     <div class="container"> 
         <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
             <div class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
-                <span class="fs-19 text-dark-gray fw-600">Property size:</span> 700sq ft
+                <span class="fs-19 text-dark-gray fw-600">Surface : </span> {{ $post->surface }}m<sup>2</sup>
             </div>
             <div class="col text-center border-end md-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
-                <span class="fs-19 text-dark-gray fw-600">Year built:</span> 2016
+                {{-- <span class="fs-19 text-dark-gray fw-600">Year built:</span> 2016 --}}
             </div>
             <div class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font sm-mb-15px">
-                <span class="fs-19 text-dark-gray fw-600">Accommodation:</span> Furnished
+                {{-- <span class="fs-19 text-dark-gray fw-600">Accommodation:</span> Furnished --}}
             </div>
             <div class="col text-center alt-font">
-                <span class="fs-19 text-dark-gray fw-600">Heating:</span> TA furnace
+                {{-- <span class="fs-19 text-dark-gray fw-600">Heating:</span> TA furnace --}}
             </div>
         </div>
     </div>
@@ -146,8 +160,8 @@
             <div class="col-lg-7 md-mb-50px">
                 <div class="row mb-15px">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Property description</span>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit sed eiusmod.</p>
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Description de l'post</span>
+                        <p>{{$post->description}}</p>
                     </div>
                 </div>
                 <div class="row g-0">
@@ -155,26 +169,26 @@
                         <div class="row row-cols-2 row-cols-md-4 row-cols-sm-2">
                             <div class="col text-center border-end border-color-extra-medium-gray sm-mb-30px">
                                 <img src="images/demo-real-estate-icon-bed.svg" class="w-50px mb-15px" alt="">
-                                <span class="text-dark-gray d-block lh-20">4 Bedrooms</span>
+                                <span class="text-dark-gray d-block lh-20">{{$post->nbpieces}} Chambres</span>
                             </div>
                             <div class="col text-center border-end sm-border-end-0 border-color-extra-medium-gray sm-mb-30px">
                                 <img src="images/demo-real-estate-icon-bath.svg" class="w-50px mb-15px" alt="">
-                                <span class="text-dark-gray d-block lh-20">4 Bathrooms</span>
+                                <span class="text-dark-gray d-block lh-20">{{$post->wcdouche}} Toilettes</span>
                             </div>
                             <div class="col text-center border-end border-color-extra-medium-gray">
                                 <img src="images/demo-real-estate-icon-car.svg" class="w-50px mb-15px" alt="">
-                                <span class="text-dark-gray d-block lh-20">2 Parking</span>
+                                <span class="text-dark-gray d-block lh-20">Parking</span>
                             </div>
                             <div class="col text-center">
                                 <img src="images/demo-real-estate-icon-swimming.svg" class="w-50px mb-15px" alt="">
-                                <span class="text-dark-gray d-block lh-20">Swimming pool</span>
+                                <span class="text-dark-gray d-block lh-20">Piscine</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row mt-7">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Specification</span>
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Specifications</span>
                     </div>
                     <div class="col-xl-6">
                         <div class="row g-0 align-items-center mb-15px pb-15px border-bottom border-color-extra-medium-gray">
@@ -333,7 +347,7 @@
                 </div> 
                 <div class="row mt-7">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Location</span>
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Localisation</span>
                     </div>
                     <div class="col-12"> 
                         <div id="map" class="map small-screen border-radius-6px" data-map-options='{ "lat": -37.805688, "lng": 144.962312, "style": "Dark", "marker": { "type": "HTML", "color": "#06af47" }, "popup": { "defaultOpen": true, "html": "<div class=infowindow><strong class=\"mb-3 d-inline-block alt-font\">Crafto Real Estate</strong><p class=\"alt-font\">401 Broadway, 24th Floor, Orchard View, London, UK</p></div><div class=\"google-maps-link alt-font\"> <a aria-label=\"View larger map\" target=\"_blank\" jstcache=\"31\" href=\"https://maps.google.com/maps?ll=-37.805688,144.962312&amp;z=17&amp;t=m&amp;hl=en-US&amp;gl=IN&amp;mapclient=embed&amp;cid=13153204942596594449\" jsaction=\"mouseup:placeCard.largerMap\">VIEW LARGER MAP</a></div>" } }'></div>
@@ -341,14 +355,14 @@
                 </div>
                 <div class="row mt-7">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Features</span>
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Caractéristiques</span>
                     </div>
                     <div class="col-6 col-sm-4">
                         <!-- start list style -->
                         <ul class="list-style-02 ps-0 mb-0">
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Refrigerator</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Gym</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Washer</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Refrigirateur</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Salle de Gym</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Machine a laver</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Barbeque</li> 
                         </ul>
                         <!-- end list style -->
@@ -356,18 +370,18 @@
                     <div class="col-6 col-sm-4">
                         <!-- start list style -->
                         <ul class="list-style-02 ps-0 mb-0">
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Hangers</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Microwave</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Cintres</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Micro-ondes</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Sauna</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Dryer</li> 
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Séchoir</li> 
                         </ul>
                         <!-- end list style -->
                     </div>
                     <div class="col-6 col-sm-4">
                         <!-- start list style -->
                         <ul class="list-style-02 ps-0 mb-0">
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Laundry</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Shower</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Lessive</li>
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Douche</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Internet</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Outdoor</li> 
                         </ul>
@@ -376,14 +390,15 @@
                 </div>
                 <div class="row mt-7">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Ground floor plan</span>
-                        <img src="https://via.placeholder.com/682x400" class="border-radius-6px" alt="">
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Plan du rez-de-chaussée</span>
+                        @foreach($post->images as $image)
+                            <img src="{{ asset('storage/'.$image->path) }}" alt="Image" class="responsive-image" style="width: 300px; height: 300px; padding:3px;">
+                        @endforeach
                     </div>
                 </div>
                 <div class="row mt-7">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">First floor plan</span>
-                        <img src="https://via.placeholder.com/682x400" class="border-radius-6px" alt="">
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Plan du premier étage</span>
                     </div>
                 </div>
             </div>
@@ -459,163 +474,64 @@
     <div class="container">
         <div class="row mb-4">
             <div class="col-12 text-center"> 
-                <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Similar <span class="fw-700 text-highlight d-inline-block">properties<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
+                <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Propriétés <span class="fw-700 text-highlight d-inline-block">similaires<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
             </div>
         </div>
         <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 justify-content-center"> 
-            <!-- start box item -->
+            @foreach($annonces as $annonce) <!-- Boucle sur les posts -->
+            <!-- start box item -->        
             <div class="col mb-30px">
                 <div class="border-radius-6px overflow-hidden box-shadow-large">
                     <div class="image position-relative">
-                        <a href="demo-real-estate-property-details.html">
-                            <img src="https://via.placeholder.com/600x415" alt="">
+                        <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->category ? $annonce->category->nom : 'Aucune catégorie' }}</div>
+                        <a href="{{ route('posts.show', $annonce->id) }}"> <!-- Lien vers l'annonce -->
+                            <img src="{{ Storage::disk('public')->url($annonce->images->first()->path) }}" alt="{{ $annonce->titre }}" style="width: 100%; height: 100%;">
                         </a>
-                        <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Sell</div>
-                    </div> 
-                    <div class="bg-white">
-                        <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                            <div class="d-flex align-items-center">
-                                <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Luxury villa in Texas</a>
-                            </div>
-                            <p class="mb-20px">982 Monroe ave, rochester</p>
-                            <div class="row g-0">
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">04</span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">05</span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">360m<sup>2</sup></span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Living area</span> 
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                            <div class="col">
-                                <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                            </div>
-                            <div class="col text-end">
-                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$6,89,000</span>
-                            </div> 
-                        </div> 
+                        <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->type }}</div> <!-- Type de l'annonce (Vente/Location) -->
                     </div>
-                </div>
-            </div>
-            <!-- end box item -->
-            <!-- start box item -->
-            <div class="col mb-30px">
-                <div class="border-radius-6px overflow-hidden box-shadow-large">
-                    <div class="image position-relative">
-                        <a href="demo-real-estate-property-details.html">
-                            <img src="https://via.placeholder.com/600x415" alt="">
-                        </a>
-                        <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                    </div> 
                     <div class="bg-white">
                         <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
                             <div class="d-flex align-items-center">
-                                <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Modern villa in Oregon</a>
+                                <a href="{{ route('posts.show', $annonce->id) }}" class="alt-font text-dark-gray fw-700 fs-22 me-10px">{{ $annonce->titre }}</a> <!-- Titre de l'annonce -->
                             </div>
-                            <p class="mb-20px">1261 Sampson street senver</p>
+                            <p class="mb-20px">{{ $annonce->address }}</p> <!-- Adresse de l'annonce -->
                             <div class="row g-0">
                                 <div class="col">
                                     <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">05</span>
+                                        <img src="{{ asset('images/demo-real-estate-icon-bed-small.svg') }}" class="me-5px h-20px" alt="">
+                                        <span class="fw-600 alt-font text-dark-gray">{{ $annonce->nbpieces }}</span> <!-- Nombre de chambres -->
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Bedrooms</span> 
+                                    <span class="d-block lh-18 fs-15">Chambre</span>
                                 </div>
                                 <div class="col">
                                     <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">05</span>
+                                        <img src="{{ asset('images/demo-real-estate-icon-bath-small.svg') }}" class="me-5px h-20px" alt="">
+                                        <span class="fw-600 alt-font text-dark-gray">{{ $annonce->wcdouche }}</span> <!-- Nombre de salles de bain -->
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Bathrooms</span> 
+                                    <span class="d-block lh-18 fs-15">Toilettes</span>
                                 </div>
                                 <div class="col">
                                     <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">780m<sup>2</sup></span>
+                                        <img src="{{ asset('images/demo-real-estate-icon-size-small.svg') }}" class="me-5px h-20px" alt="">
+                                        <span class="fw-600 alt-font text-dark-gray">{{ $annonce->surface }}m<sup>2</sup></span> <!-- Surface habitable -->
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Living area</span> 
+                                    <span class="d-block lh-18 fs-15">Surface</span>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                             <div class="col">
-                                <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
+                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Details</a> <!-- Bouton détails -->
                             </div>
                             <div class="col text-end">
-                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$8,50,000</span>
-                            </div> 
-                        </div> 
-                    </div>
-                </div>
-            </div> 
-            <!-- end box item -->
-            <!-- start box item -->
-            <div class="col mb-30px">
-                <div class="border-radius-6px overflow-hidden box-shadow-large">
-                    <div class="image position-relative">
-                        <a href="demo-real-estate-property-details.html">
-                            <img src="https://via.placeholder.com/600x415" alt="">
-                        </a>
-                        <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Sell</div>
-                    </div> 
-                    <div class="bg-white">
-                        <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                            <div class="d-flex align-items-center">
-                                <a href="demo-real-estate-property-details.html" class="alt-font text-dark-gray fw-700 fs-22 me-10px">Ranch style in Florida</a>
+                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">{{$annonce?->prix}} FCFA</span> <!-- Prix de l'annonce -->
                             </div>
-                            <p class="mb-20px">2814 Hampton meadows</p>
-                            <div class="row g-0">
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">04</span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Bedrooms</span> 
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">04</span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Bathrooms</span> 
-                                </div>
-                                <div class="col">
-                                    <div class="d-flex align-items-center">
-                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                        <span class="fw-600 alt-font text-dark-gray">260m<sup>2</sup></span>
-                                    </div>
-                                    <span class="d-block lh-18 fs-15">Living area</span> 
-                                </div>
-                            </div>
-                        </div> 
-                        <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                            <div class="col">
-                                <a href="demo-real-estate-property-details.html" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">View details</a>
-                            </div>
-                            <div class="col text-end">
-                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">$6,50,000</span>
-                            </div> 
                         </div>
                     </div>
                 </div>
             </div>
             <!-- end box item -->
+            @endforeach
         </div> 
     </div>
 </section>

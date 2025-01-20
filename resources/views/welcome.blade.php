@@ -313,7 +313,7 @@
                             <div class="image position-relative">
                                 <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->category ? $annonce->category->nom : 'Aucune catégorie' }}</div>
                                 <a href="{{ route('posts.show', $annonce->id) }}"> <!-- Lien vers l'annonce -->
-                                    <img src="#" alt="{{ $annonce->titre }}"> <!-- Affiche la première image -->
+                                    <img src="{{ Storage::disk('public')->url($annonce->images->first()->path) }}" alt="{{ $annonce->titre }}" style="width: 100%; height: 100%;"><!-- Affiche la première image -->
                                 </a>
                                 <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->type }}</div> <!-- Type de l'annonce (Vente/Location) -->
                             </div>
@@ -327,23 +327,23 @@
                                         <div class="col">
                                             <div class="d-flex align-items-center">
                                                 <img src="{{ asset('images/demo-real-estate-icon-bed-small.svg') }}" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->bedrooms }}</span> <!-- Nombre de chambres -->
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->nbpieces }}</span> <!-- Nombre de chambres -->
                                             </div>
-                                            <span class="d-block lh-18 fs-15">Bedrooms</span>
+                                            <span class="d-block lh-18 fs-15">Chambre</span>
                                         </div>
                                         <div class="col">
                                             <div class="d-flex align-items-center">
                                                 <img src="{{ asset('images/demo-real-estate-icon-bath-small.svg') }}" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->bathrooms }}</span> <!-- Nombre de salles de bain -->
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->wcdouche }}</span> <!-- Nombre de salles de bain -->
                                             </div>
-                                            <span class="d-block lh-18 fs-15">Bathrooms</span>
+                                            <span class="d-block lh-18 fs-15">Toilettes</span>
                                         </div>
                                         <div class="col">
                                             <div class="d-flex align-items-center">
                                                 <img src="{{ asset('images/demo-real-estate-icon-size-small.svg') }}" class="me-5px h-20px" alt="">
-                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->living_area }}m<sup>2</sup></span> <!-- Surface habitable -->
+                                                <span class="fw-600 alt-font text-dark-gray">{{ $annonce->surface }}m<sup>2</sup></span> <!-- Surface habitable -->
                                             </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span>
+                                            <span class="d-block lh-18 fs-15">Surface</span>
                                         </div>
                                     </div>
                                 </div>
@@ -352,7 +352,7 @@
                                         <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Details</a> <!-- Bouton détails -->
                                     </div>
                                     <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ number_format($annonce?->price, 2) }}</span> <!-- Prix de l'annonce -->
+                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">{{$annonce?->prix}} FCFA</span> <!-- Prix de l'annonce -->
                                     </div>
                                 </div>
                             </div>

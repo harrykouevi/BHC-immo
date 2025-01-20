@@ -68,10 +68,12 @@ Route::get('/posts/{id}', function ($id) {
 
     // Récupérer les annonces mises en avant
     $post = $annonceService->get($id);
+    $annonces = $annonceService->getAll();
 
     // Retourner la vue avec les données
     return view('post-single', [
         'post' => $post,
+        'annonces' => $annonces,
 
     ]);
 })->name('posts.show');
