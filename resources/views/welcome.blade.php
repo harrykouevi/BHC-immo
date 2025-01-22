@@ -9,17 +9,20 @@
 @section('content')
     <!-- start banner slider -->
     <section class="p-0 top-space-margin">
-        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
+        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
             <div class="swiper-wrapper">
+                @foreach($annonces as $annonce)
                 <!-- start slider item -->
                 <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Luxurious <span class="fw-700">mansion</span></div>
+                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: rgba(0, 0, 0, 0.5); /* Noir avec 50% de transparence */
+    color: white; /* Couleur du texte */
+    padding: 20px;">
+                                <span class="fs-20 d-block mb-15px ">{{ $annonce->adresse }}</span>
+                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-100 xs-w-100 ls-minus-2px"> <span class="fw-700">{{ $annonce->titre }}</span></div>
                                 <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
+                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
                             </div>
                         </div>
                     </div>
@@ -29,11 +32,11 @@
                                 <div class="row">
                                     <div class="col text-center border-end border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">4 Pièces</span>
+                                        <span class="alt-font fs-16 fw-500 d-block">{{ $annonce->nbpieces }} Pièces</span>
                                     </div>
                                     <div class="col text-center border-end border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
+                                        <span class="alt-font fs-16 fw-500 d-block">{{ $annonce->wcdouche }} WC-douche</span>
                                     </div>
                                     <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
@@ -42,89 +45,14 @@
                                 </div>
                             </div>
                             <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$30,99,000</h4>
+                                <span class="fw-500 mb-5px d-block alt-font"> {{  (strpos($annonce->titre, 's') ==  false ? "Prix de location / Mois" : "Prix de vente") }}</span>
+                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">{{ $annonce->prix }} FCFA</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
-                    <div class="container h-100">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Woodland <span class="fw-700">modern</span></div>
-                                <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row">
-                            <div class="col-xl-7 lg-mb-25px">
-                                <div class="row">
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">4 Pièces</span>
-                                    </div>
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
-                                    </div>
-                                    <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 Garage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$27,99,000</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
-                    <div class="container h-100">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-70 xs-w-100 ls-minus-2px">Saturate <span class="fw-700">house</span></div>
-                                <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row">
-                            <div class="col-xl-7 lg-mb-25px">
-                                <div class="row">
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 Pièces</span>
-                                    </div>
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
-                                    </div>
-                                    <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">2 Garage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$23,99,000</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
+                @endforeach
             </div>
             <!-- start slider pagination -->
             <div class="container">
@@ -307,7 +235,7 @@
             <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 @foreach($annonces as $annonce) <!-- Boucle sur les annonces -->
                     <!-- start box item -->
-                    
+
                     <div class="col mb-30px">
                         <div class="border-radius-6px overflow-hidden box-shadow-large">
                             <div class="image position-relative">

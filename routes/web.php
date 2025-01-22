@@ -155,7 +155,7 @@ $email->setRaw($rawMessage);
 
    return back()->with('success', 'Votre message a été envoyé avec succès !');
 
-})->name('send-message');
+})->name('send-me');
 
 /*
 |--------------------------------------------------------------------------
