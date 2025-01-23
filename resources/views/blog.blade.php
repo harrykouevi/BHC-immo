@@ -13,27 +13,21 @@
 @section('content')
 
         <!-- start page title -->
-        <section class="top-space-margin page-title-big-typography cover-background magic-cursor round-cursor" style="background-image: url({{ asset('images/banner-001.jpg') }}">
+        <section class="cover-background page-title-big-typography ipad-top-space-margin">
             <div class="container">
-                <div class="row extra-very-small-screen align-items-center">
-                    <div class="col-lg-8 col-sm-8 position-relative page-title-extra-small" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-30, 0], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <h2 class="text-white text-shadow-medium fw-500 ls-minus-2px mb-0">Latest blog.</h2>
-                        <h1 class="mb-20px xs-mb-20px text-white text-shadow-medium"><span class="w-30px h-2px bg-yellow d-inline-block align-middle position-relative top-minus-2px me-10px"></span>.</h1>
-
+                <div class="row align-items-center align-items-lg-end justify-content-center extra-very-small-screen g-0">
+                    <div class="col-xxl-5 col-xl-6 col-lg-7 position-relative page-title-extra-small md-mb-30px md-mt-auto" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <h1 class="text-base-color">Nos derniers articles immobiliers</h1>
+                        <h2 class="alt-font text-dark-gray fw-500 mb-0 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Suivez les dernières <span class="fw-700 text-highlight d-inline-block">actualités immobilières.<span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span></span> news.</h2>
                     </div>
-                    <div class="down-section text-center" data-anime='{ "translateY": [-50, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <a href="#down-section" class="section-link">
-                            <div class="text-white">
-                                <i class="feather icon-feather-chevron-down icon-very-medium"></i>
-                            </div>
-                        </a>
+                    <div class="col-lg-5 offset-xxl-2 offset-xl-1 border-start border-2 border-color-base-color ps-40px sm-ps-25px md-mb-auto">
+                        <span class="d-block w-85 lg-w-100" data-anime='{ "el": "lines", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>Marché immobilier en ligne pour acheter, vendre et louer des biens résidentiels et commerciaux. Utilisé par des millions de locataires pour trouver un bien immobilier.</span>
                     </div>
                 </div>
             </div>
         </section>
         <!-- end page title -->
-
-
+        
         <!-- start section -->
         <section id="down-section">
             <div class="container">

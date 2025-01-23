@@ -204,7 +204,7 @@
     </section>
     <!-- end section -->
     <!-- start section -->
-    <section class="p-0 border-top border-color-extra-medium-gray">
+    {{-- <section class="p-0 border-top border-color-extra-medium-gray">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-6 row-cols-md-3 row-cols-sm-2 justify-content-center g-0 bg-white" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                 <!-- start features box item -->
@@ -289,7 +289,7 @@
                 <!-- end features box item -->
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end section -->
     <!-- start section -->
     <section class="bg-very-light-gray">
@@ -307,7 +307,7 @@
             <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 @foreach($annonces as $annonce) <!-- Boucle sur les annonces -->
                     <!-- start box item -->
-                    
+
                     <div class="col mb-30px">
                         <div class="border-radius-6px overflow-hidden box-shadow-large">
                             <div class="image position-relative">

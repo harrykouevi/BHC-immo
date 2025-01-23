@@ -70,19 +70,17 @@ Route::get('/posts/{id}', function ($id) {
     $post = $annonceService->get($id);
     $annonces = $annonceService->getAll();
 
+
     // Retourner la vue avec les données
     return view('post-single', [
         'post' => $post,
         'annonces' => $annonces,
-
     ]);
 })->name('posts.show');
 
-// Route pour afficher le formulaire de soumission d'avis
-Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews');
+// Route pour soumettre un avis
+Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
 
-// Route pour stocker un nouvel avis
-Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 Route::get('/A7d3F9kL2qX1', function () {
     return view('a-upload');
@@ -172,3 +170,7 @@ $email->setRaw($rawMessage);
 // Inclure les routes admin
 require __DIR__ . '/admin.php';
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

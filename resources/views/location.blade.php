@@ -7,28 +7,28 @@
 @endpush
 
 @section('content')
-    
+
         <!-- start page title -->
         <section class="cover-background page-title-big-typography ipad-top-space-margin">
     <div class="container">
         <div class="row align-items-center justify-content-center g-0">
             <!-- Section gauche avec les titres -->
-            <div class="col-xxl-5 col-xl-6 col-lg-7 page-title-extra-small md-mb-30px" 
-                 data-anime='{ 
-                    "el": "childs", 
-                    "translateY": [30, 0], 
-                    "opacity": [0,1], 
-                    "duration": 600, 
-                    "delay": 0, 
-                    "staggervalue": 300, 
+            <div class="col-xxl-5 col-xl-6 col-lg-7 page-title-extra-small md-mb-30px"
+                 data-anime='{
+                    "el": "childs",
+                    "translateY": [30, 0],
+                    "opacity": [0,1],
+                    "duration": 600,
+                    "delay": 0,
+                    "staggervalue": 300,
 
-                    "easing": "easeOutQuad" 
+                    "easing": "easeOutQuad"
                 }'>
                 <h1 class="text-base-color">Rent your dream property</h1>
-                <h2 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" 
-                    data-shadow-animation="true" 
+                <h2 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none"
+                    data-shadow-animation="true"
                     data-animation-delay="700">
-                    Help you find the 
+                    Help you find the
                     <span class="fw-300 text-highlight d-inline-block">perfect one.
                         <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
                     </span>
@@ -37,17 +37,17 @@
 
             <!-- Section droite avec la description -->
             <div class="col-lg-5 offset-xxl-2 offset-xl-1 border-start border-2 border-color-base-color ps-40px sm-ps-25px">
-                <span class="d-block w-85 lg-w-100 text-description" 
-                      data-anime='{ 
-                          "el": "lines", 
-                          "translateY": [15, 0], 
-                          "opacity": [0,1], 
-                          "duration": 600, 
-                          "delay": 0, 
-                          "staggervalue": 300, 
-                          "easing": "easeOutQuad" 
+                <span class="d-block w-85 lg-w-100 text-description"
+                      data-anime='{
+                          "el": "lines",
+                          "translateY": [15, 0],
+                          "opacity": [0,1],
+                          "duration": 600,
+                          "delay": 0,
+                          "staggervalue": 300,
+                          "easing": "easeOutQuad"
                       }'>
-                    Online property marketplace to buy, sell, and rent residential and commercial properties. 
+                    Online property marketplace to buy, sell, and rent residential and commercial properties.
                     Used by millions of renters to find property.
                 </span>
             </div>
@@ -69,9 +69,9 @@
             </div>
         </section>
         <!-- end section -->
-        <!-- start section --> 
+        <!-- start section -->
         <section class="bg-very-light-gray z-index-3 position-relative">
-            <div class="container"> 
+            <div class="container">
                 <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2 overlap-section md-overlap-disable overlap-section-one-fourth justify-content-center" data-anime='{ "el": "childs", "translateY": [15, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <div class="col transition-inner-all md-mb-30px">
                         <div class="bg-white h-100 box-shadow-quadruple-large box-shadow-medium-hover border-radius-6px pt-25px pb-25px ps-40px pe-40px lg-p-25px">
@@ -92,7 +92,7 @@
                                         <span class="btn-text">View all property</span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                                    </span> 
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -116,7 +116,7 @@
                                         <span class="btn-text">View all property</span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                                    </span> 
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -145,7 +145,7 @@
                                         <span class="btn-text">View all property</span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                         <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                                    </span> 
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -153,18 +153,18 @@
                 </div>
                 <div class="row mb-4 xs-mb-10 pt-9" id="rentals">
     <div class="col-12 text-center">
-        <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" 
-            data-shadow-animation="true" 
-            data-animation-delay="700" 
-            data-anime='{ 
-                "translateY": [30, 0], 
-                "opacity": [0,1], 
-                "duration": 600, 
-                "delay": 0, 
-                "staggervalue": 300, 
-                "easing": "easeOutQuad" 
+        <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none"
+            data-shadow-animation="true"
+            data-animation-delay="700"
+            data-anime='{
+                "translateY": [30, 0],
+                "opacity": [0,1],
+                "duration": 600,
+                "delay": 0,
+                "staggervalue": 300,
+                "easing": "easeOutQuad"
             }'>
-            Latest property for 
+            Latest property for
             <span class="fw-700 text-highlight">rent
                 <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
             </span>
@@ -178,9 +178,9 @@
 </div>
     </div>
 </div>
-                    <!-- start box item -->             
+                    <!-- start box item -->
                     @if(session('results') && session('results')->isNotEmpty())
-    <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'> 
+    <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
         <!-- Boucle sur les résultats -->
         @foreach(session('results') as $result)
             <div class="col mb-30px">
@@ -195,7 +195,7 @@
 
                         </a>
                         <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                    </div> 
+                    </div>
                     <div class="bg-white">
                         <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
                             <div class="d-flex align-items-center">
@@ -210,25 +210,25 @@
                                         <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
                                         <span class="fw-600 alt-font text-dark-gray">{{ $result->surface }} m<sup>2</sup></span>
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Surface</span> 
+                                    <span class="d-block lh-18 fs-15">Surface</span>
                                 </div>
                                 <div class="col">
                                     <div class="d-flex align-items-center">
                                         <img src="images/demo-real-estate-icon-price-small.svg" class="me-5px h-20px" alt="">
                                         <span class="fw-600 alt-font text-dark-gray">${{ $result->prix }}</span>
                                     </div>
-                                    <span class="d-block lh-18 fs-15">Prix</span> 
+                                    <span class="d-block lh-18 fs-15">Prix</span>
                                 </div>
                             </div>
-                        </div> 
+                        </div>
                         <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                             <div class="col">
-                                <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
+                                <a href="{{ route('posts.show', $result->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
                             </div>
                             <div class="col text-end">
                                 <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ $result->prix }}</span>
-                            </div> 
-                        </div> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -238,7 +238,7 @@
     <!-- Message Aucun Résultat -->
     <p class="text-center mt-4">Aucun résultat trouvé.</p>
 @endif
- 
+
                 <div class="row">
                     <div class="mt-5 xs-mt-10 d-flex justify-content-center" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
                         <!-- start pagination -->
@@ -251,7 +251,7 @@
                             <li class="page-item"><a class="page-link" href="#"><i class="feather icon-feather-arrow-right fs-18 d-xs-none"></i></a></li>
                         </ul>
                         <!-- end pagination -->
-                    </div> 
+                    </div>
                 </div>
             </div>
         </section>
@@ -307,10 +307,10 @@
                                 <a href="#"><img src="images/logo-realtor.svg" alt="" class="h-35px xs-h-30px" /></a>
                             </div>
                             <!-- end client item -->
-                        </div> 
-                    </div>  
+                        </div>
+                    </div>
                 </div>
-            </div> 
+            </div>
         </section>
         <!-- end section -->
         <!-- start footer -->
@@ -323,7 +323,7 @@
                         <h3 class="alt-font fw-500 text-white ls-minus-1px mb-10px">Subscribe to <span class="fw-700 text-highlight d-inline-block">newsletter<span class="bg-white h-10px bottom-1px opacity-3"></span></span></h3>
                         <span class="fs-20 text-white">Social media its ways of our excellence.</span>
                     </div>
-                    <div class="col-lg-5 offset-xl-1 position-relative"> 
+                    <div class="col-lg-5 offset-xl-1 position-relative">
                         <div class="d-inline-block w-100 newsletter-style-03 position-relative">
                             <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative w-100">
                                 <input class="input-large bg-white border-color-white w-100 box-shadow-extra-large form-control required" type="email" name="email" placeholder="Enter your email..." />
@@ -356,9 +356,9 @@
                         <div class="elements-social social-icon-style-02 mt-15px">
                             <ul class="small-icon dark">
                                 <li><a class="facebook" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li> 
-                                <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li> 
-                                <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> 
+                                <li><a class="dribbble" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li>
+                                <li><a class="twitter" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                                <li><a class="instagram" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -388,7 +388,7 @@
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3">
                         <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Customer</span>
-                        <ul>                           
+                        <ul>
                             <li><a href="demo-real-estate-contact.html">Client support</a></li>
                             <li><a href="demo-real-estate-contact.html">Help center</a></li>
                             <li><a href="demo-real-estate-contact.html">System status</a></li>
@@ -404,14 +404,14 @@
                         <span class="d-block lh-normal">Customer care</span>
                         <a href="tel:12345678910" class="text-dark-gray text-decoration-line-bottom lh-22 d-inline-block">+1 234 567 8910</a>
                     </div>
-                    <!-- end footer column -->                     
+                    <!-- end footer column -->
                 </div>
                 <!-- start footer content -->
                 <div class="border-top border-color-extra-medium-gray pt-35px pb-35px text-center">
                     <span class="fs-13 w-60 lg-w-70 md-w-90 sm-w-100 d-block mx-auto lh-22">This site is protected by reCAPTCHA and the Google <a href="#" class="text-dark-gray text-decoration-line-bottom">privacy policy</a> and <a href="#" class="text-dark-gray text-decoration-line-bottom">terms of service</a> apply. You must not use this website if you disagree with any of these website standard terms and conditions.</span>
                 </div>
                 <!-- end footer content -->
-            </div> 
+            </div>
         </footer>
         <!-- end footer -->
         <!-- start scroll progress -->
