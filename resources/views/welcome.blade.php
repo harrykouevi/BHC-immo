@@ -16,7 +16,7 @@
                 <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: rgba(0, 0, 0, 0.5); /* Noir avec 50% de transparence */
+                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: inherite /*rgba(59, 56, 56, 0.5); /* Noir avec 50% de transparence */
     color: white; /* Couleur du texte */
     padding: 20px;">
                                 <span class="fs-20 d-block mb-15px ">{{ $annonce->adresse }}</span>
