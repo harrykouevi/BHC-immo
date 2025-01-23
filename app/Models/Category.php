@@ -17,4 +17,8 @@ class Category extends Model
     {
         return $this->hasMany(Annonce::class);
     }
+    public function article()
+    {
+        return $this->hasMany(Article::class);
+    }
 }
