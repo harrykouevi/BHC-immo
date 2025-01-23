@@ -7153,7 +7153,7 @@ header.sticky .navbar.disable-fixed {
 }
 .navbar .navbar-nav .dropdown .dropdown-menu {
   margin: 0;
-  padding: 60px 0 65px;
+  padding: 15px 0 15px;
   border: 0;
   top: 100%;
   background-color: var(--white);

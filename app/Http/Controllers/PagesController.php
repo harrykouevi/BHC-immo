@@ -14,6 +14,7 @@ class PagesController extends Controller
 {
     public function sendMessage(Request $request)
     {
+
         // Validation des données du formulaire
         $request->validate([
             'nom' => 'required|string|max:255',
@@ -30,7 +31,7 @@ class PagesController extends Controller
         $message->message = $request->message;
         $message->save();
 
-   
+
         $emailContent = "
             Nom : {$request->nom}\n
             Email : {$request->email}\n
@@ -57,12 +58,12 @@ class PagesController extends Controller
     public function search(Request $request)
     {
         $critere = $request->input('critere');
-    
+
         // Vérifier que le critère n'est pas vide
         if (empty($critere)) {
             return redirect('/location')->with('error', 'Le critère de recherche est requis');
         }
-    
+
         $results = Annonce::with(['Category', 'images']) // Chargement des relations
     ->where('titre', 'LIKE', "%{$critere}%")
     ->orWhere('description', 'LIKE', "%{$critere}%")
@@ -80,7 +81,7 @@ class PagesController extends Controller
         if ($results->isEmpty()) {
             return redirect('/location')->with('error', 'Aucune annonce trouvée pour ce critère');
         }
-    
+
         // Rediriger avec les résultats
         return redirect('/location')->with('results', $results);
     }
@@ -95,6 +96,6 @@ class PagesController extends Controller
         $annonces = Annonce::with(['Category', 'images'])->get();
         return view('location', compact('annonces'));
     }
-    
-    
+
+
 }

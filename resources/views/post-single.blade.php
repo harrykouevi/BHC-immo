@@ -86,7 +86,7 @@
 <!-- end page title -->
 <!-- start section -->
 <section class="p-0 overflow-hidden">
-    <div class="container-fluid p-0"> 
+    <div class="container-fluid p-0">
         <div class="row row-cols-1 justify-content-center">
             <!-- start content carousal item -->
             <div class="col">
@@ -99,7 +99,12 @@
                         <!-- end content carousal item -->
                         <!-- start content carousal item -->
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/626x600" alt="" class="w-100" /> 
+                            <img src="https://via.placeholder.com/626x600" alt="" class="w-100" />
+                        </div>
+                        <!-- end content carousal item -->
+                        <!-- start content carousal item -->
+                        <div class="swiper-slide">
+                            <img src="https://via.placeholder.com/626x600" alt="" class="w-100" />
                         </div>
                         <!-- end content carousal item -->
                         <!-- start content carousal item -->
@@ -111,15 +116,10 @@
                         <div class="swiper-slide">
                             <img src="https://via.placeholder.com/626x600" alt="" class="w-100" />
                         </div>
-                        <!-- end content carousal item --> 
-                        <!-- start content carousal item -->
-                        <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/626x600" alt="" class="w-100" />
-                        </div>
                         <!-- end content carousal item -->
                         <!-- start content carousal item -->
                         <div class="swiper-slide">
-                            <img src="https://via.placeholder.com/626x600" alt="" class="w-100" /> 
+                            <img src="https://via.placeholder.com/626x600" alt="" class="w-100" />
                         </div>
                         <!-- end content carousal item -->
                     </div>
@@ -132,10 +132,10 @@
         </div>
     </div>
 </section>
-<!-- end section --> 
-<!-- start section --> 
+<!-- end section -->
+<!-- start section -->
 <section class="pt-30px pb-30px border-bottom border-color-extra-medium-gray">
-    <div class="container"> 
+    <div class="container">
         <div class="row row-cols-1 row-cols-lg-4 row-cols-sm-2">
             <div class="col text-center border-end xs-border-end-0 border-color-extra-medium-gray alt-font md-mb-15px">
                 <span class="fs-19 text-dark-gray fw-600">Surface : </span> {{ $post->surface }}m<sup>2</sup>
@@ -153,14 +153,14 @@
     </div>
 </section>
 <!-- end section -->
-<!-- start section -->  
+<!-- start section -->
 <section class="position-relative">
     <div class="container">
         <div class="row">
             <div class="col-lg-7 md-mb-50px">
                 <div class="row mb-15px">
                     <div class="col-12">
-                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Description de l'post</span>
+                        <span class="text-dark-gray fs-24 fw-600 alt-font mb-15px d-block">Description de l'annonce</span>
                         <p>{{$post->description}}</p>
                     </div>
                 </div>
@@ -344,12 +344,12 @@
                             <div class="col">03</div>
                         </div>
                     </div>
-                </div> 
+                </div>
                 <div class="row mt-7">
                     <div class="col-12">
                         <span class="text-dark-gray fs-24 fw-600 alt-font mb-25px d-block">Localisation</span>
                     </div>
-                    <div class="col-12"> 
+                    <div class="col-12">
                         <div id="map" class="map small-screen border-radius-6px" data-map-options='{ "lat": -37.805688, "lng": 144.962312, "style": "Dark", "marker": { "type": "HTML", "color": "#06af47" }, "popup": { "defaultOpen": true, "html": "<div class=infowindow><strong class=\"mb-3 d-inline-block alt-font\">Crafto Real Estate</strong><p class=\"alt-font\">401 Broadway, 24th Floor, Orchard View, London, UK</p></div><div class=\"google-maps-link alt-font\"> <a aria-label=\"View larger map\" target=\"_blank\" jstcache=\"31\" href=\"https://maps.google.com/maps?ll=-37.805688,144.962312&amp;z=17&amp;t=m&amp;hl=en-US&amp;gl=IN&amp;mapclient=embed&amp;cid=13153204942596594449\" jsaction=\"mouseup:placeCard.largerMap\">VIEW LARGER MAP</a></div>" } }'></div>
                     </div>
                 </div>
@@ -363,7 +363,7 @@
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Refrigirateur</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Salle de Gym</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Machine a laver</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Barbeque</li> 
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Barbeque</li>
                         </ul>
                         <!-- end list style -->
                     </div>
@@ -373,7 +373,7 @@
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Cintres</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Micro-ondes</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Sauna</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Séchoir</li> 
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Séchoir</li>
                         </ul>
                         <!-- end list style -->
                     </div>
@@ -383,7 +383,7 @@
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Lessive</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Douche</li>
                             <li><i class="bi bi-check-circle icon-small me-10px"></i>Internet</li>
-                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Outdoor</li> 
+                            <li><i class="bi bi-check-circle icon-small me-10px"></i>Outdoor</li>
                         </ul>
                         <!-- end list style -->
                     </div>
@@ -405,58 +405,36 @@
             <!-- start sticky -->
             <div class="col-xl-4 offset-xl-1 col-lg-5">
                 <div class="bg-base-color-light border-radius-6px position-sticky top-120px">
-                    <div class="bg-base-color border-radius-6px feature-box feature-box-left-icon-middle overflow-hidden icon-with-text-style-08 ps-35px pe-35px pt-25px pb-20px xs-p-25px">
-                        <!-- start features box item -->
-                        <div class="feature-box-icon feature-box-icon-rounded w-90px h-90px overflow-visible me-20px position-relative">
-                            <img src="https://via.placeholder.com/148x148" class="rounded-circle" alt="">
-                            <span class="animation-zoom d-inline-block bg-orange border border-2 border-color-white h-20px w-20px border-radius-100 position-absolute right-0px top-5px"></span>
-                        </div>
-                        <!-- end features box item -->
-                        <!-- start features box item -->
-                        <div class="feature-box-content last-paragraph-no-margin">
-                            <span class="text-white alt-font fw-600 fs-20 d-block">Herman miller</span>
-                            <div class="lh-24 d-block">
-                                <span class="me-5px text-white opacity-8">17 property</span>
-                                <div class="bg-white border-radius-2px text-uppercase alt-font fw-700 text-dark-gray fs-12 lh-24 ps-10px pe-10px d-inline-block align-middle">Verified</div>
+
+                    <div class="ps-45px pe-45px pt-35px pb-45px xs-p-25px contact-form-style-01 mt-0">
+                        <span class="alt-font fs-20 fw-600 text-dark-gray d-block mb-25px">Nous contacter autrement</span>
+                        <div class="mb-20px last-paragraph-no-margin">
+                            <p class="mb-0 alt-font fw-500 text-dark-gray"><i class="feather icon-feather-phone-call icon-small text-base-color me-10px"></i><span class="fw-600  d-inline-block">Téléphone:</span><a href="tel:12345678910" class="text-dark-gray text-base-color-hover">+1 234 567 8910</a></p>
+                            <p class="alt-font fw-500 text-dark-gray"><i class="feather icon-feather-mail icon-small text-base-color me-10px"></i><span class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Email:</span><a href="mailto:info@domain.com" class="text-dark-gray text-decoration-line-bottom">info@domain.com</a></p>
+                            <div class="elements-social social-icon-style-02 mt-5px w-100 text-start ">
+                                <ul class="medium-icon">
+                                    <li class="m-0"><a class="facebook text-black" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li class="m-0"><a class="dribbble text-black" href="http://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- end features box item -->
-                        <!-- start social icon -->
-                        <div class="elements-social social-icon-style-02 mt-5px w-100 text-start text-lg-center">
-                            <ul class="medium-icon">
-                                <li class="m-0"><a class="facebook text-white" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="m-0"><a class="dribbble text-white" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li> 
-                                <li class="m-0"><a class="twitter text-white" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li> 
-                                <li class="m-0"><a class="instagram text-white" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li> 
-                            </ul>
-                        </div>
-                        <!-- end social icon -->
-                    </div>
-                    <div class="ps-45px pe-45px pt-35px pb-45px xs-p-25px contact-form-style-01 mt-0">
-                        <div class="mb-20px last-paragraph-no-margin">
-                            <p class="mb-0 alt-font fw-500 text-dark-gray"><i class="feather icon-feather-phone-call icon-small text-base-color me-10px"></i><span class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Phone:</span><a href="tel:12345678910" class="text-dark-gray text-base-color-hover">+1 234 567 8910</a></p>
-                            <p class="alt-font fw-500 text-dark-gray"><i class="feather icon-feather-mail icon-small text-base-color me-10px"></i><span class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Email:</span><a href="mailto:info@domain.com" class="text-dark-gray text-decoration-line-bottom">info@domain.com</a></p>
-                        </div>
-                        <span class="alt-font fs-20 fw-600 text-dark-gray d-block mb-25px">Leave your message here</span>
+                        <span class="alt-font fs-20 fw-600 text-dark-gray d-block mb-25px">Laisser un commentaire</span>
                         <!-- start contact form -->
                         <form action="email-templates/contact-form.php" method="post">
                             <div class="position-relative form-group mb-15px">
                                 <span class="form-icon"><i class="bi bi-emoji-smile"></i></span>
-                                <input type="text" name="name" class="form-control border-color-white box-shadow-large required" placeholder="Your name*" />
+                                <input type="text" name="name" class="form-control border-color-white box-shadow-large required" placeholder="Votre Nom*" />
                             </div>
                             <div class="position-relative form-group mb-15px">
                                 <span class="form-icon"><i class="bi bi-envelope"></i></span>
-                                <input type="email" name="email" class="form-control border-color-white box-shadow-large required" placeholder="Your email address*" />
+                                <input type="email" name="email" class="form-control border-color-white box-shadow-large required" placeholder="Téléphone /addresse email *" />
                             </div>
-                            <div class="position-relative form-group mb-15px">
-                                <span class="form-icon"><i class="bi bi-telephone-outbound"></i></span>
-                                <input type="tel" name="phone" class="form-control border-color-white box-shadow-large" placeholder="Your phone" />
-                            </div>
+
                             <div class="position-relative form-group form-textarea">
                                 <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
-                                <textarea placeholder="Your message" name="comment" class="form-control border-color-white box-shadow-large" rows="3"></textarea>
+                                <textarea placeholder="Ecrivez votre commentaire" name="comment" class="form-control border-color-white box-shadow-large" rows="3"></textarea>
                                 <input type="hidden" name="redirect" value="">
-                                <button class="btn btn-small btn-round-edge btn-base-color mt-20px submit " type="submit">Send message</button>
+                                <button class="btn btn-small btn-round-edge btn-base-color mt-20px submit " type="submit">Commenter</button>
                                 <div class="form-results mt-20px d-none"></div>
                             </div>
                         </form>
@@ -468,18 +446,18 @@
         </div>
     </div>
 </section>
-<!-- end section --> 
-<!-- start section --> 
+<!-- end section -->
+<!-- start section -->
 <section class="bg-gradient-very-light-gray">
     <div class="container">
         <div class="row mb-4">
-            <div class="col-12 text-center"> 
+            <div class="col-12 text-center">
                 <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Propriétés <span class="fw-700 text-highlight d-inline-block">similaires<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
             </div>
         </div>
-        <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 justify-content-center"> 
+        <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-2 row-cols-md-2 justify-content-center">
             @foreach($annonces as $annonce) <!-- Boucle sur les posts -->
-            <!-- start box item -->        
+            <!-- start box item -->
             <div class="col mb-30px">
                 <div class="border-radius-6px overflow-hidden box-shadow-large">
                     <div class="image position-relative">
@@ -532,196 +510,196 @@
             </div>
             <!-- end box item -->
             @endforeach
-        </div> 
+        </div>
     </div>
 </section>
-<!-- end section --> 
-<!-- start section --> 
-<section class="pt-0 pb-30px position-relative overlap-height overflow-hidden"> 
+<!-- end section -->
+<!-- start section -->
+<section class="pt-0 pb-30px position-relative overlap-height overflow-hidden">
     <div class="container-fluid overlap-gap-section">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Best review by <span class="fw-700 text-highlight d-inline-block">happy customer<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
+                <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Notre Sélection des meilleurs Avis de <span class="fw-700 text-highlight d-inline-block">Nos Clients<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12 p-0 review-style-09">
                 <div class="swiper slider-shadow-left-right lg-slider-shadow-none magic-cursor lg-ps-15px lg-pe-15px" data-slider-options='{ "slidesPerView": 1, "spaceBetween": 30, "loop": true, "autoplay": { "delay": 2000, "disableOnInteraction": false },  "pagination": { "el": ".slider-three-slide-pagination", "clickable": true, "dynamicBullets": true }, "navigation": { "nextEl": ".slider-three-slide-next", "prevEl": ".slider-three-slide-prev" }, "keyboard": { "enabled": true, "onlyInViewport": true }, "breakpoints": { "1400": { "slidesPerView": 4 }, "1200": { "slidesPerView": 3 }, "768": { "slidesPerView": 2 } }, "effect": "slide" }'>
                     <div class="swiper-wrapper pt-30px pb-30px">
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fw-600 alt-font text-dark-gray d-inline-block">Matthew taylor</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Herman miller</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jacob kalling</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/200x200" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Alexa harvard</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/200x200" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jhon smith</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fw-600 alt-font text-dark-gray d-inline-block">Matthew taylor</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Herman miller</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
-                        <!-- start slider item --> 
-                        <div class="swiper-slide"> 
+                        <!-- start slider item -->
+                        <div class="swiper-slide">
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jacob kalling</span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- end review item --> 
+                            <!-- end review item -->
                         </div>
                         <!-- end slider item -->
                     </div>
