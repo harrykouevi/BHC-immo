@@ -25,6 +25,12 @@ class ShowArticleCompact extends Component
 
         $articles = (new ArticleService())->getFinded($this->search) ;
 
+        // $articles =[{ 'nom':'ffffffff','id':1},
+        // { 'nom':'ffffffff'}
+        // { 'nom':'ffffffff'}
+        // { 'nom':'ffffffff'}
+        // ]
+
         return view('livewire.show-article-compact', [
             'articles' => $articles,
         ]);

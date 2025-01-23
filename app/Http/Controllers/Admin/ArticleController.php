@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
+    protected $articleService;
     //
     public function __construct(ArticleService $articleService)
     {

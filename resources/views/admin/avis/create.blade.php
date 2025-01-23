@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Articles')
+@section('title', 'Avis')
 
 @push('css')
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -20,7 +20,7 @@
 
     </div>
     <!-- breadcrumb -->
-     @livewire('manage-article',['articleId' =>  $postId ?? null])
+     @livewire('manage-avis',['avisId' =>  $avisId ?? null])
 
 @endsection
 

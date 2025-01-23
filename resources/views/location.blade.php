@@ -276,7 +276,7 @@
                                                 <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
                                                 <span class="fw-600 alt-font text-dark-gray">{{ $annonce->surface }}m<sup>2</sup></span>
                                             </div>
-                                            <span class="d-block lh-18 fs-15">Living area</span> 
+                                            <span class="d-block lh-18 fs-15">Surface</span> 
                                         </div>
                                     </div>
                                 </div> 
@@ -285,7 +285,7 @@
                                 <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
                             </div>
                             <div class="col text-end">
-                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ $annonce->prix }}</span>
+                                <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">{{ $annonce->prix }} FCFA</span>
                             </div> 
                         </div> 
                     </div>
