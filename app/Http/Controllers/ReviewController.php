@@ -24,7 +24,7 @@ class ReviewController extends Controller
 
         // Vérification si l'utilisateur (ou visiteur) a pris contact
         $contact = Contact::where('email', $request->email)
-        ->where('has_contacted', true) // Vérifier si le visiteur a pris contact
+        //->where('has_contacted', true) // Vérifier si le visiteur a pris contact
         ->first();
 
         if (!$contact) {
@@ -42,7 +42,7 @@ class ReviewController extends Controller
         ]);
 
         // Retour à la page de l'annonce avec un message de succès
-        return redirect()->route('annonces.show', $request->annonce_id)
+        return redirect()->route('posts.show', $id)
                         ->with('success', 'Votre avis a été soumis avec succès.');
     }
 

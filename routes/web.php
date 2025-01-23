@@ -80,8 +80,6 @@ Route::get('/posts/{id}', function ($id) {
 // Route pour soumettre un avis
 Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
 
-Route::resource('articles', ArticleController::class)->name('articles');
-
 
 Route::get('/A7d3F9kL2qX1', function () {
     return view('a-upload');
