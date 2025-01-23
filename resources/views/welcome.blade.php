@@ -22,7 +22,7 @@
                                 <span class="fs-20 d-block mb-15px ">{{ $annonce->adresse }}</span>
                                 <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-100 xs-w-100 ls-minus-2px"> <span class="fw-700">{{ $annonce->titre }}</span></div>
                                 <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
+                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Détails</a>
                             </div>
                         </div>
                     </div>
@@ -277,7 +277,7 @@
                                 </div>
                                 <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                                     <div class="col">
-                                        <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Details</a> <!-- Bouton détails -->
+                                        <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Détails</a> <!-- Bouton détails -->
                                     </div>
                                     <div class="col text-end">
                                         <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">{{$annonce?->prix}} FCFA</span> <!-- Prix de l'annonce -->
