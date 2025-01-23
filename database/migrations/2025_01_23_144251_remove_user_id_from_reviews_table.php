@@ -11,13 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('avis', function (Blueprint $table) {
-            $table->id();
-            $table->string("nom_client");
-            $table->string("temoignage");
-            $table->integer("note");
-
-            $table->timestamps();
+        Schema::table('reviews', function (Blueprint $table) {
+            $table->dropColumn('user_id'); // Supprimer la colonne user_id
         });
     }
 
@@ -26,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('avis');
+        Schema::table('reviews', function (Blueprint $table) {
+            $table->unsignedBigInteger('user_id'); // Recréer la colonne user_id au cas où on annule la migration
+        });
     }
 };

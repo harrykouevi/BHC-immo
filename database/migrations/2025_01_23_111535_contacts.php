@@ -6,19 +6,10 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
     public function up(): void
     {
-        Schema::create('contacts', function (Blueprint $table) {
-            $table->id();
-            $table->string("nom");
-            $table->string("email");
-            $table->integer("tel");
-            $table->text("message");
-
-            $table->timestamps();
+        Schema::table('contacts', function (Blueprint $table) {
+            $table->boolean('has_contacted')->default(false)->nullable(); // Indicateur si le visiteur a pris contact
         });
     }
 

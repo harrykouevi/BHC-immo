@@ -5,9 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+
 class Review extends Model
 {
-    protected $fillable = ['annonce_id', 'user_id', 'review', 'rating'];
+    protected $fillable = ['annonce_id', 'user_id', 'name', 'email', 'phone', 'comment'];
 
     public function annonce()
     {
