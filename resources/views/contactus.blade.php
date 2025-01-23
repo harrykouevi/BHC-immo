@@ -12,12 +12,7 @@
 
         <!-- start page title -->
         <section class="top-space-margin page-title-big-typography cover-background magic-cursor round-cursor" style="background-image: url({{ asset('images/banner-001.jpg') }}">
-         @if (Session::has('status'))
-            <div class="alert alert-success">
-                {{Session::get('status')}}
-            
-             </div>
-        @endif
+
             <div class="container">
                 <div class="row extra-very-small-screen align-items-center">
                     <div class="col-lg-5 col-sm-8 position-relative page-title-extra-small" data-anime='{ "el": "childs", "opacity": [0, 1], "translateX": [-30, 0], "duration": 800, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -91,16 +86,16 @@
                         @if (Session::has('status'))
                             <div class="alert alert-success">
                                 {{Session::get('status')}}
-                            
+
                              </div>
                         @endif
                             <div class="row">
                                  <div class="col-12 mb-4">
-        <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px">Comment pouvons-nous vous aider ?</h3>
-    </div>
+                                    <h3 class="alt-font text-dark-gray fw-700 ls-minus-2px">Comment pouvons-nous vous aider ?</h3>
+                                </div>
                                <div class="col-3 text-start" data-anime='{ "translateY": [30, 0], "translateX": [-30, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-    <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
-</div>
+                                    <i class="bi bi-send icon-large text-dark-gray animation-zoom"></i>
+                                </div>
                                 <div class="col-12">
                                     @if ($errors->any())
                                         <div class="alert alert-danger">
@@ -114,6 +109,7 @@
                                 </div>
                             </div>
                             <!-- start contact form -->
+
                             <form  action="{{ route('send-message')}}"  method="post" class="contact-form-style-03">
                                 @csrf
                                 <div class="row justify-content-center" data-anime='{ "opacity": [0,1], "duration": 600, "delay":0, "staggervalue": 300, "easing": "easeOutQuad" }'>
@@ -138,7 +134,7 @@
                                             <input  class="ps-0 border-radius-0px border-color-extra-medium-gray bg-transparent form-control" id="exampleInputEmail3" type="tel" name="tel" placeholder="Veuillez entrer votre numéro de téléphone" />
                                         </div>
                                     </div>
-                                  
+
                                     <div class="col-md-6">
                                         <label for="exampleInputEmail1" class="form-label fw-600 text-dark-gray mb-0">Méssage</label>
                                         <div class="position-relative form-group form-textarea mb-0">

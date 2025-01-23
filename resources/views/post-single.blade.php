@@ -471,6 +471,7 @@
                                 <span class="form-icon"><i class="bi bi-telephone-outbound"></i></span>
                                 <input type="tel" name="phone" class="form-control border-color-white box-shadow-large" placeholder="Votre téléphone" />
                             </div>
+
                             <div class="position-relative form-group form-textarea">
                                 <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
                                 <textarea placeholder="Votre message" name="comment" class="form-control border-color-white box-shadow-large" rows="3" required></textarea>
@@ -558,7 +559,7 @@
     <div class="container-fluid overlap-gap-section">
         <div class="row justify-content-center">
             <div class="col-12 text-center">
-                <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Les meilleurs avis des <span class="fw-700 text-highlight d-inline-block">clients satisfaits<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
+                <h3 class="alt-font text-dark-gray fw-500 ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Notre Sélection des meilleurs Avis de <span class="fw-700 text-highlight d-inline-block">Nos Clients<span class="bg-base-color h-10px bottom-5px opacity-3 separator-animation"></span></span></h3>
             </div>
         </div>
         <div class="row">
@@ -570,16 +571,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fw-600 alt-font text-dark-gray d-inline-block">Matthew taylor</span>
                                     </div>
                                 </div>
@@ -592,16 +593,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Herman miller</span>
                                     </div>
                                 </div>
@@ -614,16 +615,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jacob kalling</span>
                                     </div>
                                 </div>
@@ -636,16 +637,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/200x200" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Alexa harvard</span>
                                     </div>
                                 </div>
@@ -658,16 +659,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/200x200" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jhon smith</span>
                                     </div>
                                 </div>
@@ -680,16 +681,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fw-600 alt-font text-dark-gray d-inline-block">Matthew taylor</span>
                                     </div>
                                 </div>
@@ -702,16 +703,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Herman miller</span>
                                     </div>
                                 </div>
@@ -724,16 +725,16 @@
                             <!-- start review item -->
                             <div class="border-radius-10px bg-white box-shadow-double-large">
                                 <div class="d-flex align-items-center p-40px md-p-25px">
-                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="https://via.placeholder.com/148x148" alt="" />
+                                    <img class="rounded-circle w-110px h-110px md-w-80px md-h-80px me-25px md-me-20px" src="{{ asset('img/logos/bhc-logo.png') }}" alt="" />
                                     <div>
                                         <p class="mb-10px lh-32">Lorem ipsum amet tempor incididunt nostrud dolore.</p>
-                                        <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
+                                        {{-- <div class="d-inline-block bg-orange text-white border-radius-3px ps-10px pe-10px fs-13 ls-minus-2px lh-28 me-10px md-me-5px sm-me-10px align-middle">
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star"></i>
                                             <i class="fa-solid fa-star-half-stroke"></i>
-                                        </div>
+                                        </div> --}}
                                         <span class="fs-18 fw-600 alt-font text-dark-gray d-inline-block">Jacob kalling</span>
                                     </div>
                                 </div>

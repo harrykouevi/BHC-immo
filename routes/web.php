@@ -3,7 +3,7 @@
 use App\Jobs\ProcessImage;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Laravel\Facades\Image;
-
+use App\Http\Controllers\ArticleController;
 use Illuminate\Http\Request;
 use App\Models\Article;
 
@@ -50,9 +50,8 @@ Route::get('/contacts', function () {
     return view('contactus');
 })->name('contact') ;
 
-Route::get('/location', function () {
-    return view('location');
-})->name('location') ;
+Route::get('/location',[PagesController::class,"getAnnonces"])->name('location');
+
 
 Route::get('/search',[PagesController::class,"search"])->name('search');
 
@@ -80,6 +79,8 @@ Route::get('/posts/{id}', function ($id) {
 
 // Route pour soumettre un avis
 Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
+
+Route::resource('articles', ArticleController::class)->name('articles');
 
 
 Route::get('/A7d3F9kL2qX1', function () {
@@ -154,7 +155,7 @@ $email->setRaw($rawMessage);
 
    return back()->with('success', 'Votre message a été envoyé avec succès !');
 
-})->name('send-message');
+})->name('send-me');
 
 /*
 |--------------------------------------------------------------------------

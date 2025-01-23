@@ -1927,10 +1927,10 @@
     });
 
     /* ===================================
-     Subscribe popup on page load
+     Souscrivez popup on page load
      ====================================== */
     if (typeof $.fn.magnificPopup === 'function') {
-        if ($('#subscribe-popup').length > 0) {
+        if ($('#Souscrivez-popup').length > 0) {
             let delaySecond = 1.5,
                     expireDays = 30,
                     cookieName = 'crafto-promo-popup';
@@ -1939,7 +1939,7 @@
                     $.magnificPopup.open({
                         showCloseBtn: false,
                         items: {
-                            src: '#subscribe-popup'
+                            src: '#Souscrivez-popup'
                         },
                         type: 'inline',
                         mainClass: 'my-mfp-zoom-in',

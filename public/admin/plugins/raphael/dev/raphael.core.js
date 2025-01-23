@@ -23,7 +23,7 @@ define(["eve"], function(eve) {
      - all (array) (first 3 or 4 elements in the array are equal to [containerID, width, height] or [x, y, width, height]. The rest are element descriptions in format {type: type, <attributes>}). See @Paper.add.
      - callback (function) #optional callback function which is going to be executed in the context of newly created paper
      * or
-     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also subscribe to this event via Eve’s “DOMLoad” event. In this case method returns `undefined`.
+     - onReadyCallback (function) function that is going to be called on DOM ready event. You can also Souscrivez to this event via Eve’s “DOMLoad” event. In this case method returns `undefined`.
      = (object) @Paper
      > Usage
      | // Each of the following examples create a canvas
@@ -3767,7 +3767,7 @@ define(["eve"], function(eve) {
      **
      > Parameters
      **
-     - glow (object) #optional parameters object with all properties optional:
+     - glow (object) #optional parameters object with Tout propriété optional:
      o {
      o     width (number) size of the glow, default is `10`
      o     fill (boolean) will it be filled, default is `false`

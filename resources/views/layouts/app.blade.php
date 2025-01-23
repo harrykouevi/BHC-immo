@@ -64,56 +64,52 @@
                                 <li class="nav-item dropdown submenu">
                                     <a href="{{route('location')}}" class="nav-link">Location</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink1" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink1">
+                                    <div class="dropdown-menu submenu-content" style="background-color: rgba(0, 0, 0, 0.80); z-index: 98"  aria-labelledby="navbarDropdownMenuLink1">
                                         <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-15px">
                                             <div class="row row-cols-2 row-cols-lg-5 row-cols-sm-3 w-100 mx-0 align-items-center justify-content-center">
-                                                <div class="col md-mb-30px">
+                                                <div class="col md-mb-10px">
                                                     <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-apartment.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">20K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Apartment</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Apartment</span>
                                                     </a>
                                                 </div>
-                                                <div class="col md-mb-30px">
-                                                    <a href="        <section class="bg-dark-gray" style="    padding-top: 5px; padding-bottom: 5px;"></section>
-" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                <div class="col md-mb-10px">
+                                                    <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-condominium.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">18K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Condominium</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Condominium</span>
                                                     </a>
                                                 </div>
-                                                <div class="col md-mb-30px">
-                                                    <a href="        <section class="bg-dark-gray" style="    padding-top: 5px; padding-bottom: 5px;"></section>
-" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                <div class="col md-mb-10px">
+                                                    <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-home.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">10K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Accueil</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Accueil</span>
                                                     </a>
                                                 </div>
                                                 <div class="col xs-mb-30px">
-                                                    <a href="        <section class="bg-dark-gray" style="    padding-top: 5px; padding-bottom: 5px;"></section>
-" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                    <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-office.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">17K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Office</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Office</span>
                                                     </a>
                                                 </div>
                                                 <div class="col">
-                                                    <a href="        <section class="bg-dark-gray" style="    padding-top: 5px; padding-bottom: 5px;"></section>
-" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                    <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-shop.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">09K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Shop</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Shop</span>
                                                     </a>
                                                 </div>
                                             </div>
@@ -121,102 +117,61 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a href="#" class="nav-link">Vente<span class="label bg-light-red text-red border-radius-26px">Hot</span></a>
+                                    <a href="#" class="nav-link">Vente</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <div class="dropdown-menu submenu-content" aria-labelledby="navbarDropdownMenuLink2">
-                                        <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-15px">
+                                    <div class="dropdown-menu submenu-content" style="background-color: rgba(0, 0, 0, 0.80); z-index: 98" aria-labelledby="navbarDropdownMenuLink2">
+                                        <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-5px">
                                             <div class="row row-cols-2 row-cols-lg-5 row-cols-sm-3 w-100 mx-0 align-items-center justify-content-center">
-                                                <div class="col md-mb-30px">
+                                                <div class="col md-mb-10px">
                                                     <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-apartment.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">20K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Apartment</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Apartment</span>
                                                     </a>
                                                 </div>
-                                                <div class="col md-mb-30px">
+                                                <div class="col md-mb-10px">
                                                     <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-condominium.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">18K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Condominium</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Condominium</span>
                                                     </a>
                                                 </div>
-                                                <div class="col md-mb-30px">
+                                                <div class="col md-mb-10px">
                                                     <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-home.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">10K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Accueil</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Accueil</span>
                                                     </a>
                                                 </div>
                                                 <div class="col xs-mb-30px">
                                                     <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-office.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">17K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Office</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Office</span>
                                                     </a>
                                                 </div>
                                                 <div class="col">
                                                     <a href="#" class="opacity-10 text-center justify-content-center flex-column d-flex">
-                                                        <span class="w-120px h-120px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
+                                                        <span class="w-80px h-80px mt-15px mb-15px mx-auto bg-white d-flex justify-content-center border-radius-100px box-shadow-large box-shadow-large-hover position-relative">
                                                             <img src="images/demo-real-estate-icon-shop.svg" class="w-50px" alt="">
                                                             <span class="text-uppercase alt-font fw-700 text-base-color fs-12 lh-22 bg-base-color-transparent border-radius-4px position-absolute right-minus-5px top-5px ps-10px pe-10px">09K</span>
                                                         </span>
-                                                        <span class="alt-font fw-600 fs-17 text-dark-gray">Shop</span>
+                                                        <span class="alt-font fw-600 fs-17 text-white">Shop</span>
                                                     </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                                <li class="nav-item dropdown dropdown-with-icon">
-                                    <a href="#" class="nav-link">Agents</a>
-                                    <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink3" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
-                                        <li>
-                                            <a href="#"><img src="https://via.placeholder.com/148x148" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Evan thomson</span>
-                                                    <p>I'm Evan, Expert in sales executive.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="https://via.placeholder.com/148x148" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Bryan jonhson</span>
-                                                    <p>I'm Bryan, Expert in propriété broker.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="https://via.placeholder.com/148x148" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Jemmy watson</span>
-                                                    <p>I'm Jemmy, Expert in propriété lawyer.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#"><img src="https://via.placeholder.com/200x200" alt="">
-                                                <div class="submenu-icon-content">
-                                                    <span>Jeremy dupont</span>
-                                                    <p>I'm Jeremy, Expert in propriété broker.</p>
-                                                </div>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#" class="btn btn-dark-gray btn-round-edge align-self-center text-center text-white">All view agents</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+
                                 <li class="nav-item"><a href="{{route('contact')}}" class="nav-link">Contact</a></li>
                             </ul>
                         </div>
@@ -228,9 +183,9 @@
                             </div>
                             <div class="header-icon">
                                 <div class="header-button">
-                                    <a href="#" class="btn btn-base-color btn-small btn-round-edge btn-hover-animation-switch">
+                                    <a href="{{route('location')}}" class="btn btn-base-color btn-small btn-round-edge btn-hover-animation-switch">
                                         <span>
-                                            <span class="btn-text">Devenir propriétaire</span>
+                                            <span class="btn-text">Trouver une chambre</span>
                                             <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
                                             <span class="btn-icon"><i class="feather icon-feather-arrow-right icon-very-small"></i></span>
                                         </span>
@@ -267,15 +222,15 @@
                 <!-- start newsletter -->
                 <div class="row row-cols-1 row-cols-lg-2 justify-content-center align-items-center bg-base-color pt-4 pb-4 ps-6 pe-6 lg-p-5 border-radius-6px g-0">
                     <div class="col-xl-6 col-lg-7 md-mb-25px sm-mb-15px position-relative text-center text-lg-start">
-                        <h3 class="alt-font fw-500 text-white ls-minus-1px mb-10px shadow-none" data-shadow-animation="true" data-animation-delay="700">Subscribe to <span class="fw-700 text-highlight d-inline-block">newsletter<span class="bg-white h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
-                        <span class="fs-20 text-white">Social media its ways of our excellence.</span>
+                        <h3 class="alt-font fw-500 text-white ls-minus-1px mb-10px shadow-none" data-shadow-animation="true" data-animation-delay="700">Souscrivez à <span class="fw-700 text-highlight d-inline-block">newsletter<span class="bg-white h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
+                        <span class="fs-20 text-white">Nous sommes la voie de l'exellence.</span>
                     </div>
                     <div class="col-lg-5 offset-xl-1 position-relative">
                         <div class="d-inline-block w-100 newsletter-style-03 position-relative">
-                            <form action="email-templates/subscribe-newsletter.php" method="post" class="position-relative w-100">
+                            <form action="email-templates/Souscrivez-newsletter.php" method="post" class="position-relative w-100">
                                 <input class="input-large bg-white border-color-white w-100 box-shadow-extra-large form-control required" type="email" name="email" placeholder="Enter your email..." />
                                 <input type="hidden" name="redirect" value="">
-                                <button class="btn btn-large text-dark-gray ls-0px left-icon submit fw-700" aria-label="submit"><i class="icon feather icon-feather-mail icon-small text-base-color"></i><span>Subscribe</span></button>
+                                <button class="btn btn-large text-dark-gray ls-0px left-icon submit fw-700" aria-label="submit"><i class="icon feather icon-feather-mail icon-small text-base-color"></i><span>Souscrivez</span></button>
                                 <div class="form-results border-radius-4px pt-10px pb-10px ps-15px pe-15px fs-16 lh-22 mt-10px w-100 text-center position-absolute d-none"></div>
                             </form>
                         </div>
@@ -287,9 +242,9 @@
                 <div class="row align-items-center justify-content-center">
                     <!-- start footer column -->
                     <div class="col-auto d-flex flex-column flex-md-row align-items-center text-center text-md-start">
-                        <div class="text-dark-gray fs-28 alt-font fw-500">1M+ Propriété prête à<span class="fw-700 text-decoration-line-bottom">acheter and à louer.</span></div>
+                        <div class="text-dark-gray fs-28 alt-font fw-500">1M+ Propriété prête à<span class="fw-700 text-decoration-line-bottom">acheter et à louer.</span></div>
                         <div class="bg-white border-radius-50px d-flex align-items-center p-10px ps-35px ms-20px md-ps-20px md-ms-15px box-shadow-medium sm-m-20px">
-                            <a href="#" class="text-dark-gray fs-22 alt-font fw-500 me-10px overflow-hidden">Say, <span class="fw-700 w-65px text-start d-inline-block" data-fancy-text='{ "effect": "rotate", "string": ["Hello!", "Salve!", "Hallå!"] }'></span></a>
+                            <a href="#" class="text-dark-gray fs-22 alt-font fw-500 me-10px overflow-hidden">Dire, <span class="fw-700 w-65px text-start d-inline-block" data-fancy-text='{ "effect": "rotate", "string": ["Hello!", "Salve!", "Hallå!"] }'></span></a>
                             <span class="text-dark-gray h-45px w-45px text-center d-flex align-items-center justify-content-center border-radius-100 bg-base-color-transparent fs-20">&#128075;</span>
                         </div>
                     </div>
@@ -312,43 +267,43 @@
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3 sm-mb-25px">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Company</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Entreprise</span>
                         <ul>
-                            <li><a href="#">A propos us</a></li>
-                            <li><a href="#">Our agent</a></li>
-                            <li><a href="#">Latest blog</a></li>
-                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">A propos de nous</a></li>
+                            <li><a href="#">Nos agents</a></li>
+                            <li><a href="#">Dernièrs blog</a></li>
+                            <li><a href="#">Contact </a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3 sm-mb-25px">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Resources</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Ressources</span>
                         <ul>
-                            <li><a href="#">Location a home</a></li>
-                            <li><a href="#">Vente a home</a></li>
-                            <li><a href="#">Ready to move</a></li>
-                            <li><a href="#">Budget homes</a></li>
+                            <li><a href="#">Louez une maison</a></li>
+                            <li><a href="#">Vendre une maison</a></li>
+                            <li><a href="#">Prêt a faire le pas</a></li>
+                            <li><a href="#">Budgets</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Customer</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-5px">Client</span>
                         <ul>
-                            <li><a href="#">Client support</a></li>
-                            <li><a href="#">Help center</a></li>
-                            <li><a href="#">System status</a></li>
-                            <li><a href="#">Feedback</a></li>
+                            <li><a href="#">Support client</a></li>
+                            <li><a href="#">Centre d'aide</a></li>
+                            <li><a href="#">Status</a></li>
+                            <li><a href="#">Retour</a></li>
                         </ul>
                     </div>
                     <!-- end footer column -->
                     <!-- start footer column -->
                     <div class="col-6 col-lg-2 col-md-3">
-                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-10px">Say hello</span>
-                        <span class="d-block lh-normal">Need support?</span>
+                        <span class="alt-font fs-18 fw-600 d-block text-dark-gray mb-10px">Faire un coucou</span>
+                        <span class="d-block lh-normal">Besoin de support?</span>
                         <a href="mailto:info@domain.com" class="text-dark-gray text-decoration-line-bottom lh-22 d-inline-block mb-20px">info@domain.com</a>
-                        <span class="d-block lh-normal">Customer care</span>
+                        <span class="d-block lh-normal">Assurance client</span>
                         <a href="tel:12345678910" class="text-dark-gray text-decoration-line-bottom lh-22 d-inline-block">+1 234 567 8910</a>
                     </div>
                     <!-- end footer column -->
@@ -362,7 +317,7 @@
         </footer>
         <!-- end footer -->
         <!-- start subscription popup -->
-            <div id="subscribe-popup" class="mfp-hide subscribe-popup">
+            {{-- <div id="Souscrivez-popup" class="mfp-hide Souscrivez-popup">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-10 col-md-10 bg-white">
@@ -373,7 +328,7 @@
                                     <h4 class="d-inline-block alt-font text-dark-gray mb-20px">1M+ Propriété prête à<span class="fw-700 d-inline-flex text-highlight">acheter & à louer.<span class="bg-base-color h-10px bottom-8px opacity-3"></span></span></span></h4>
                                     <p>Abonnez-vous à nos newsletters et recevez des mises à jour sur les propriétés à vendre et à louer.</p>
                                     <div class="d-inline-block w-100 newsletter-style-05 position-relative mb-20px">
-                                        <form action="email-templates/subscribe-newsletter.php" method="post">
+                                        <form action="email-templates/Souscrivez-newsletter.php" method="post">
                                             <input class="input-medium w-100 border-radius-4px form-control required mb-15px" type="email" name="email" placeholder="Entrez votre adresse e-mail" />
                                             <input type="hidden" name="redirect" value="">
                                             <button type="submit" aria-label="submit" class="btn btn-medium btn-round-edge btn-dark-gray btn-box-shadow w-100 submit">Abonnez-vous maintenant!</button>
@@ -387,7 +342,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         <!-- end subscription popup -->
             <!-- start scroll progress -->
         <div class="scroll-progress d-none d-xxl-block">

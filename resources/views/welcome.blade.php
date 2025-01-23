@@ -9,17 +9,20 @@
 @section('content')
     <!-- start banner slider -->
     <section class="p-0 top-space-margin">
-        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
+        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
             <div class="swiper-wrapper">
+                @foreach($annonces as $annonce)
                 <!-- start slider item -->
                 <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Luxurious <span class="fw-700">mansion</span></div>
+                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: rgba(0, 0, 0, 0.5); /* Noir avec 50% de transparence */
+    color: white; /* Couleur du texte */
+    padding: 20px;">
+                                <span class="fs-20 d-block mb-15px ">{{ $annonce->adresse }}</span>
+                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-100 xs-w-100 ls-minus-2px"> <span class="fw-700">{{ $annonce->titre }}</span></div>
                                 <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
+                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
                             </div>
                         </div>
                     </div>
@@ -29,11 +32,11 @@
                                 <div class="row">
                                     <div class="col text-center border-end border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">4 Pièces</span>
+                                        <span class="alt-font fs-16 fw-500 d-block">{{ $annonce->nbpieces }} Pièces</span>
                                     </div>
                                     <div class="col text-center border-end border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
+                                        <span class="alt-font fs-16 fw-500 d-block">{{ $annonce->wcdouche }} WC-douche</span>
                                     </div>
                                     <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
@@ -42,89 +45,14 @@
                                 </div>
                             </div>
                             <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$30,99,000</h4>
+                                <span class="fw-500 mb-5px d-block alt-font"> {{  (strpos($annonce->titre, 's') ==  false ? "Prix de location / Mois" : "Prix de vente") }}</span>
+                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">{{ $annonce->prix }} FCFA</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
-                    <div class="container h-100">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Woodland <span class="fw-700">modern</span></div>
-                                <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row">
-                            <div class="col-xl-7 lg-mb-25px">
-                                <div class="row">
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">4 Pièces</span>
-                                    </div>
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
-                                    </div>
-                                    <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 Garage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$27,99,000</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
-                    <div class="container h-100">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-70 xs-w-100 ls-minus-2px">Saturate <span class="fw-700">house</span></div>
-                                <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row">
-                            <div class="col-xl-7 lg-mb-25px">
-                                <div class="row">
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 Pièces</span>
-                                    </div>
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
-                                    </div>
-                                    <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">2 Garage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$23,99,000</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
+                @endforeach
             </div>
             <!-- start slider pagination -->
             <div class="container">
@@ -300,7 +228,7 @@
                 </div>
                 <div class="col-md-4" data-anime='{ "translateX": [30, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                     <div class="d-flex justify-content-center justify-content-md-end">
-                        <a href="#" class="fw-600 alt-font text-dark-gray text-dark-gray-hover d-flex align-items-center">Voir toutes les annonces<span class="d-flex align-items-center justify-content-center bg-dark-gray h-40px w-40px text-center rounded-circle fs-16 text-white ms-10px"><i class="feather icon-feather-arrow-right"></i></span></a>
+                        <a href="{{route('location')}}" class="fw-600 alt-font text-dark-gray text-dark-gray-hover d-flex align-items-center">Voir toutes les annonces<span class="d-flex align-items-center justify-content-center bg-dark-gray h-40px w-40px text-center rounded-circle fs-16 text-white ms-10px"><i class="feather icon-feather-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -379,8 +307,8 @@
                                     <img src="https://via.placeholder.com/80x80" class="w-80px" alt="">
                                 </div>
                                 <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="text-dark-gray fs-19 alt-font mb-5px fw-600 d-block">Most appreciated projects</span>
-                                    <p class="w-80 lg-w-100">Browse millions of properties in your city save your favorites.</p>
+                                    <span class="text-dark-gray fs-19 alt-font mb-5px fw-600 d-block">Les projets les mieux apprécis</span>
+                                    <p class="w-80 lg-w-100">Parcourez de millions de propriétés dans votre ville et choisissez une!</p>
                                 </div>
                             </div>
                         </div>
@@ -392,16 +320,16 @@
                                     <img src="https://via.placeholder.com/80x80" class="w-80px" alt="">
                                 </div>
                                 <div class="feature-box-content last-paragraph-no-margin">
-                                    <span class="text-dark-gray fs-19 alt-font mb-5px fw-600 d-block">Highest rental income projects</span>
-                                    <p class="w-80 lg-w-100">Browse millions of properties in your city save your favorites.</p>
+                                    <span class="text-dark-gray fs-19 alt-font mb-5px fw-600 d-block">Des projets rentables en vue</span>
+                                    <p class="w-80 lg-w-100">Parcourez de millions de propriétés dans votre ville et choisissez une!.</p>
                                 </div>
                             </div>
                         </div>
                         <!-- end features box item -->
                     </div>
                     <div class="d-inline-block">
-                        <a href="#" class="btn btn-dark-gray btn-medium btn-round-edge me-15px xs-mb-10px">about more</a>
-                        <a href="#" class="btn btn-medium btn-round-edge btn-transparent-light-gray border-1 fw-700 xs-mb-10px">Trusted agents</a>
+                        <a href="#" class="btn btn-dark-gray btn-medium btn-round-edge me-15px xs-mb-10px">Plus d'info</a>
+                        <a href="#" class="btn btn-medium btn-round-edge btn-transparent-light-gray border-1 fw-700 xs-mb-10px">Agents de confiance</a>
                     </div>
                 </div>
                 <div class="col-lg-6 offset-lg-1 position-relative" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"lr", "easing": "easeOutQuad", "delay":50}'>
@@ -423,7 +351,7 @@
                             <div class="text-base-color fs-19 ls-2px lh-10">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
-                            <span class="text-dark-gray text-uppercase fs-13 fw-700 alt-font mb-15px d-inline-block">TrustScore</span>
+                            <span class="text-dark-gray text-uppercase fs-13 fw-700 alt-font mb-15px d-inline-block">Meilleures notes</span>
                         </figcaption>
                     </figure>
                     <!-- end popup video -->
@@ -449,9 +377,9 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-xl-4 col-lg-5 md-mb-50px sm-mb-35px">
-                    <span class="fs-20 d-inline-block mb-15px text-base-color">Find your dream house</span>
-                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px w-90 xl-w-100 shadow-none" data-shadow-animation="true" data-animation-delay="700">We are available in <span class="fw-700 text-highlight d-inline-block">many countries<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
-                    <p class="mb-30px w-90 md-w-100">We provide a wide selection of home types for you and your family and are free to choose a home model.</p>
+                    <span class="fs-20 d-inline-block mb-15px text-base-color">Trouvez la maison de vos rêves</span>
+                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px w-90 xl-w-100 shadow-none" data-shadow-animation="true" data-animation-delay="700">Nous sommes disponibles dans <span class="fw-700 text-highlight d-inline-block">plusieurs pays<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
+                    <p class="mb-30px w-90 md-w-100">Nous vous offrons une grande variété de type de maison pour votre famille et vous en fonction des vos modèles </p>
                     <div class="d-flex">
                         <!-- start slider navigation -->
                         <div class="slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 bg-white box-shadow-large"><i class="fa-solid fa-arrow-left icon-small text-dark-gray"></i></div>
@@ -475,14 +403,14 @@
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-orange lh-18">
                                                         <i class="fa-solid fa-check fs-10"></i>
                                                     </div>
-                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Trusted</span>
+                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Confiance</span>
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
                                                 <a href="#" class="text-white alt-font fw-600 fs-26">Washington, USA</a>
-                                                <span class="opacity-7 text-white">17 propriété listing</span>
-                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">All properties<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
+                                                <span class="opacity-7 text-white">17 propriété en attente</span>
+                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -501,14 +429,14 @@
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
                                                         <i class="fa-solid fa-check fs-10"></i>
                                                     </div>
-                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Verified</span>
+                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Certifié</span>
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
                                                 <a href="#" class="text-white alt-font fw-600 fs-26">Paris, France</a>
-                                                <span class="opacity-7 text-white">20 propriété listing</span>
-                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">All properties<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
+                                                <span class="opacity-7 text-white">20 propriété en attente</span>
+                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -527,14 +455,14 @@
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
                                                         <i class="fa-solid fa-check fs-10"></i>
                                                     </div>
-                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Verified</span>
+                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Certifié</span>
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
                                                 <a href="#" class="text-white alt-font fw-600 fs-26">Chicago, USA</a>
-                                                <span class="opacity-7 text-white">45 propriété listing</span>
-                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">All properties<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
+                                                <span class="opacity-7 text-white">45 propriété en attente</span>
+                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -553,14 +481,14 @@
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
                                                         <i class="fa-solid fa-check fs-10"></i>
                                                     </div>
-                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Verified</span>
+                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Certifié</span>
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
                                                 <a href="#" class="text-white alt-font fw-600 fs-26">San francisco, USA</a>
-                                                <span class="opacity-7 text-white">45 propriété listing</span>
-                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">All properties<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
+                                                <span class="opacity-7 text-white">45 propriété en attente</span>
+                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -578,14 +506,14 @@
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
                                                         <i class="fa-solid fa-check fs-10"></i>
                                                     </div>
-                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Verified</span>
+                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Certifié</span>
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
                                                 <a href="#" class="text-white alt-font fw-600 fs-26">Paris, France</a>
-                                                <span class="opacity-7 text-white">20 propriété listing</span>
-                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">All properties<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
+                                                <span class="opacity-7 text-white">20 propriété en attente</span>
+                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -604,14 +532,14 @@
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
                                                         <i class="fa-solid fa-check fs-10"></i>
                                                     </div>
-                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Verified</span>
+                                                    <span class="d-inline-block align-middle alt-font fw-600 text-white fs-12 text-uppercase">Certifié</span>
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
                                                 <a href="#" class="text-white alt-font fw-600 fs-26">Chicago, USA</a>
-                                                <span class="opacity-7 text-white">45 propriété listing</span>
-                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">All properties<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
+                                                <span class="opacity-7 text-white">45 propriété en attente</span>
+                                                <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
                                         </figure>
                                     </div>
@@ -642,7 +570,7 @@
                             <i class="bi bi-house-door icon-large text-dark-gray"></i>
                         </div>
                         <div class="feature-box-content last-paragraph-no-margin">
-                            <span class="alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Vente your home</span>
+                            <span class="alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Vendre votre maison</span>
                             <p class="w-80 md-w-70 mx-auto">Lorem dummy printing typesetting industry.</p>
                         </div>
                     </div>
@@ -655,7 +583,7 @@
                             <i class="bi bi-camera icon-large text-dark-gray"></i>
                         </div>
                         <div class="feature-box-content last-paragraph-no-margin">
-                            <span class="alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Free photoshoot</span>
+                            <span class="alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Prise de photo gratuite</span>
                             <p class="w-80 md-w-70 mx-auto">Lorem dummy printing typesetting industry.</p>
                         </div>
                     </div>
@@ -668,7 +596,7 @@
                             <i class="bi bi-key icon-large text-dark-gray"></i>
                         </div>
                         <div class="feature-box-content last-paragraph-no-margin">
-                            <span class="alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Buy a home</span>
+                            <span class="alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Acheter une maison</span>
                             <p class="w-80 md-w-70 mx-auto">Lorem dummy printing typesetting industry.</p>
                         </div>
                     </div>
@@ -681,7 +609,7 @@
                             <i class="bi bi-gear icon-large text-dark-gray"></i>
                         </div>
                         <div class="feature-box-content last-paragraph-no-margin">
-                            <span class="d-inline-block alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Free appraisal</span>
+                            <span class="d-inline-block alt-font fw-600 text-dark-gray fs-19 d-inline-block mb-5px">Évaluation gratuite</span>
                             <p class="w-80 md-w-70 mx-auto">Lorem dummy printing typesetting industry.</p>
                         </div>
                     </div>
@@ -695,7 +623,7 @@
                             <i class="bi bi-patch-check icon-medium text-base-color"></i>
                         </div>
                         <div class="feature-box-content alt-font text-dark-gray fs-22 fw-600">
-                            We are growing fast! Today crafto has <span class="text-decoration-line-bottom">36k+ active residents.</span>
+                            Nous grandissons vite , nous comptons <span class="text-decoration-line-bottom">36k+ d'immeuble active.</span>
                         </div>
                     </div>
                 </div>
@@ -726,8 +654,8 @@
                     </figure>
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                    <span class="fs-20 d-inline-block mb-15px text-base-color">Clients feedback</span>
-                    <h2 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Here is what our <span class="fw-700 text-highlight d-inline-block">client's<span class="bg-base-color h-10px bottom-4px opacity-3 separator-animation"></span></span> have to say</h2>
+                    <span class="fs-20 d-inline-block mb-15px text-base-color">Retour des clients</span>
+                    <h2 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Voici les témoinages de nos <span class="fw-700 text-highlight d-inline-block">de nos<span class="bg-base-color h-10px bottom-4px opacity-3 separator-animation"></span></span> clients</h2>
                     <div class="swiper position-relative" data-slider-options='{ "autoHeight": true, "loop": true, "allowTouchMove": true, "autoplay": { "delay": 4000, "disableOnInteraction": false }, "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, "effect": "fade" }'>
                         <div class="swiper-wrapper mb-40px">
                             <!-- start text slider item -->
@@ -790,7 +718,7 @@
         <div class="container overlap-gap-section">
             <div class="row align-items-center mb-2" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                 <div class="col-12 text-center">
-                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Latest trends <span class="fw-700 text-highlight d-inline-block">blogs<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
+                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">Dernières  <span class="fw-700 text-highlight d-inline-block">tendances des blogs<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
                 </div>
             </div>
             <div class="row">
@@ -805,7 +733,7 @@
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
                                     <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">He is not a full man who does not own a piece of land.</a>
+                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Il n'est pas un homme complet si ce n'est qu'il ne possède pas un morceau de terre.</a>
                                 </div>
                             </div>
                         </li>
@@ -817,8 +745,8 @@
                                     <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residential</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Risk comes from not knowing what you're doing.</a>
+                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residence</a><a href="#" class="blog-date">22 August 2023</a></span>
+                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Le risque vient du fait de ne pas savoir ce que l'on fait.</a>
                                 </div>
                             </div>
                         </li>
@@ -831,7 +759,7 @@
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
                                     <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">20 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Know what you own, and know why you own it.</a>
+                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Sachez ce que vous possédez et pourquoi vous le possédez.</a>
                                 </div>
                             </div>
                         </li>
@@ -843,8 +771,8 @@
                                     <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residential</a><a href="#" class="blog-date">18 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Don't wait to buy real estate buy real estate and wait.</a>
+                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Résidence</a><a href="#" class="blog-date">18 August 2023</a></span>
+                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">N'attendez pas pour acheter de l'immobilier, achetez de l'immobilier et attendez.</a>
                                 </div>
                             </div>
                         </li>

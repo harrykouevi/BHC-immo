@@ -14,6 +14,7 @@ class PagesController extends Controller
 {
     public function sendMessage(Request $request)
     {
+
         // Validation des données du formulaire
         $request->validate([
             'nom' => 'required|string|max:255',
@@ -30,7 +31,7 @@ class PagesController extends Controller
         $message->message = $request->message;
         $message->save();
 
-   
+
         $emailContent = "
             Nom : {$request->nom}\n
             Email : {$request->email}\n
@@ -44,7 +45,7 @@ class PagesController extends Controller
                  ->subject('Un message du site Immo');
         });
 
-        // Envoi =l'utilisateur
+        // Envoi à l'utilisateur
         Mail::raw('Merci de nous avoir contacté. Votre message a été bien envoyé.', function ($mail) use ($request) {
             $mail->from(config('mail.from.address'), config('mail.from.name'))
                  ->to($request->email)  // Envoi à l'utilisateur
@@ -57,18 +58,21 @@ class PagesController extends Controller
     public function search(Request $request)
     {
         $critere = $request->input('critere');
-    
+
         // Vérifier que le critère n'est pas vide
         if (empty($critere)) {
             return redirect('/location')->with('error', 'Le critère de recherche est requis');
         }
-    
+
         $results = Annonce::with(['Category', 'images']) // Chargement des relations
     ->where('titre', 'LIKE', "%{$critere}%")
     ->orWhere('description', 'LIKE', "%{$critere}%")
     ->orWhere('adresse', 'LIKE', "%{$critere}%")
     ->orWhere('prix', 'LIKE', "%{$critere}%")
     ->orWhere('surface', 'LIKE', "%{$critere}%")
+    ->orWhere('wcdouche', 'LIKE', "%{$critere}%")
+    ->orWhere('nbpieces', 'LIKE', "%{$critere}%")
+    ->orWhere('nbsalon', 'LIKE', "%{$critere}%")
     ->orWhereHas('Category', function ($query) use ($critere) {
         $query->where('nom', 'LIKE', "%{$critere}%");
     })
@@ -77,16 +81,21 @@ class PagesController extends Controller
         if ($results->isEmpty()) {
             return redirect('/location')->with('error', 'Aucune annonce trouvée pour ce critère');
         }
-    
+
         // Rediriger avec les résultats
         return redirect('/location')->with('results', $results);
     }
     public function apropos(){
-
         $avis = Avis::all();
+
 
         return view('apropos', compact('avis'));
     }
-    
-    
+
+    public function getAnnonces(){
+        $annonces = Annonce::with(['Category', 'images'])->get();
+        return view('location', compact('annonces'));
+    }
+
+
 }
