@@ -3,7 +3,8 @@
 use App\Jobs\ProcessImage;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Laravel\Facades\Image;
-use App\Http\Controllers\ArticleController;
+// use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Admin\ArticleController;
 use Illuminate\Http\Request;
 use App\Models\Article;
 
@@ -12,6 +13,7 @@ use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail; // Make sure to import your Mailable class
 use App\Services\AnnonceService;
+use App\Services\ArticleService;
 use Google\Client;
 use Google\Service\Gmail;
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +47,16 @@ Route::get('/', function () {
     return view('welcome',['articles'=>$posts, 'annonces' => $annonces]);
 })->name('accueil');
 
+// Route::get('/blogs', function () {
+
+//     $articleService = new ArticleService();
+//     $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
+
+//     return view('blog',['articles' => $articles]);
+// })->name('blogs');
+
+Route::get('/blogs', [ArticleController::class, 'view_blog'])->name('blogs');
+
 
 Route::get('/contacts', function () {
     return view('contactus');
@@ -59,9 +71,9 @@ Route::get('/search',[PagesController::class,"search"])->name('search');
 
 Route::post('/contacts/send_message',[PagesController::class,'sendMessage'])->name('send-message');
 Route::get('/apropos',[PagesController::class,'apropos'])->name('apropos');;
-Route::get('/blogs', function () {
-    return view('blog');
-})->name('blogs.index') ;
+// Route::get('/blogs', function () {
+//     return view('blog');
+// })->name('blogs.index') ;
 
 Route::get('/posts/{id}', function ($id) {
     // Créer une instance du service Annonce

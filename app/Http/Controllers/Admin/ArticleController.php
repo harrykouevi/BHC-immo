@@ -27,7 +27,7 @@ class ArticleController extends Controller
         // Fetch all posts for display using the service
          //$posts = $this->ArticleService->getAll();
         return view('admin.article.index');
-    } 
+    }
 
     public function getFeatured()
     {
@@ -59,5 +59,32 @@ class ArticleController extends Controller
             dd($e);
             // return redirect()->route('admin.annonces.index')->with('error', 'Erreur lors de la suppression de l\'annonce : ' . $e->getMessage());
         }
+    }
+
+    public function view_blog()
+    {
+        // Création d'articles statiques
+        $articles = [
+            (object)[
+                'id' => 1,
+                'title' => 'Découverte des meilleures pratiques Laravel',
+                'category' => 'Développement',
+                'created_at' => now()->subDays(5), // Date de création fictive
+            ],
+            (object)[
+                'id' => 2,
+                'title' => 'Comment optimiser votre application web',
+                'category' => 'Performance',
+                'created_at' => now()->subDays(10),
+            ],
+            (object)[
+                'id' => 3,
+                'title' => 'Les tendances du développement web en 2025',
+                'category' => null, // Catégorie non spécifiée
+                'created_at' => now()->subDays(15),
+            ],
+        ];
+
+        return view('blog', compact('articles'));
     }
 }

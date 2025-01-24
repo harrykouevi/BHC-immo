@@ -41,7 +41,7 @@ class ArticleService
         ->paginate(9); // Adjust the number of items per page as needed
     }
 
-    
+
 
     public function create(array $data)
     {
@@ -116,5 +116,5 @@ class ArticleService
     }
 
 
-    
+
 }
