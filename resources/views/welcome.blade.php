@@ -723,17 +723,17 @@
             </div>
             <div class="row">
                 <div class="col-12">
-                    {{-- <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
+                    <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                         <li class="grid-sizer"></li>
                         <!-- start blog item -->
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Il n'est pas un homme complet si ce n'est qu'il ne possède pas un morceau de terre.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="{{ route('blog-single')}}" class="blog-date">22 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Il n'est pas un homme complet si ce n'est qu'il ne possède pas un morceau de terre.</a>
                                 </div>
                             </div>
                         </li>
@@ -742,11 +742,11 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residence</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Le risque vient du fait de ne pas savoir ce que l'on fait.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Residence</a><a href="{{ route('blog-single')}}" class="blog-date">22 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Le risque vient du fait de ne pas savoir ce que l'on fait.</a>
                                 </div>
                             </div>
                         </li>
@@ -755,11 +755,11 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">20 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Sachez ce que vous possédez et pourquoi vous le possédez.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="{{ route('blog-single')}}" class="blog-date">20 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Sachez ce que vous possédez et pourquoi vous le possédez.</a>
                                 </div>
                             </div>
                         </li>
@@ -768,17 +768,17 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Résidence</a><a href="#" class="blog-date">18 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">N'attendez pas pour acheter de l'immobilier, achetez de l'immobilier et attendez.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Résidence</a><a href="{{ route('blog-single')}}" class="blog-date">18 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">N'attendez pas pour acheter de l'immobilier, achetez de l'immobilier et attendez.</a>
                                 </div>
                             </div>
                         </li>
                         <!-- end blog item -->
-                    </ul> --}}
-                    <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                    </ul>
+                    {{-- <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
                         <li class="grid-sizer"></li>
                         <!-- start blog items -->
                         {{-- @foreach($articles as $article)
@@ -795,7 +795,7 @@
                                     </div>
                                 </div>
                             </li>
-                        @endforeach --}}
+                        @endforeach
                         <!-- end blog items -->
                         <ul class="grid">
                             @foreach($articles as $article)
@@ -803,10 +803,10 @@
                                     <div class="card bg-transparent border-0 h-100">
                                         <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
                                             <span class="fs-14 text-uppercase">
-                                                <a href="#" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
-                                                <a href="#" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
+                                                <a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
+                                                <a href="{{ route('blog-single')}}" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
                                             </span>
-                                            <a href="{{ route('blogs', $article->id) }}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
+                                            <a href="{{ route('blog-single')}}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
                                                 {{ Str::limit($article->title, 60) }}
                                             </a>
                                         </div>
@@ -815,7 +815,7 @@
                             @endforeach
                         </ul>
 
-                    </ul>
+                    </ul> --}}
                 </div>
             </div>
         </div>

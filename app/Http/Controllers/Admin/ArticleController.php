@@ -61,7 +61,7 @@ class ArticleController extends Controller
         }
     }
 
-    public function view_blog()
+    public function view_blog(Request $request)
     {
         // Création d'articles statiques
         $articles = [
@@ -85,7 +85,14 @@ class ArticleController extends Controller
             ],
         ];
 
-        return view('blog', compact('articles'));
-        return view('welcome', compact('articles'));
+        // Vérifiez le paramètre de requête pour déterminer la vue à retourner
+        if ($request->input('view') === 'welcome') {
+            return view('welcome', compact('articles'));
+        } elseif ($request->input('view') === 'single') {
+            return view('blog-single', compact('articles'));
+        } else {
+            return view('blog', compact('articles')); // Vue par défaut
+        }
     }
+
 }

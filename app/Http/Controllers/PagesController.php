@@ -95,5 +95,9 @@ class PagesController extends Controller
         return view('location', compact('annonces'));
     }
 
+    public function getSellAnnonces(){
+        $annonces = Annonce::with(['Category', 'images'])->get();
+        return view('sell', compact('annonces'));
+    }
 
 }

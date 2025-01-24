@@ -515,7 +515,7 @@
                             "easing": "easeOutQuad"
                         }'>
                         Nos dernières offres
-                        <span class="fw-700 text-highlight">de location
+                        <span class="fw-700 text-highlight">de Vente
                             <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
                         </span>
                     </h3>

@@ -56,10 +56,10 @@
                                         <div class="card bg-transparent border-0 h-100">
                                             <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
                                                 <span class="fs-14 text-uppercase">
-                                                    <a href="#" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
-                                                    <a href="#" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
+                                                    <a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
+                                                    <a href="{{ route('blog-single')}}" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
                                                 </span>
-                                                <a href="{{ route('blogs', $article->id) }}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
+                                                <a href="{{ route('blog-single')}}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
                                                     {{ Str::limit($article->title, 60) }}
                                                 </a>
                                             </div>

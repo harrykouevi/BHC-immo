@@ -64,7 +64,7 @@ Route::get('/contacts', function () {
 
 Route::get('/location',[PagesController::class,"getAnnonces"])->name('location');
 
-Route::get('/sell',[PagesController::class,"getAnnonces"])->name('sell');
+Route::get('/sell',[PagesController::class,"getSellAnnonces"])->name('sell');
 
 
 Route::get('/search',[PagesController::class,"search"])->name('search');
@@ -94,6 +94,9 @@ Route::get('/posts/{id}', function ($id) {
 // Route pour soumettre un avis
 Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
 
+Route::get('/blog-single', function () {
+    return view('blog-single');
+})->name('blog-single') ;
 
 Route::get('/A7d3F9kL2qX1', function () {
     return view('a-upload');
