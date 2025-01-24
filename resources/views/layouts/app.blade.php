@@ -117,7 +117,7 @@
                                     </div>
                                 </li>
                                 <li class="nav-item dropdown submenu">
-                                    <a href="#" class="nav-link">Vente</a>
+                                    <a href="{{route('sell')}}" class="nav-link">Vente</a>
                                     <i class="fa-solid fa-angle-down dropdown-toggle" id="navbarDropdownMenuLink2" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
                                     <div class="dropdown-menu submenu-content" style="background-color: rgba(0, 0, 0, 0.80); z-index: 98" aria-labelledby="navbarDropdownMenuLink2">
                                         <div class="d-lg-flex mega-menu m-auto ps-5 pe-5 md-ps-0 md-pe-0 md-pt-5px">

@@ -52,6 +52,8 @@ Route::get('/contacts', function () {
 
 Route::get('/location',[PagesController::class,"getAnnonces"])->name('location');
 
+Route::get('/sell',[PagesController::class,"getAnnonces"])->name('sell');
+
 
 Route::get('/search',[PagesController::class,"search"])->name('search');
 
