@@ -15,6 +15,7 @@ class Avis extends Model
         'email',
         'phone',
         'comment',
+        
     ];
 
     public function annonce()
