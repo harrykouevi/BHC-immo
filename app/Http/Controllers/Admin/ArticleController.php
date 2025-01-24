@@ -86,5 +86,6 @@ class ArticleController extends Controller
         ];
 
         return view('blog', compact('articles'));
+        return view('welcome', compact('articles'));
     }
 }
