@@ -8,7 +8,7 @@ use App\Models\Contact;
 use App\Models\Annonce;
 use App\Models\Image;
 use App\Models\Category;
-use App\Models\Avis;
+use App\Models\Review;
 
 class PagesController extends Controller
 {
@@ -86,7 +86,7 @@ class PagesController extends Controller
         return redirect('/location')->with('results', $results);
     }
     public function apropos(){
-        $avis = Avis::all();
+        $avis = Review::all();
 
 
         return view('apropos', compact('avis'));

@@ -3,33 +3,33 @@
 namespace App\Services;
 
 use App\Models\FeaturedArticle;
-use App\Models\Article;
-use App\Models\Category;
+use App\Models\Annonce;
+use App\Models\Review;
 
 class AvisService
 {
-    //public function getAll()
-    //{
-    //    return Article::with('Category')->get();
-    //}
+    public function getAll()
+    {
+       return Review::with('Annonce')->get();
+    }
 
-//    public function get($id, array $relations = [])
-//{
-//    // Vérifie si des relations supplémentaires doivent être chargées
-//    if (!empty($relations)) {
-//        // Valide que chaque élément dans $relations est une chaîne
-//        foreach ($relations as $relation) {
-//            if (!is_string($relation)) {
-//                throw new InvalidArgumentException('All elements in relations must be strings.');
-//            }
-//        }
-//        // Charge les relations spécifiées dynamiquement
-//        return Article::with('Category')->findOrFail($id);
-//    }
-//
-//    // Si aucune relation supplémentaire n'est spécifiée, charge seulement "images"
-//    return Article::with('Category')->findOrFail($id);
-//}
+    public function get($id, array $relations = [])
+{
+    // Vérifie si des relations supplémentaires doivent être chargées
+    if (!empty($relations)) {
+        // Valide que chaque élément dans $relations est une chaîne
+        foreach ($relations as $relation) {
+            if (!is_string($relation)) {
+                throw new InvalidArgumentException('All elements in relations must be strings.');
+            }
+        }
+        // Charge les relations spécifiées dynamiquement
+        return Review::with('Annonce')->findOrFail($id);
+    }
+
+    // Si aucune relation supplémentaire n'est spécifiée, charge seulement "images"
+    return Review::with('Annonce')->findOrFail($id);
+}
 
 
 
@@ -37,7 +37,7 @@ class AvisService
 
     public function getFinded(String $search){
         // Query annonces with pagination, optionally filtering by search term
-        return Article::where('titre', 'like', '%' . $search . '%')
+        return Review::where('comment', 'like', '%' . $search . '%')
         ->paginate(9); // Adjust the number of items per page as needed
     }
 
@@ -96,21 +96,23 @@ class AvisService
      * @param int $annonceId
      * @return FeaturedPost
      */
+    
     public function addToFeatured($annonceId)
     {
         return FeaturedArticle::create(['article_id' => $articleId]);
     }
+
 
     /**
      * Retirer un article à la une.
      *
      * @param int $articleId
      */
-    public function removeFromFeatured($articleId)
+    public function removeFromFeatured($avisId)
     {
-        $article = $this->get($articleId);
-        if(!is_null($article)){
-            FeaturedArticle::where('article_id', $articleId)
+        $avisId = $this->get($avisId);
+        if(!is_null($avisId)){
+            FeaturedArticle::where('avisId', $avisId)
         ->delete();}
         return true;
     }

@@ -215,8 +215,9 @@
         <div class="swiper-wrapper mb-40px">
             <!-- Start text slider items -->
             @foreach($avis as $avi)
+                @if ($avi -> approuve == "oui")
                 <div class="swiper-slide review-style-08">
-                    <p class="w-80 lg-w-100">{{ $avi->temoignage }}</p>
+                    <p class="w-80 lg-w-100">{{ $avi->comment}}</p>
                     
                     <div class="mt-20px d-flex align-items-center">
                         <img 
@@ -227,10 +228,11 @@
                         
                         <div class="d-inline-block align-middle text-start">
                             <div class="text-dark-gray alt-font fs-20">
-                                <span class="fw-700">{{ $avi->nom_client }}</span>
+                                <span class="fw-700">{{ $avi->name }}</span>
                             </div>
                             
                             <div class="review-star-icon fs-18">
+                            {{-- 
                                 @for ($i = 1; $i <= 5; $i++)
                                     @if($i <= $avi->note)
                                         <i class="bi bi-star-fill text-warning"></i> <!-- Full star -->
@@ -238,10 +240,12 @@
                                         <i class="bi bi-star text-muted"></i> <!-- Empty star -->
                                     @endif
                                 @endfor
+                                --}}
                             </div>
                         </div>
                     </div> 
                 </div>
+                @endif
             @endforeach
             <!-- End text slider items -->
         </div>
