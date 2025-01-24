@@ -25,7 +25,8 @@ Route::middleware(['auth'])->group(function () {
 
     //route pour les avis
     
-    Route::get('/avis/{id}/edit', [AvisController::class, 'edit'])->name('admin.avis.edit');
+    Route::get('/avis/{id}/edit', [AvisController::class, 'updateColumn'])->name('admin.avis.update');
+    Route::get('/avis/{id}/response', [AvisController::class, 'avisReponse'])->name('admin.avis.reponse');
     Route::get('/avis/', [AvisController::class, 'index'])->name('admin.avis.index');
 
 

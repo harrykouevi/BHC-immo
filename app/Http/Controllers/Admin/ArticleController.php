@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Services\ArticleService;
+use Exception;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
@@ -12,7 +13,7 @@ class ArticleController extends Controller
     public function __construct(ArticleService $articleService)
     {
 
-        $this->ArticleService = $articleService;
+        $this->articleService = $articleService;
     }
 
 
@@ -25,13 +26,13 @@ class ArticleController extends Controller
     public function index()
     {
         // Fetch all posts for display using the service
-         //$posts = $this->ArticleService->getAll();
+         //$posts = $this->articleService->getAll();
         return view('admin.article.index');
     }
 
     public function getFeatured()
     {
-        $featuredarticles = $this->ArticleService->getFeatured();
+        $featuredarticles = $this->articleService->getFeatured();
         return view('article.index', compact('featuredarticles'));
 
     }
@@ -40,7 +41,7 @@ class ArticleController extends Controller
     public function show($id)
     {
         // Display a single post using the service
-        return view('admin.article.index', ['post' => $this->ArticleService->get($id)]);
+        return view('admin.article.index', ['post' => $this->articleService->get($id)]);
     }
 
     public function edit($post)
@@ -53,7 +54,7 @@ class ArticleController extends Controller
     public function destroy($id)
     {
         try {
-            $this->ArticleService->delete($id);
+            $this->articleService->delete($id);
             return redirect()->route('admin.article.index')->with('success', 'Article supprimée avec succès.');
         } catch (Exception $e) {
             dd($e);
@@ -61,38 +62,38 @@ class ArticleController extends Controller
         }
     }
 
-    public function view_blog(Request $request)
-    {
-        // Création d'articles statiques
-        $articles = [
-            (object)[
-                'id' => 1,
-                'title' => 'Découverte des meilleures pratiques Laravel',
-                'category' => 'Développement',
-                'created_at' => now()->subDays(5), // Date de création fictive
-            ],
-            (object)[
-                'id' => 2,
-                'title' => 'Comment optimiser votre application web',
-                'category' => 'Performance',
-                'created_at' => now()->subDays(10),
-            ],
-            (object)[
-                'id' => 3,
-                'title' => 'Les tendances du développement web en 2025',
-                'category' => null, // Catégorie non spécifiée
-                'created_at' => now()->subDays(15),
-            ],
-        ];
+    // public function view_blog(Request $request)
+    // {
+    //     // Création d'articles statiques
+    //     $articles = [
+    //         (object)[
+    //             'id' => 1,
+    //             'title' => 'Découverte des meilleures pratiques Laravel',
+    //             'category' => 'Développement',
+    //             'created_at' => now()->subDays(5), // Date de création fictive
+    //         ],
+    //         (object)[
+    //             'id' => 2,
+    //             'title' => 'Comment optimiser votre application web',
+    //             'category' => 'Performance',
+    //             'created_at' => now()->subDays(10),
+    //         ],
+    //         (object)[
+    //             'id' => 3,
+    //             'title' => 'Les tendances du développement web en 2025',
+    //             'category' => null, // Catégorie non spécifiée
+    //             'created_at' => now()->subDays(15),
+    //         ],
+    //     ];
 
-        // Vérifiez le paramètre de requête pour déterminer la vue à retourner
-        if ($request->input('view') === 'welcome') {
-            return view('welcome', compact('articles'));
-        } elseif ($request->input('view') === 'single') {
-            return view('blog-single', compact('articles'));
-        } else {
-            return view('blog', compact('articles')); // Vue par défaut
-        }
-    }
+    //     // Vérifiez le paramètre de requête pour déterminer la vue à retourner
+    //     if ($request->input('view') === 'welcome') {
+    //         return view('welcome', compact('articles'));
+    //     } elseif ($request->input('view') === 'single') {
+    //         return view('blog-single', compact('articles'));
+    //     } else {
+    //         return view('blog', compact('articles')); // Vue par défaut
+    //     }
+    // }
 
 }

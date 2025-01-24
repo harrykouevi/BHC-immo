@@ -241,7 +241,7 @@
                             <div class="image position-relative">
                                 <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->category ? $annonce->category->nom : 'Aucune catégorie' }}</div>
                                 <a href="{{ route('posts.show', $annonce->id) }}"> <!-- Lien vers l'annonce -->
-                                    <img src="{{ Storage::disk('public')->url($annonce->images->first()->path) }}" alt="{{ $annonce->titre }}" style="width: 100%; height: 100%;"><!-- Affiche la première image -->
+                                    <img src="{{ $annonce->images->first() ? asset('storage/' . $annonce->images->first()->path) : 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $annonce->titre }}">
                                 </a>
                                 <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->type }}</div> <!-- Type de l'annonce (Vente/Location) -->
                             </div>
@@ -378,7 +378,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-4 col-lg-5 md-mb-50px sm-mb-35px">
                     <span class="fs-20 d-inline-block mb-15px text-base-color">Trouvez la maison de vos rêves</span>
-                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px w-90 xl-w-100 shadow-none" data-shadow-animation="true" data-animation-delay="700">Nous sommes disponibles dans <span class="fw-700 text-highlight d-inline-block">plusieurs pays<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
+                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px w-90 xl-w-100 shadow-none" data-shadow-animation="true" data-animation-delay="700">Nous sommes disponibles dans <span class="fw-700 text-highlight d-inline-block">plusieurs quartiers<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
                     <p class="mb-30px w-90 md-w-100">Nous vous offrons une grande variété de type de maison pour votre famille et vous en fonction des vos modèles </p>
                     <div class="d-flex">
                         <!-- start slider navigation -->
@@ -397,7 +397,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-orange border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-orange lh-18">
@@ -407,8 +407,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Washington, USA</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Adakpame, LOME</a>
                                                 <span class="opacity-7 text-white">17 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -423,7 +423,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -433,8 +433,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Paris, France</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Adidogome, LOME</a>
                                                 <span class="opacity-7 text-white">20 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -449,7 +449,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -459,8 +459,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Chicago, USA</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Sagbado, LOME</a>
                                                 <span class="opacity-7 text-white">45 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -475,7 +475,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -486,7 +486,7 @@
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">San francisco, USA</a>
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Legbassito, LOME</a>
                                                 <span class="opacity-7 text-white">45 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -500,7 +500,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -510,8 +510,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Paris, France</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Tokoin, LOME</a>
                                                 <span class="opacity-7 text-white">20 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -526,7 +526,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -536,8 +536,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Chicago, USA</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Segbe, LOME</a>
                                                 <span class="opacity-7 text-white">45 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>

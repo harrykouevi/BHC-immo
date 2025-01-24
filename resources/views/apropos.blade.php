@@ -214,9 +214,10 @@
     >
         <div class="swiper-wrapper mb-40px">
             <!-- Start text slider items -->
-            @foreach($reviews as $reviews)
+            @foreach($avis as $avi)
+                @if ($avi -> approuve == "oui")
                 <div class="swiper-slide review-style-08">
-                    <p class="w-80 lg-w-100">{{ $reviews->comment }}</p>
+                    <p class="w-80 lg-w-100">{{ $avi->comment}}</p>
 
                     <div class="mt-20px d-flex align-items-center">
                         {{-- <img
@@ -226,10 +227,16 @@
 
                         <div class="d-inline-block align-middle text-start">
                             <div class="text-dark-gray alt-font fs-20">
-                                <span class="fw-700">{{ $reviews->name }}</span>
+                                <span class="fw-700">{{ $avi->name }}</span>
                             </div>
 
                             {{-- <div class="review-star-icon fs-18">
+                                <span class="fw-700">{{ $avi->name }}</span>
+                            </div>
+
+
+                            <div class="review-star-icon fs-18">
+                            {{--
                                 @for ($i = 1; $i <= 5; $i++)
                                     @if($i <= $reviews->note?0)
                                         <i class="bi bi-star-fill text-warning"></i> <!-- Full star -->
@@ -237,10 +244,15 @@
                                         <i class="bi bi-star text-muted"></i> <!-- Empty star -->
                                     @endif
                                 @endfor
-                            </div> --}}
+                                </div>
+
+
+
+                            </div>--}}
                         </div>
                     </div>
                 </div>
+                @endif
             @endforeach
             <!-- End text slider items -->
         </div>
@@ -272,7 +284,7 @@
                                 <img src="images/demo-real-estate-logo-01.svg" class="h-40px" alt="" />
                             </div>
                             <div class="border-top border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                <div class="alt-font mx-auto lh-28">Property sell listed - <span class="fw-700 text-dark-gray">275% Growth</span></div>
+                                <div class="alt-font mx-auto lh-28">Propriété à vendre répertoriée - <span class="fw-700 text-dark-gray">275% Croissance</span></div>
                             </div>
                         </div>
                     </div>
@@ -282,7 +294,7 @@
                                 <img src="images/demo-real-estate-logo-02.svg" class="h-40px" alt="" />
                             </div>
                             <div class="border-top border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                <div class="alt-font mx-auto lh-28">Property selling - <span class="fw-700 text-dark-gray">235% Growth</span></div>
+                                <div class="alt-font mx-auto lh-28">Vente de biens immobiliers - <span class="fw-700 text-dark-gray">235% Croissance</span></div>
                             </div>
                         </div>
                     </div>
@@ -292,15 +304,15 @@
                                 <img src="images/demo-real-estate-logo-03.svg" class="h-40px" alt="" />
                             </div>
                             <div class="border-top border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                <div class="alt-font mx-auto lh-28">Property agents - <span class="fw-700 text-dark-gray">175% Growth</span></div>
+                                <div class="alt-font mx-auto lh-28">Agents immobiliers - <span class="fw-700 text-dark-gray">175% Croissance</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center mt-5 md-mt-7" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <div class="col-12 text-center align-items-center">
-                        <div class="bg-dark-gray alt-font fs-12 fw-700 text-white text-uppercase border-radius-30px ps-20px pe-20px me-10px sm-m-5px d-inline-block align-middle">Fun facts</div>
-                        <div class="fs-20 text-dark-gray d-block d-md-inline-block align-middle alt-font fw-600">World's famous ratings companies we worked with us.</div>
+                        <div class="bg-dark-gray alt-font fs-12 fw-700 text-white text-uppercase border-radius-30px ps-20px pe-20px me-10px sm-m-5px d-inline-block align-middle">Faits amusants</div>
+                        <div class="fs-20 text-dark-gray d-block d-md-inline-block align-middle alt-font fw-600">Les agences de notation les plus connues au monde avec lesquelles nous avons travaillé.</div>
                     </div>
                 </div>
             </div>

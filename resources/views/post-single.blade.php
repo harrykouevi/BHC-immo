@@ -502,15 +502,15 @@
                 <div class="border-radius-6px overflow-hidden box-shadow-large">
                     <div class="image position-relative">
                         <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->category ? $annonce->category->nom : 'Aucune catégorie' }}</div>
-                        <a href="{{ route('posts.show', $annonce->id) }}"> <!-- Lien vers l'annonce -->
-                            <img src="{{ Storage::disk('public')->url($annonce->images->first()->path) }}" alt="{{ $annonce->titre }}" style="width: 100%; height: 100%;">
+                        <a href="Souscrivez"> <!-- Lien vers l'annonce -->
+                           
                         </a>
                         <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->type }}</div> <!-- Type de l'annonce (Vente/Location) -->
                     </div>
                     <div class="bg-white">
                         <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
                             <div class="d-flex align-items-center">
-                                <a href="{{ route('posts.show', $annonce->id) }}" class="alt-font text-dark-gray fw-700 fs-22 me-10px">{{ $annonce->titre }}</a> <!-- Titre de l'annonce -->
+                                <a href="Souscrivez" class="alt-font text-dark-gray fw-700 fs-22 me-10px">{{ $annonce->titre }}</a> <!-- Titre de l'annonce -->
                             </div>
                             <p class="mb-20px">{{ $annonce->address }}</p> <!-- Adresse de l'annonce -->
                             <div class="row g-0">
@@ -539,7 +539,7 @@
                         </div>
                         <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                             <div class="col">
-                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Details</a> <!-- Bouton détails -->
+                                <a href="Souscrivez" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Details</a> <!-- Bouton détails -->
                             </div>
                             <div class="col text-end">
                                 <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">{{$annonce?->prix}} FCFA</span> <!-- Prix de l'annonce -->

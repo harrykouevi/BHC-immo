@@ -86,8 +86,10 @@ class PagesController extends Controller
         return redirect('/location')->with('results', $results);
     }
     public function apropos(){
-        $reviews = Review::all();
-        return view('apropos', compact('reviews'));
+        $avis = Review::all();
+
+
+        return view('apropos', compact('avis'));
     }
 
     public function getAnnonces(){

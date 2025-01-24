@@ -224,7 +224,7 @@ class ManageAnnonce extends Component
             $this->nbpieces= 0;
             $this->nbsalon= 0;
             $this->wcdouche= false;
-            $this->category_id = Null ;
+            $this->categoryId = Null ;
             $this->annonce->user_id = Null ;
         }
 

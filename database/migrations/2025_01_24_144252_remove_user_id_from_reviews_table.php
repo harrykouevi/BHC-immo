@@ -12,7 +12,15 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('reviews', function (Blueprint $table) {
-            $table->dropColumn('user_id'); // Supprimer la colonne user_id
+           if (!Schema::hasColumn('reviews', 'reponse')) {
+            $table->text('reponse')->nullable();
+        }
+        if (!Schema::hasColumn('reviews', 'approuve')) {
+            $table->text('approuve')->default('non');
+        }
+        if (Schema::hasColumn('reviews', 'user_id')) {
+            $table->dropColumn('user_id');
+        }
         });
     }
 

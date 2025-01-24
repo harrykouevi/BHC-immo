@@ -15,10 +15,10 @@ class Article extends Model
         'categorie_id',    // Exemple d'autres champs
     ];
 
-    public function Category() 
-{
-    return $this->belongsTo(Category::class);
-}
+    public function category()
+    {
+        return $this->belongsTo(Category::class , 'categorie_id', 'id');
+    }
 
 
 

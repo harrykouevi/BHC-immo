@@ -5,12 +5,13 @@ namespace App\Services;
 use App\Models\FeaturedArticle;
 use App\Models\Article;
 use App\Models\Category;
+use InvalidArgumentException;
 
 class ArticleService
 {
     public function getAll()
     {
-        return Article::with('Category')->get();
+        return Article::with('category')->get();
     }
 
     public function get($id, array $relations = [])
@@ -24,11 +25,11 @@ class ArticleService
             }
         }
         // Charge les relations spécifiées dynamiquement
-        return Article::with('Category')->findOrFail($id);
+        return Article::with('category')->findOrFail($id);
     }
 
     // Si aucune relation supplémentaire n'est spécifiée, charge seulement "images"
-    return Article::with('Category')->findOrFail($id);
+    return Article::with('category')->findOrFail($id);
 }
 
 
@@ -70,50 +71,7 @@ class ArticleService
 
 
 
-    //public function getLastFiveHistories($annonceId)
-    //{
-    //    return AnnonceHistory::where('annonce_id', $annonceId)
-    //                        ->with('user') // Assurez-vous d'avoir défini la relation user dans AnnonceHistory
-    //                        ->orderBy('created_at', 'desc')
-    //                        ->take(5)
-    //                        ->get();
-    //}
 
-
-    /**
-     * Récupérer les articles à la une.
-     *
-     * @return \Illuminate\Database\Eloquent\Collection
-     */
-    public function getFeatured()
-    {
-        return FeaturedArticle::with('Category')->get();
-    }
-
-    /**
-     * Ajouter un article à la une.
-     *
-     * @param int $annonceId
-     * @return FeaturedPost
-     */
-    public function addToFeatured($annonceId)
-    {
-        return FeaturedArticle::create(['article_id' => $articleId]);
-    }
-
-    /**
-     * Retirer un article à la une.
-     *
-     * @param int $articleId
-     */
-    public function removeFromFeatured($articleId)
-    {
-        $article = $this->get($articleId);
-        if(!is_null($article)){
-            FeaturedArticle::where('article_id', $articleId)
-        ->delete();}
-        return true;
-    }
 
 
 

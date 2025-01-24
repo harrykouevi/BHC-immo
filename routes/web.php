@@ -47,15 +47,13 @@ Route::get('/', function () {
     return view('welcome',['articles'=>$posts, 'annonces' => $annonces]);
 })->name('accueil');
 
-// Route::get('/blogs', function () {
+Route::get('/blogs', function () {
+   $articleService = new ArticleService();
+   $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
+   return view('blog',['articles' => $articles]);
+})->name('blogs');
 
-//     $articleService = new ArticleService();
-//     $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
-
-//     return view('blog',['articles' => $articles]);
-// })->name('blogs');
-
-Route::get('/blogs', [ArticleController::class, 'view_blog'])->name('blogs');
+// Route::get('/blogs', [ArticleController::class, 'view_blog'])->name('blogs');
 
 
 Route::get('/contacts', function () {
@@ -95,7 +93,9 @@ Route::get('/posts/{id}', function ($id) {
 Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
 
 Route::get('/blog-single', function () {
-    return view('blog-single');
+    $articleService = new ArticleService();
+    $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
+    return view('blog-single',['articles' => $articles]);
 })->name('blog-single') ;
 
 Route::get('/A7d3F9kL2qX1', function () {
