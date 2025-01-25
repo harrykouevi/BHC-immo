@@ -11,6 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Check if the 'annonces' table already exists
+        if (!Schema::hasTable('reviews')) {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('annonce_id'); // Référence à l'annonce
@@ -21,6 +23,7 @@ return new class extends Migration
             $table->text('comment'); // Contenu de l'avis
             $table->timestamps();
         });
+        }
     }
 
     /**

@@ -41,7 +41,7 @@ class AvisService
         ->paginate(9); // Adjust the number of items per page as needed
     }
 
-    
+
 
     //public function create(array $data)
     //{
@@ -96,7 +96,7 @@ class AvisService
      * @param int $annonceId
      * @return FeaturedPost
      */
-    
+
     public function addToFeatured($annonceId)
     {
         return FeaturedArticle::create(['article_id' => $articleId]);
@@ -118,5 +118,5 @@ class AvisService
     }
 
 
-    
+
 }

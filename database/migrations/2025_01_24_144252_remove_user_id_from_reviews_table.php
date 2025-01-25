@@ -13,14 +13,16 @@ return new class extends Migration
     {
         Schema::table('reviews', function (Blueprint $table) {
            if (!Schema::hasColumn('reviews', 'reponse')) {
-            $table->text('reponse')->nullable();
-        }
-        if (!Schema::hasColumn('reviews', 'approuve')) {
-            $table->text('approuve')->default('non');
-        }
-        if (Schema::hasColumn('reviews', 'user_id')) {
-            $table->dropColumn('user_id');
-        }
+                $table->text('reponse')->nullable();
+            }
+            if (!Schema::hasColumn('reviews', 'approuve')) {
+                $table->text('approuve')->default('non');
+            }
+            if (Schema::hasColumn('reviews', 'user_id')) {
+                // Drop the index by its name
+                $table->dropForeign('reviews_user_id_foreign'); // Replace with your actual index name
+                $table->dropColumn('user_id');
+            }
         });
     }
 
