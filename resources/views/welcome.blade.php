@@ -10,7 +10,9 @@
     <!-- start banner slider -->
     <section class="p-0 top-space-margin">
         <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
+        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
             <div class="swiper-wrapper">
+                @foreach($annonces as $annonce)
                 @foreach($annonces as $annonce)
                 <!-- start slider item -->
                 <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
@@ -45,6 +47,7 @@
                                 </div>
                             </div>
                             <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
+
                                 <span class="fw-500 mb-5px d-block alt-font"> {{  (strpos($annonce->titre, 's') ==  false ? "Prix de location / Mois" : "Prix de vente") }}</span>
                                 <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">{{ $annonce->prix }} FCFA</h4>
                             </div>
@@ -52,6 +55,7 @@
                     </div>
                 </div>
                 <!-- end slider item -->
+                @endforeach
                 @endforeach
             </div>
             <!-- start slider pagination -->
@@ -235,6 +239,7 @@
             <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 @foreach($annonces as $annonce) <!-- Boucle sur les annonces -->
                     <!-- start box item -->
+
 
                     <div class="col mb-30px">
                         <div class="border-radius-6px overflow-hidden box-shadow-large">

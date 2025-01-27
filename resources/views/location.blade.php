@@ -224,7 +224,7 @@
                                         </div>
                                 <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                                     <div class="col">
-                                        <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Détails</a>
+                                        <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
                                     </div>
                                     <div class="col text-end">
                                         <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ $result->prix }}</span>
@@ -281,7 +281,7 @@
                                             </div>
                                     <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                                         <div class="col">
-                                            <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Détails</a>
+                                            <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Voir les détails</a>
                                         </div>
                                         <div class="col text-end">
                                             <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ $annonce->prix }}</span>
@@ -320,7 +320,7 @@
         <div class="container overlap-gap-section">
             <div class="row mb-2">
                 <div class="col-12 text-center">
-                    <h5 class="alt-font fw-500 text-dark-gray">Nos meilleurs partenaires commerciaux, <span class="text-red fs-28 ms-5px me-5px align-middle"></span><strong class="text-decoration-line-bottom-medium">au service des gens avec ❤ passion.</strong></h5>
+                    <h5 class="alt-font fw-500 text-dark-gray">Nos meilleurs partenaires commerciaux, <span class="text-red fs-28 ms-5px me-5px align-middle"></span><strong class="text-decoration-line-bottom-medium">au service des gens avec ❤️ passion.</strong></h5>
                 </div>
             </div>
             <div class="row position-relative clients-style-08">

@@ -405,40 +405,20 @@
             <!-- start sticky -->
             <div class="col-xl-4 offset-xl-1 col-lg-5">
                 <div class="bg-base-color-light border-radius-6px position-sticky top-120px">
-                    <div class="bg-base-color border-radius-6px feature-box feature-box-left-icon-middle overflow-hidden icon-with-text-style-08 ps-35px pe-35px pt-25px pb-20px xs-p-25px">
-                        <!-- start features box item -->
-                        <div class="feature-box-icon feature-box-icon-rounded w-90px h-90px overflow-visible me-20px position-relative">
-                            {{-- <img src="https://via.placeholder.com/148x148" class="rounded-circle" alt=""> --}}
-                            <span class="animation-zoom d-inline-block bg-orange border border-2 border-color-white h-20px w-20px border-radius-100 position-absolute right-0px top-5px"></span>
-                        </div>
-                        <!-- end features box item -->
-                        <!-- start features box item -->
-                        <div class="feature-box-content last-paragraph-no-margin">
-                            <span class="text-white alt-font fw-600 fs-20 d-block">Laissez votre avis</span>
-                            <div class="lh-24 d-block">
-                                {{-- <span class="me-5px text-white opacity-8">17 property</span> --}}
-                                {{-- <div class="bg-white border-radius-2px text-uppercase alt-font fw-700 text-dark-gray fs-12 lh-24 ps-10px pe-10px d-inline-block align-middle">Verified</div> --}}
+
+                    <div class="ps-45px pe-45px pt-35px pb-45px xs-p-25px contact-form-style-01 mt-0">
+                        <span class="alt-font fs-20 fw-600 text-dark-gray d-block mb-25px">Nous contacter autrement</span>
+                        <div class="mb-20px last-paragraph-no-margin">
+                            <p class="mb-0 alt-font fw-500 text-dark-gray"><i class="feather icon-feather-phone-call icon-small text-base-color me-10px"></i><span class="fw-600  d-inline-block">Téléphone:</span><a href="tel:12345678910" class="text-dark-gray text-base-color-hover">+1 234 567 8910</a></p>
+                            <p class="alt-font fw-500 text-dark-gray"><i class="feather icon-feather-mail icon-small text-base-color me-10px"></i><span class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Email:</span><a href="mailto:info@domain.com" class="text-dark-gray text-decoration-line-bottom">info@domain.com</a></p>
+                            <div class="elements-social social-icon-style-02 mt-5px w-100 text-start ">
+                                <ul class="medium-icon">
+                                    <li class="m-0"><a class="facebook text-black" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                    <li class="m-0"><a class="dribbble text-black" href="http://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- end features box item -->
-                        <!-- start social icon -->
-                        <div class="elements-social social-icon-style-02 mt-5px w-100 text-start text-lg-center">
-                            <ul class="medium-icon">
-                                <li class="m-0"><a class="facebook text-white" href="https://www.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                                <li class="m-0"><a class="dribbble text-white" href="http://www.dribbble.com" target="_blank"><i class="fa-brands fa-dribbble"></i></a></li>
-                                <li class="m-0"><a class="twitter text-white" href="http://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                                <li class="m-0"><a class="instagram text-white" href="http://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                            </ul>
-                        </div>
-                        <!-- end social icon -->
-                    </div>
-                    <div class="ps-45px pe-45px pt-35px pb-45px xs-p-25px contact-form-style-01 mt-0">
-                        <div class="mb-20px last-paragraph-no-margin">
-                            <p class="mb-0 alt-font fw-500 text-dark-gray"><i class="feather icon-feather-phone-call icon-small text-base-color me-10px"></i><span class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Phone:</span><a href="tel:12345678910" class="text-dark-gray text-base-color-hover">+1 234 567 8910</a></p>
-                            <p class="alt-font fw-500 text-dark-gray"><i class="feather icon-feather-mail icon-small text-base-color me-10px"></i><span class="fw-600 w-20 sm-w-15 xs-w-20 d-inline-block">Email:</span><a href="mailto:info@domain.com" class="text-dark-gray text-decoration-line-bottom">info@domain.com</a></p>
-                        </div>
-                        <span class="alt-font fs-20 fw-600 text-dark-gray d-block mb-25px">Laissez votre message ici</span>
-
+                        <span class="alt-font fs-20 fw-600 text-dark-gray d-block mb-25px">Laisser un commentaire</span>
                         <div>
                             @if(session('success'))
                                 <div class="alert alert-success">
@@ -452,8 +432,6 @@
                                 </div>
                             @endif
                         </div>
-
-
                         <!-- start contact form -->
                         <form action="{{ route('reviews.store', $post->id) }}" method="POST">
                             @csrf <!-- Inclure le token CSRF pour la sécurité -->
@@ -470,13 +448,22 @@
                             <div class="position-relative form-group mb-15px">
                                 <span class="form-icon"><i class="bi bi-telephone-outbound"></i></span>
                                 <input type="tel" name="phone" class="form-control border-color-white box-shadow-large" placeholder="Votre téléphone" />
+                                {{-- <input type="text" name="name" class="form-control border-color-white box-shadow-large required" placeholder="Votre Nom*" /> --}}
                             </div>
+                            {{-- <div class="position-relative form-group mb-15px">
+                                <span class="form-icon"><i class="bi bi-envelope"></i></span>
+                                <input type="email" name="email" class="form-control border-color-white box-shadow-large required" placeholder="Téléphone /addresse email *" />
+                            </div> --}}
 
                             <div class="position-relative form-group form-textarea">
                                 <span class="form-icon"><i class="bi bi-chat-square-dots"></i></span>
                                 <textarea placeholder="Votre message" name="comment" class="form-control border-color-white box-shadow-large" rows="3" required></textarea>
-                                <button class="btn btn-small btn-round-edge btn-base-color mt-20px " type="submit">Envoyer</button>
+                                {{-- <button class="btn btn-small btn-round-edge btn-base-color mt-20px " type="submit">Envoyer</button> --}}
+                                {{-- <textarea placeholder="Ecrivez votre commentaire" name="comment" class="form-control border-color-white box-shadow-large" rows="3"></textarea>
+                                <input type="hidden" name="redirect" value=""> --}}
+                                {{-- <div class="form-results mt-20px d-none"></div> --}}
                             </div>
+                            <button class="btn btn-small btn-round-edge btn-base-color mt-20px " type="submit">Commenter</button>
                         </form>
                         <!-- end contact form -->
                     </div>
