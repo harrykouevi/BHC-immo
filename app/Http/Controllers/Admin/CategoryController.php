@@ -20,7 +20,7 @@ class CategoryController extends Controller
     {
         // Fetch all posts for display using the service
         // $posts = $this->categoryService->getAll();
-        return view('admin.categories.index');
+        return view('admin.categories.index', ['categories' => $this->categoryService->getAll()]);
     }
 
 

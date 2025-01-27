@@ -1,6 +1,4 @@
 
-<div>
-
 <!-- row -->
 <div class="row">
     <div class="col-md-12 col-xl-12 col-xs-12 col-sm-12">
@@ -27,21 +25,15 @@
 
                     <div class="row row-sm">
                         <div class="col-lg-12 col-md-12">
-
                             <div>
                                 <h6 class="card-title mb-1">Détail de l'article</h6>
-                            
                             </div>
-
-
-
                         </div>
                         <div class="col-lg-12 col-md-12">
                             <p class="mg-b-10">Titre</p>
                             <input class="form-control" placeholder="Titre" wire:model="titre" type="text">
                             @error('titre') <span class="error">{{ $message }}</span> @enderror
                         </div>
-
                     </div>
                     <div class="row row-sm mg-t-20">
                         <div class="col-lg">
@@ -90,21 +82,14 @@
                             @error('categorie_id') <span class="error">{{ $message }}</span> @enderror
                         </div>
                     </div>
-
-
-                   
-
+                </div>
                 <div class="card-footer">
                     <button type="submit" class="btn btn-primary waves-effect waves-light">
                         <span class="btn-double-text" data-text="{{ $isUpdate ? 'Mettre à jour' : 'Créer' }} l'article">{{ $isUpdate ? 'Mettre à jour' : 'Créer' }} l'article</span>
-
                     </button>
-
                 </div>
             </form>
         </div>
     </div>
-</div>
-<!-- row closed -->
 </div>
 

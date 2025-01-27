@@ -1,5 +1,6 @@
-<div>
-    <div class="col-xl-9 col-lg-9 col-md-12">
+<!-- row opened -->
+<div class="row row-sm">
+    <div class="col-xl-12 col-lg-12 col-md-12">
         <div class="row row-sm">
             @foreach($lesavis as $avis)
             <div class="col-12 mb-3"> <!-- Avis prennent toute la largeur -->
@@ -7,7 +8,7 @@
                     <div class="card-body">
                         <!-- Contenu de l'avis -->
                         <div class="main-content-label mb-3" style="font-weight: normal; text-transform: lowercase;">{!! Str::words($avis->comment ?? 'aucun avis') !!}</div>
-                        
+
                         <!-- Boutons -->
                         <div class="d-flex justify-content-between">
                             @if ($avis->approuve == "non")
