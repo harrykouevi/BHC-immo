@@ -35,22 +35,22 @@
         </section>
         <!-- end section -->
         <!-- start section -->
-        <section class="pb-0"> 
+        <section class="pb-0">
             <div class="container">
-                <div class="row align-items-center">  
-                    <div class="col-lg-6 order-2 order-lg-1 position-relative align-self-end" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"tb", "easing": "easeOutQuad", "delay":50}'> 
+                <div class="row align-items-center">
+                    <div class="col-lg-6 order-2 order-lg-1 position-relative align-self-end" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"tb", "easing": "easeOutQuad", "delay":50}'>
                         <figure class="position-relative m-0">
                             <img src="https://via.placeholder.com/610x647" class="w-100" alt="">
-                            <figcaption class="w-180px bg-white p-30px pt-20px border-radius-8px position-absolute top-150px right-minus-30px lg-right-0px overflow-hidden box-shadow-medium animation-float"> 
+                            <figcaption class="w-180px bg-white p-30px pt-20px border-radius-8px position-absolute top-150px right-minus-30px lg-right-0px overflow-hidden box-shadow-medium animation-float">
                                 <span class="alt-font fs-100 fw-700 text-white d-block position-relative z-index-1">10</span>
                                 <div class="alt-font fw-500 fs-24 d-block text-dark-gray lh-26 ls-minus-05px">années d' <span class="fw-700">experience.</span></div>
                                 <div class="h-150px w-150px border-radius-100 bg-base-color position-absolute left-minus-10px top-minus-50px z-index-0"></div>
                             </figcaption>
                         </figure>
                     </div>
-                    <div class="col-xl-5 offset-xl-1 col-lg-6 mb-8 order-1 order-lg-2 md-mb-40px" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'> 
-                        <span class="fs-20 d-inline-block mb-15px text-base-color">Marketplace immobilier en ligne</span> 
-                        <h2 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">À vos côtés pour dénicher   <span class="fw-700 text-highlight d-inline-block">la meilleure place.<span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span></span></h2> 
+                    <div class="col-xl-5 offset-xl-1 col-lg-6 mb-8 order-1 order-lg-2 md-mb-40px" data-anime='{ "opacity": [0,1], "duration": 600, "delay": 100, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <span class="fs-20 d-inline-block mb-15px text-base-color">Marketplace immobilier en ligne</span>
+                        <h2 class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" data-shadow-animation="true" data-animation-delay="700">À vos côtés pour dénicher   <span class="fw-700 text-highlight d-inline-block">la meilleure place.<span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span></span></h2>
                         <p class="w-80 lg-w-100">Marketplace immobilier en ligne pour acheter, vendre et louer des biens résidentiels et commerciaux.</p>
                         <div class="pt-20px pb-20px ps-30px pe-30px xs-p-20px border border-color-extra-medium-gray border-radius-6px mb-15px icon-with-text-style-08 w-80 lg-w-100">
                             <div class="feature-box feature-box-left-icon-middle">
@@ -63,13 +63,13 @@
                             </div>
                         </div>
                         <p class="fs-13 mb-35px xs-lh-20">Nos meilleures<span class="text-dark-gray text-decoration-line-bottom">selections</span> pour vous.</p>
-                        <a href="demo-real-estate-agents.html" class="btn btn-dark-gray btn-medium btn-round-edge me-25px">Trusted agents</a> 
+                        <a href="demo-real-estate-agents.html" class="btn btn-dark-gray btn-medium btn-round-edge me-25px">Trusted agents</a>
                         <a href="demo-real-estate-sell.html" class="btn btn-large btn-link btn-hover-animation-switch text-dark-gray p-0">
                             <span>
                                 <span class="btn-text">Trouvez un immeuble</span>
                                 <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
                                 <span class="btn-icon"><i class="feather icon-feather-arrow-right"></i></span>
-                            </span> 
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -88,52 +88,52 @@
                     <!-- start features box item -->
                     <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px">
                         <div class="bg-white feature-box box-shadow-quadruple-large box-shadow-quadruple-large-hover text-center p-16 lg-p-14 border-radius-10px last-paragraph-no-margin">
-                            <div class="feature-box-icon mb-20px"> 
+                            <div class="feature-box-icon mb-20px">
                                 <img src="https://via.placeholder.com/158x158" class="h-80px" alt="">
                             </div>
                             <div class="feature-box-content">
                                 <span class="alt-font fw-600 text-dark-gray fs-20 d-inline-block mb-5px">Meilleures services</span>
                                 <p>Lorem ipsum is simply printing typesetting.</p>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                     <!-- end features box item -->
                     <!-- start features box item -->
                     <div class="col icon-with-text-style-07 transition-inner-all md-mb-30px">
                         <div class="bg-white feature-box box-shadow-quadruple-large box-shadow-quadruple-large-hover text-center p-16 lg-p-14 border-radius-10px last-paragraph-no-margin">
-                            <div class="feature-box-icon mb-20px"> 
+                            <div class="feature-box-icon mb-20px">
                                 <img src="https://via.placeholder.com/158x158" class="h-80px" alt="">
                             </div>
                             <div class="feature-box-content">
                                 <span class="alt-font fw-600 text-dark-gray fs-20 d-inline-block mb-5px">Nos amis Utilisateurs</span>
                                 <p>Lorem ipsum is simply printing typesetting.</p>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                     <!-- end features box item -->
                     <!-- start features box item -->
                     <div class="col icon-with-text-style-07 transition-inner-all xs-mb-30px">
                         <div class="bg-white feature-box box-shadow-quadruple-large box-shadow-quadruple-large-hover text-center p-16 lg-p-14 border-radius-10px last-paragraph-no-margin">
-                            <div class="feature-box-icon mb-20px"> 
+                            <div class="feature-box-icon mb-20px">
                                 <img src="https://via.placeholder.com/158x158" class="h-80px" alt="">
                             </div>
                             <div class="feature-box-content">
                                 <span class="alt-font fw-600 text-dark-gray fs-20 d-inline-block mb-5px">Propriété de confiance</span>
                                 <p>Lorem ipsum is simply printing typesetting.</p>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                     <!-- end features box item -->
                     <!-- start features box item -->
                     <div class="col icon-with-text-style-07 transition-inner-all">
                         <div class="bg-white feature-box box-shadow-quadruple-large box-shadow-quadruple-large-hover text-center p-16 lg-p-14 border-radius-10px last-paragraph-no-margin">
-                            <div class="feature-box-icon mb-20px"> 
+                            <div class="feature-box-icon mb-20px">
                                 <img src="https://via.placeholder.com/158x158" class="h-80px" alt="">
                             </div>
                             <div class="feature-box-content">
                                 <span class="alt-font fw-600 text-dark-gray fs-20 d-inline-block mb-5px">Conseiller juridique</span>
                                 <p>Lorem ipsum is simply printing typesetting.</p>
-                            </div>                        
+                            </div>
                         </div>
                     </div>
                     <!-- end features box item -->
@@ -157,9 +157,9 @@
         <section class="position-relative overflow-hidden pt-0">
             <img src="images/demo-real-estate-07.png" alt="" class="position-absolute left-100px top-50px z-index-minus-1" data-bottom-top="transform: translate3d(80px, 0px, 0px);" data-top-bottom="transform: translate3d(-180px, 0px, 0px);" />
             <img src="images/demo-real-estate-08.png" alt="" class="position-absolute right-100px top-100px z-index-minus-1" data-bottom-top="transform:scale(1.4, 1.4) translate3d(0px, 0px, 0px);" data-top-bottom="transform:scale(1, 1) translate3d(-400px, 0px, 0px);" />
-            <div class="container">  
-                <div class="row align-items-center justify-content-center">  
-                    <div class="col-lg-6 text-end md-mb-50px" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"lr", "easing": "easeOutQuad", "delay":50}'> 
+            <div class="container">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-6 text-end md-mb-50px" data-anime='{ "effect": "slide", "color": "#262b35", "direction":"lr", "easing": "easeOutQuad", "delay":50}'>
                         <figure class="position-relative m-0">
                             <img src="https://via.placeholder.com/800x907" class="w-90 border-radius-6px" alt="">
                             <figcaption class="position-absolute bg-dark-gray border-radius-10px box-shadow-quadruple-large bottom-100px xs-bottom-minus-20px left-minus-30px md-left-0px w-230px xs-w-210px text-center last-paragraph-no-margin animation-float">
@@ -175,73 +175,84 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div 
-    class="col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start" 
+                    <div
+    class="col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start"
     data-anime='{
-        "translateY": [0, 0], 
-        "opacity": [0, 1], 
-        "duration": 1200, 
-        "delay": 100, 
-        "staggervalue": 150, 
+        "translateY": [0, 0],
+        "opacity": [0, 1],
+        "duration": 1200,
+        "delay": 100,
+        "staggervalue": 150,
         "easing": "easeOutQuad"
     }'
 >
     <span class="fs-20 d-inline-block mb-15px text-base-color">Retour de nos clients</span>
-    
-    <h2 
-        class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none" 
-        data-shadow-animation="true" 
+
+    <h2
+        class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none"
+        data-shadow-animation="true"
         data-animation-delay="700"
     >
-        Voici les témoignages 
+        Voici les témoignages
         <span class="fw-700 text-highlight d-inline-block">
-            de nos 
+            de nos
             <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
-        </span> 
+        </span>
         clients
     </h2>
-    
-    <div 
-        class="swiper position-relative" 
+
+    <div
+        class="swiper position-relative"
         data-slider-options='{
-            "autoHeight": true, 
-            "loop": true, 
-            "allowTouchMove": true, 
-            "autoplay": { "delay": 4000, "disableOnInteraction": false }, 
-            "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" }, 
+            "autoHeight": true,
+            "loop": true,
+            "allowTouchMove": true,
+            "autoplay": { "delay": 4000, "disableOnInteraction": false },
+            "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" },
             "effect": "fade"
         }'
     >
         <div class="swiper-wrapper mb-40px">
             <!-- Start text slider items -->
             @foreach($avis as $avi)
+                @if ($avi -> approuve == "oui")
                 <div class="swiper-slide review-style-08">
-                    <p class="w-80 lg-w-100">{{ $avi->temoignage }}</p>
-                    
+                    <p class="w-80 lg-w-100">{{ $avi->comment}}</p>
+
                     <div class="mt-20px d-flex align-items-center">
-                        <img 
-                            class="rounded-circle w-95px h-95px me-15px" 
-                            src="https://via.placeholder.com/148x148" 
-                            alt="{{ $avi->nom_client }}"
-                        >
-                        
+                        {{-- <img
+                            class="rounded-circle w-95px h-95px me-15px"
+                            src="https://via.placeholder.com/148x148"
+                            alt="{{ $reviews->name }}"> --}}
+
                         <div class="d-inline-block align-middle text-start">
                             <div class="text-dark-gray alt-font fs-20">
-                                <span class="fw-700">{{ $avi->nom_client }}</span>
+                                <span class="fw-700">{{ $avi->name }}</span>
                             </div>
-                            
+
+                            {{-- <div class="review-star-icon fs-18">
+                                <span class="fw-700">{{ $avi->name }}</span>
+                            </div>
+
+
                             <div class="review-star-icon fs-18">
+                            {{--
                                 @for ($i = 1; $i <= 5; $i++)
-                                    @if($i <= $avi->note)
+                                    @if($i <= $reviews->note?0)
                                         <i class="bi bi-star-fill text-warning"></i> <!-- Full star -->
                                     @else
                                         <i class="bi bi-star text-muted"></i> <!-- Empty star -->
                                     @endif
                                 @endfor
-                            </div>
+                                </div>
+
+
+
+                            </div>--}}
                         </div>
-                    </div> 
+                    </div>
                 </div>
+                @endif
             @endforeach
             <!-- End text slider items -->
         </div>
@@ -262,7 +273,7 @@
                 </div>
             </div>
         </section>
-        <!-- end section -->    
+        <!-- end section -->
         <!-- start section -->
         <section class="pt-0 pb-30px sm-pb-50px overlap-height">
             <div class="container overlap-gap-section">
@@ -273,7 +284,7 @@
                                 <img src="images/demo-real-estate-logo-01.svg" class="h-40px" alt="" />
                             </div>
                             <div class="border-top border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                <div class="alt-font mx-auto lh-28">Property sell listed - <span class="fw-700 text-dark-gray">275% Growth</span></div>
+                                <div class="alt-font mx-auto lh-28">Propriété à vendre répertoriée - <span class="fw-700 text-dark-gray">275% Croissance</span></div>
                             </div>
                         </div>
                     </div>
@@ -283,7 +294,7 @@
                                 <img src="images/demo-real-estate-logo-02.svg" class="h-40px" alt="" />
                             </div>
                             <div class="border-top border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                <div class="alt-font mx-auto lh-28">Property selling - <span class="fw-700 text-dark-gray">235% Growth</span></div>
+                                <div class="alt-font mx-auto lh-28">Vente de biens immobiliers - <span class="fw-700 text-dark-gray">235% Croissance</span></div>
                             </div>
                         </div>
                     </div>
@@ -293,15 +304,15 @@
                                 <img src="images/demo-real-estate-logo-03.svg" class="h-40px" alt="" />
                             </div>
                             <div class="border-top border-1 border-color-extra-medium-gray p-15px last-paragraph-no-margin">
-                                <div class="alt-font mx-auto lh-28">Property agents - <span class="fw-700 text-dark-gray">175% Growth</span></div>
+                                <div class="alt-font mx-auto lh-28">Agents immobiliers - <span class="fw-700 text-dark-gray">175% Croissance</span></div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center align-items-center mt-5 md-mt-7" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <div class="col-12 text-center align-items-center">
-                        <div class="bg-dark-gray alt-font fs-12 fw-700 text-white text-uppercase border-radius-30px ps-20px pe-20px me-10px sm-m-5px d-inline-block align-middle">Fun facts</div>
-                        <div class="fs-20 text-dark-gray d-block d-md-inline-block align-middle alt-font fw-600">World's famous ratings companies we worked with us.</div>
+                        <div class="bg-dark-gray alt-font fs-12 fw-700 text-white text-uppercase border-radius-30px ps-20px pe-20px me-10px sm-m-5px d-inline-block align-middle">Faits amusants</div>
+                        <div class="fs-20 text-dark-gray d-block d-md-inline-block align-middle alt-font fw-600">Les agences de notation les plus connues au monde avec lesquelles nous avons travaillé.</div>
                     </div>
                 </div>
             </div>

@@ -1,50 +1,50 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Annonce;
 use App\Models\Review;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Contact;
 
+use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    /**
-     * Affiche le formulaire de soumission d'avis.
-     *
-     * @return \Illuminate\View\View
-     */
-    public function create($id)
+    //
+    public function storef(Request $request, $id)
     {
-        $annonce = Annonce::findOrFail($id); // Crée une nouvelle instance d'annonce
-        return view('reviews', compact('annonce'));
-    }
 
-    /**
-     * Stocke un nouvel avis dans la base de données.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\RedirectResponse
-     */
-    public function store(Request $request)
-    {
-        // Validation des données
-        $validatedData = $request->validate([
+        // Validation des données du formulaire
+        $request->validate([
             'annonce_id' => 'required|exists:annonces,id',
-            'content' => 'required|string|max:1000',
-            'rating' => 'required|integer|min:1|max:5',
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'phone' => 'nullable|string|max:20',
+            'comment' => 'required|string|max:1000',
         ]);
+
+
+        // Vérification si l'utilisateur (ou visiteur) a pris contact
+        $contact = Contact::where('email', $request->email)
+        //->where('has_contacted', true) // Vérifier si le visiteur a pris contact
+        ->first();
+
+        if (!$contact) {
+            return redirect()->route('posts.show', $id)->with('error', 'Vous devez avoir pris contact avec nous avant de soumettre un avis.');
+            dd('aaaaaaa');
+        }
 
         // Création de l'avis
         Review::create([
-            'annonce_id' => $validatedData['annonce_id'],
-            'user_id' => Auth::id(), // ID de l'utilisateur connecté
-            'content' => $validatedData['content'],
-            'rating' => $validatedData['rating'],
+        'annonce_id' => $id,
+        'name' => $request->name,
+        'email' => $request->email,
+        'phone' => $request->phone,
+        'comment' => $request->comment,
         ]);
 
-        return redirect()->back()->with('status', 'Votre avis a été soumis avec succès.');
+        // Retour à la page de l'annonce avec un message de succès
+        return redirect()->route('posts.show', $id)
+                        ->with('success', 'Votre avis a été soumis avec succès.');
     }
+
 
 }

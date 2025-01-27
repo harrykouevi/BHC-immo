@@ -9,17 +9,20 @@
 @section('content')
     <!-- start banner slider -->
     <section class="p-0 top-space-margin">
-        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 4000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
+        <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
             <div class="swiper-wrapper">
+                @foreach($annonces as $annonce)
                 <!-- start slider item -->
                 <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Luxurious <span class="fw-700">mansion</span></div>
+                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: inherite /*rgba(59, 56, 56, 0.5); /* Noir avec 50% de transparence */
+    color: white; /* Couleur du texte */
+    padding: 20px;">
+                                <span class="fs-20 d-block mb-15px ">{{ $annonce->adresse }}</span>
+                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-100 xs-w-100 ls-minus-2px"> <span class="fw-700">{{ $annonce->titre }}</span></div>
                                 <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
+                                <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Détails</a>
                             </div>
                         </div>
                     </div>
@@ -29,11 +32,11 @@
                                 <div class="row">
                                     <div class="col text-center border-end border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">4 Pièces</span>
+                                        <span class="alt-font fs-16 fw-500 d-block">{{ $annonce->nbpieces }} Pièces</span>
                                     </div>
                                     <div class="col text-center border-end border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
+                                        <span class="alt-font fs-16 fw-500 d-block">{{ $annonce->wcdouche }} WC-douche</span>
                                     </div>
                                     <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
                                         <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
@@ -42,89 +45,14 @@
                                 </div>
                             </div>
                             <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$30,99,000</h4>
+                                <span class="fw-500 mb-5px d-block alt-font"> {{  (strpos($annonce->titre, 's') ==  false ? "Prix de location / Mois" : "Prix de vente") }}</span>
+                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">{{ $annonce->prix }} FCFA</h4>
                             </div>
                         </div>
                     </div>
                 </div>
                 <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
-                    <div class="container h-100">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-80 xs-w-100 ls-minus-2px">Woodland <span class="fw-700">modern</span></div>
-                                <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row">
-                            <div class="col-xl-7 lg-mb-25px">
-                                <div class="row">
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">4 Pièces</span>
-                                    </div>
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
-                                    </div>
-                                    <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 Garage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$27,99,000</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
-                <!-- start slider item -->
-                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
-                    <div class="container h-100">
-                        <div class="row align-items-center h-100">
-                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                                <span class="fs-20 d-block mb-15px">Valmont road, Boulder, CO 80301</span>
-                                <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-70 xs-w-100 ls-minus-2px">Saturate <span class="fw-700">house</span></div>
-                                <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
-                                <a href="{{ route('posts.show', 'new') }}" class="btn btn-transparent-white-light border-1 btn-large btn-round-edge fw-500 xs-mt-10px xs-mb-10px">Details</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                        <div class="row">
-                            <div class="col-xl-7 lg-mb-25px">
-                                <div class="row">
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bed.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 Pièces</span>
-                                    </div>
-                                    <div class="col text-center border-end border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-bath.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">3 WC-douche</span>
-                                    </div>
-                                    <div class="col text-center border-end lg-border-end-0 border-color-extra-medium-gray">
-                                        <img class="mb-5px h-50px" src="images/demo-real-estate-icon-car.svg" alt="">
-                                        <span class="alt-font fs-16 fw-500 d-block">2 Garage</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
-                                <span class="fw-500 mb-5px d-block alt-font">Prix d'acquisition</span>
-                                <h4 class="text-dark-gray fw-700 alt-font mb-0 ls-minus-1px">$23,99,000</h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end slider item -->
+                @endforeach
             </div>
             <!-- start slider pagination -->
             <div class="container">
@@ -204,7 +132,7 @@
     </section>
     <!-- end section -->
     <!-- start section -->
-    <section class="p-0 border-top border-color-extra-medium-gray">
+    {{-- <section class="p-0 border-top border-color-extra-medium-gray">
         <div class="container">
             <div class="row row-cols-1 row-cols-lg-6 row-cols-md-3 row-cols-sm-2 justify-content-center g-0 bg-white" data-anime='{ "el": "childs", "translateX": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
                 <!-- start features box item -->
@@ -289,7 +217,7 @@
                 <!-- end features box item -->
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-- end section -->
     <!-- start section -->
     <section class="bg-very-light-gray">
@@ -307,13 +235,13 @@
             <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 @foreach($annonces as $annonce) <!-- Boucle sur les annonces -->
                     <!-- start box item -->
-                    
+
                     <div class="col mb-30px">
                         <div class="border-radius-6px overflow-hidden box-shadow-large">
                             <div class="image position-relative">
                                 <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->category ? $annonce->category->nom : 'Aucune catégorie' }}</div>
                                 <a href="{{ route('posts.show', $annonce->id) }}"> <!-- Lien vers l'annonce -->
-                                    <img src="{{ Storage::disk('public')->url($annonce->images->first()->path) }}" alt="{{ $annonce->titre }}" style="width: 100%; height: 100%;"><!-- Affiche la première image -->
+                                    <img src="{{ $annonce->images->first() ? asset('storage/' . $annonce->images->first()->path) : 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $annonce->titre }}">
                                 </a>
                                 <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->type }}</div> <!-- Type de l'annonce (Vente/Location) -->
                             </div>
@@ -349,7 +277,7 @@
                                 </div>
                                 <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
                                     <div class="col">
-                                        <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Details</a> <!-- Bouton détails -->
+                                        <a href="{{ route('posts.show', $annonce->id) }}" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Détails</a> <!-- Bouton détails -->
                                     </div>
                                     <div class="col text-end">
                                         <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">{{$annonce?->prix}} FCFA</span> <!-- Prix de l'annonce -->
@@ -450,7 +378,7 @@
             <div class="row align-items-center">
                 <div class="col-xl-4 col-lg-5 md-mb-50px sm-mb-35px">
                     <span class="fs-20 d-inline-block mb-15px text-base-color">Trouvez la maison de vos rêves</span>
-                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px w-90 xl-w-100 shadow-none" data-shadow-animation="true" data-animation-delay="700">Nous sommes disponibles dans <span class="fw-700 text-highlight d-inline-block">plusieurs pays<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
+                    <h3 class="alt-font fw-500 text-dark-gray ls-minus-1px w-90 xl-w-100 shadow-none" data-shadow-animation="true" data-animation-delay="700">Nous sommes disponibles dans <span class="fw-700 text-highlight d-inline-block">plusieurs quartiers<span class="bg-base-color h-10px bottom-1px opacity-3 separator-animation"></span></span></h3>
                     <p class="mb-30px w-90 md-w-100">Nous vous offrons une grande variété de type de maison pour votre famille et vous en fonction des vos modèles </p>
                     <div class="d-flex">
                         <!-- start slider navigation -->
@@ -469,7 +397,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-orange border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-orange lh-18">
@@ -479,8 +407,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Washington, USA</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Adakpame, LOME</a>
                                                 <span class="opacity-7 text-white">17 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -495,7 +423,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -505,8 +433,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Paris, France</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Adidogome, LOME</a>
                                                 <span class="opacity-7 text-white">20 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -521,7 +449,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -531,8 +459,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Chicago, USA</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Sagbado, LOME</a>
                                                 <span class="opacity-7 text-white">45 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -547,7 +475,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -558,7 +486,7 @@
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
                                                 <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">San francisco, USA</a>
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Legbassito, LOME</a>
                                                 <span class="opacity-7 text-white">45 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -572,7 +500,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -582,8 +510,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Paris, France</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Tokoin, LOME</a>
                                                 <span class="opacity-7 text-white">20 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -598,7 +526,7 @@
                                     <div class="col interactive-banner-style-05">
                                         <figure class="m-0 hover-box overflow-hidden position-relative border-radius-6px">
                                             <a href="#">
-                                                <img src="https://via.placeholder.com/370x510" class="w-100 border-radius-6px" alt="" />
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="w-100 border-radius-6px" alt="" />
                                                 <div class="position-absolute top-0px left-0px w-100 h-100 bg-gradient-gray-light-dark-transparent"></div>
                                                 <div class="position-absolute top-25px right-25px bg-base-color border-radius-50px ps-5px pe-15px lh-28">
                                                     <div class="w-20px h-20px text-center bg-white rounded-circle d-inline-block align-middle text-base-color lh-18">
@@ -608,8 +536,8 @@
                                                 </div>
                                             </a>
                                             <figcaption class="d-flex flex-column align-items-start justify-content-center position-absolute left-0px top-0px w-100 h-100 z-index-1 p-50px xl-p-40px sm-p-30px last-paragraph-no-margin">
-                                                <img src="https://via.placeholder.com/130x130" class="mb-auto h-70px" alt="" />
-                                                <a href="#" class="text-white alt-font fw-600 fs-26">Chicago, USA</a>
+                                                <img src="{{ asset('img/les_quartiers.png') }}" class="mb-auto h-70px" alt="" />
+                                                <a href="#" class="text-white alt-font fw-600 fs-26">Segbe, LOME</a>
                                                 <span class="opacity-7 text-white">45 propriété en attente</span>
                                                 <a href="#" class="btn btn-light-base-color btn-small btn-round-edge btn-box-shadow mt-20px">Tout propriété<i class="feather icon-feather-arrow-right icon-very-small"></i></a>
                                             </figcaption>
@@ -801,11 +729,11 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Il n'est pas un homme complet si ce n'est qu'il ne possède pas un morceau de terre.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="{{ route('blog-single')}}" class="blog-date">22 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Il n'est pas un homme complet si ce n'est qu'il ne possède pas un morceau de terre.</a>
                                 </div>
                             </div>
                         </li>
@@ -814,11 +742,11 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residence</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Le risque vient du fait de ne pas savoir ce que l'on fait.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Residence</a><a href="{{ route('blog-single')}}" class="blog-date">22 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Le risque vient du fait de ne pas savoir ce que l'on fait.</a>
                                 </div>
                             </div>
                         </li>
@@ -827,11 +755,11 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">20 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Sachez ce que vous possédez et pourquoi vous le possédez.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="{{ route('blog-single')}}" class="blog-date">20 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Sachez ce que vous possédez et pourquoi vous le possédez.</a>
                                 </div>
                             </div>
                         </li>
@@ -840,16 +768,54 @@
                         <li class="grid-item">
                             <div class="card bg-transparent border-0 h-100">
                                 <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                    <a href="#"><img src="https://via.placeholder.com/600x430" alt="" /></a>
+                                    <a href="{{ route('blog-single')}}"><img src="https://via.placeholder.com/600x430" alt="" /></a>
                                 </div>
                                 <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                    <span class="fs-14 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Résidence</a><a href="#" class="blog-date">18 August 2023</a></span>
-                                    <a href="#" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">N'attendez pas pour acheter de l'immobilier, achetez de l'immobilier et attendez.</a>
+                                    <span class="fs-14 text-uppercase"><a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">Résidence</a><a href="{{ route('blog-single')}}" class="blog-date">18 August 2023</a></span>
+                                    <a href="{{ route('blog-single')}}" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">N'attendez pas pour acheter de l'immobilier, achetez de l'immobilier et attendez.</a>
                                 </div>
                             </div>
                         </li>
                         <!-- end blog item -->
                     </ul>
+                    {{-- <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
+                        <li class="grid-sizer"></li>
+                        <!-- start blog items -->
+                        {{-- @foreach($articles as $article)
+                            <li class="grid-item">
+                                <div class="card bg-transparent border-0 h-100">
+                                    <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
+                                        <span class="fs-14 text-uppercase">
+                                            <a href="#" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
+                                            <a href="#" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
+                                        </span>
+                                        <a href="{{ route('blogs', $article->id) }}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
+                                            {{ Str::limit($article->title, 60) }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        @endforeach
+                        <!-- end blog items -->
+                        <ul class="grid">
+                            @foreach($articles as $article)
+                                <li class="grid-item">
+                                    <div class="card bg-transparent border-0 h-100">
+                                        <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
+                                            <span class="fs-14 text-uppercase">
+                                                <a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
+                                                <a href="{{ route('blog-single')}}" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
+                                            </span>
+                                            <a href="{{ route('blog-single')}}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
+                                                {{ Str::limit($article->title, 60) }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            @endforeach
+                        </ul>
+
+                    </ul> --}}
                 </div>
             </div>
         </div>

@@ -11,16 +11,20 @@ return new class extends Migration
      */
     public function up(): void
     {
+        // Check if the 'annonces' table already exists
+        if (!Schema::hasTable('reviews')) {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->cascadeOnDelete(); // Clé étrangère vers users
-            $table->foreignId('annonce_id')->constrained('annonces')->cascadeOnDelete(); // Clé étrangère vers annonces
-            $table->text('content');
-            $table->unsignedTinyInteger('rating'); // Note de 1 à 5
+            $table->unsignedBigInteger('annonce_id'); // Référence à l'annonce
+            $table->unsignedBigInteger('user_id'); // Référence au client
+            $table->text('name'); // Nom du client
+            $table->string('email'); // Email du client
+            $table->integer('phone'); // Numerodu telephone
+            $table->text('comment'); // Contenu de l'avis
             $table->timestamps();
         });
+        }
     }
-
 
     /**
      * Reverse the migrations.

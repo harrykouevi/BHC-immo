@@ -49,9 +49,6 @@ class Annonce extends Model
         static::deleting(function ($annonce) {
             // Supprimer les images associées
             $annonce->images()->delete();
-
-            // Supprimer les historiques associés
-            //AnnonceHistory::where('annonce_id', $annonce->id)->delete();
         });
     }
 

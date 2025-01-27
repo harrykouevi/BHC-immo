@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('avis', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->id();
-            $table->string("nom_client");
-            $table->string("temoignage");
-            $table->integer("note");
-
+            $table->string("titre");
+            $table->Text("contenu");
+            $table->foreignId('categorie_id')->constrained('categories')->cascadeOnDelete(); 
             $table->timestamps();
         });
     }
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('avis');
+        Schema::dropIfExists('articles');
     }
 };

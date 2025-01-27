@@ -3,7 +3,8 @@
 use App\Jobs\ProcessImage;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Laravel\Facades\Image;
-
+// use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Admin\ArticleController;
 use Illuminate\Http\Request;
 use App\Models\Article;
 
@@ -12,6 +13,7 @@ use App\Http\Controllers\ReviewController;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ContactMail; // Make sure to import your Mailable class
 use App\Services\AnnonceService;
+use App\Services\ArticleService;
 use Google\Client;
 use Google\Service\Gmail;
 use Illuminate\Support\Facades\Auth;
@@ -45,6 +47,14 @@ Route::get('/', function () {
     return view('welcome',['articles'=>$posts, 'annonces' => $annonces]);
 })->name('accueil');
 
+Route::get('/blogs', function () {
+   $articleService = new ArticleService();
+   $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
+   return view('blog',['articles' => $articles]);
+})->name('blogs');
+
+// Route::get('/blogs', [ArticleController::class, 'view_blog'])->name('blogs');
+
 
 Route::get('/contacts', function () {
     return view('contactus');
@@ -52,14 +62,16 @@ Route::get('/contacts', function () {
 
 Route::get('/location',[PagesController::class,"getAnnonces"])->name('location');
 
+Route::get('/sell',[PagesController::class,"getSellAnnonces"])->name('sell');
+
 
 Route::get('/search',[PagesController::class,"search"])->name('search');
 
 Route::post('/contacts/send_message',[PagesController::class,'sendMessage'])->name('send-message');
 Route::get('/apropos',[PagesController::class,'apropos'])->name('apropos');;
-Route::get('/blogs', function () {
-    return view('blog');
-})->name('blogs.index') ;
+// Route::get('/blogs', function () {
+//     return view('blog');
+// })->name('blogs.index') ;
 
 Route::get('/posts/{id}', function ($id) {
     // Créer une instance du service Annonce
@@ -69,19 +81,22 @@ Route::get('/posts/{id}', function ($id) {
     $post = $annonceService->get($id);
     $annonces = $annonceService->getAll();
 
+
     // Retourner la vue avec les données
     return view('post-single', [
         'post' => $post,
         'annonces' => $annonces,
-
     ]);
 })->name('posts.show');
 
-// Route pour afficher le formulaire de soumission d'avis
-Route::get('/reviews/create', [ReviewController::class, 'create'])->name('reviews');
+// Route pour soumettre un avis
+Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
 
-// Route pour stocker un nouvel avis
-Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+Route::get('/blog-single', function () {
+    $articleService = new ArticleService();
+    $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
+    return view('blog-single',['articles' => $articles]);
+})->name('blog-single') ;
 
 Route::get('/A7d3F9kL2qX1', function () {
     return view('a-upload');
@@ -155,7 +170,7 @@ $email->setRaw($rawMessage);
 
    return back()->with('success', 'Votre message a été envoyé avec succès !');
 
-})->name('send-message');
+})->name('send-me');
 
 /*
 |--------------------------------------------------------------------------
@@ -171,3 +186,7 @@ $email->setRaw($rawMessage);
 // Inclure les routes admin
 require __DIR__ . '/admin.php';
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
