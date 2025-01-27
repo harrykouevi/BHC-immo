@@ -40,17 +40,17 @@ class ShowVisitsInline extends Component
     public function mount()
     {
         $this->collection =  collect([
-            (object) ['id' => 1, 'visitor_name' => "Produit très satisfaisant!", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 2, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 3, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 4, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 5, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 6, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 7, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 8, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 9, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 10, 'visitor_name' => "Moyennement satisfait.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
-            (object) ['id' => 11, 'visitor_name' => "Je ne recommande pas ce produit.", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 1, 'visitor_name' => "Thomas Dubois", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 2, 'visitor_name' => "Jean Martin", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 3, 'visitor_name' => "Sophie Leroy", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 4, 'visitor_name' => "Sophie Leroy", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 5, 'visitor_name' => "Jean Martin", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 6, 'visitor_name' => "Lucas Bernard", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 7, 'visitor_name' => "Léa Lefèvre", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 8, 'visitor_name' => "Lucas Bernard", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 9, 'visitor_name' => "Camille Rousseau", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 10, 'visitor_name' => "Camille Rousseau", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
+            (object) ['id' => 11, 'visitor_name' => "Hugo Laurent", 'visitor_email' => 'harry.kouevi@gmail.com','host_name' => "harry" , "visit_date" => "2025-12-16" , "scheduled_time" => Null , "remind_count" => 0 , "state" => "pending"],
         ]);
     }
 

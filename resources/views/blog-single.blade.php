@@ -177,65 +177,11 @@
                 </div>
                 <div class="row">
                     <div class="col-12">
-                        {{-- <ul class="blog-classic blog-wrapper grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'>
-                            <li class="grid-sizer"></li>
-                            <!-- start blog item -->
-                            <li class="grid-item">
-                                <div class="card bg-transparent border-0 h-100">
-                                    <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                        <a href="demo-real-estate-blog-single-creative.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                                    </div>
-                                    <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                        <span class="fs-13 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                        <a href="demo-real-estate-blog-single-creative.html" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">He is not a full man who does not own a piece of land.</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- end blog item -->
-                            <!-- start blog item -->
-                            <li class="grid-item">
-                                <div class="card bg-transparent border-0 h-100">
-                                    <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                        <a href="demo-real-estate-blog-single-creative.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                                    </div>
-                                    <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                        <span class="fs-13 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residential</a><a href="#" class="blog-date">22 August 2023</a></span>
-                                        <a href="demo-real-estate-blog-single-creative.html" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Risk comes from not knowing what you're doing.</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- end blog item -->
-                            <!-- start blog item -->
-                            <li class="grid-item">
-                                <div class="card bg-transparent border-0 h-100">
-                                    <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                        <a href="demo-real-estate-blog-single-creative.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                                    </div>
-                                    <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                        <span class="fs-13 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Commercial</a><a href="#" class="blog-date">20 August 2023</a></span>
-                                        <a href="demo-real-estate-blog-single-creative.html" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Know what you own, and know why you own it.</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- end blog item -->
-                            <!-- start blog item -->
-                            <li class="grid-item">
-                                <div class="card bg-transparent border-0 h-100">
-                                    <div class="blog-image position-relative overflow-hidden border-radius-6px">
-                                        <a href="demo-real-estate-blog-single-creative.html"><img src="https://via.placeholder.com/600x430" alt="" /></a>
-                                    </div>
-                                    <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                        <span class="fs-13 text-uppercase"><a href="#" class="text-dark-gray fw-500 categories-text">Residential</a><a href="#" class="blog-date">18 August 2023</a></span>
-                                        <a href="demo-real-estate-blog-single-creative.html" class="card-title mb-10px alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">Don't wait to buy real estate buy real estate and wait.</a>
-                                    </div>
-                                </div>
-                            </li>
-                            <!-- end blog item -->
-                        </ul> --}}
                         <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
                             <li class="grid-sizer"></li>
-                            <!-- start blog items -->
+
                             @foreach($articles as $article)
+                                <!-- start blog items -->
                                 <li class="grid-item">
                                     <div class="card bg-transparent border-0 h-100">
                                         <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
@@ -250,25 +196,6 @@
                                     </div>
                                 </li>
                             @endforeach
-                            <!-- end blog items -->
-                            <ul class="grid">
-                                {{-- @foreach($articles as $article)
-                                    <li class="grid-item">
-                                        <div class="card bg-transparent border-0 h-100">
-                                            <div class="card-body px-0 pb-30px pt-30px xs-pb-15px">
-                                                <span class="fs-14 text-uppercase">
-                                                    <a href="{{ route('blog-single')}}" class="text-dark-gray fw-500 categories-text">{{ $article->category ?? 'Non spécifiée' }}</a>
-                                                    <a href="{{ route('blog-single')}}" class="blog-date">{{ $article->created_at->format('d M Y') }}</a>
-                                                </span>
-                                                <a href="{{ route('blog-single')}}" class="card-title alt-font fw-600 lh-30 text-dark-gray d-inline-block w-95 fs-19">
-                                                    {{ Str::limit($article->title, 60) }}
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </li>
-                                @endforeach --}}
-                            </ul>
-
                         </ul>
                     </div>
                 </div>
@@ -491,8 +418,136 @@
 @endsection
 
 @push('scripts')
-        <!-- javascript libraries -->
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/vendors.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+    <!-- slider revolution core javaScript files -->
+   <script type="text/javascript" src="{{ asset('r/js/jquery.themepunch.tools.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('r/js/jquery.themepunch.revolution.min.js') }}"></script>
+   <!-- slider revolution extension scripts. ONLY NEEDED FOR LOCAL TESTING -->
+   <!-- <script type="text/javascript" src=" asset('r/js/extensions/revolution.extension.actions.min.js') }}"></script>
+   <script type="text/javascript" src=" asset('r/js/extensions/revolution.extension.carousel.min.js') }}"></script>
+   <script type="text/javascript" src=" asset('r/js/extensions/revolution.extension.kenburn.min.js') }}"></script>
+   <script type="text/javascript" src=" asset('r/js/extensions/revolution.extension.migration.min.js') }}"></script>
+   <script type="text/javascript" src=" asset('r/js/extensions/revolution.extension.video.min.js') }}"></script> -->
+   <script type="text/javascript" src=" {{ asset('r/js/extensions/revolution.extension.slideanims.min.js') }}"></script>
+   <script type="text/javascript" src="{{  asset('r/js/extensions/revolution.extension.layeranimation.min.js') }}"></script>
+   <script type="text/javascript" src="{{  asset('r/js/extensions/revolution.extension.navigation.min.js') }}"></script>
+   <script type="text/javascript" src="{{ asset('r/js/extensions/revolution.extension.parallax.min.js') }}"></script>
+
+
+   <!-- Slider's main "init" script -->
+   <script>
+       var tpj = jQuery;
+       var revapi7;
+       var $ = jQuery.noConflict();
+       tpj(document).ready(function () {
+           if (tpj("#demo-corporate-slider").revolution == undefined) {
+               revslider_showDoubleJqueryError("#demo-corporate-slider");
+           } else {
+               revapi7 = tpj("#demo-corporate-slider").show().revolution({
+                   sliderType: "standard",
+                   /* sets the Slider's default timeline */
+                   delay: 9000,
+                   /* options are 'auto', 'fullwidth' or 'fullscreen' */
+                   sliderLayout: 'fullscreen',
+                   /* RESPECT ASPECT RATIO */
+                   autoHeight: 'off',
+                   /* options that disable autoplay */
+                   stopLoop: "off",
+                   stopAfterLoops: -1,
+                   stopAtSlide: -1,
+                   navigation: {
+                       keyboardNavigation: 'on',
+                       keyboard_direction: 'horizontal',
+                       mouseScrollNavigation: 'off',
+                       mouseScrollReverse: 'reverse',
+                       onHoverStop: 'off',
+                       arrows: {
+                           enable: true,
+                           style: 'hesperiden',
+                           rtl: false,
+                           hide_onleave: false,
+                           hide_onmobile: true,
+                           hide_under: 500,
+                           hide_over: 9999,
+                           hide_delay: 200,
+                           hide_delay_mobile: 1200,
+                           left: {
+                               container: 'slider',
+                               h_align: 'left',
+                               v_align: 'center',
+                               h_offset: 50,
+                               v_offset: 0
+                           },
+                           right: {
+                               container: 'slider',
+                               h_align: 'right',
+                               v_align: 'center',
+                               h_offset: 50,
+                               v_offset: 0
+                           }
+                       },
+                       bullets: {
+
+                           enable: true,
+                           style: 'hermes',
+                           tmp: '',
+                           direction: 'horizontal',
+                           rtl: false,
+
+                           container: 'layergrid',
+                           h_align: 'center',
+                           v_align: 'bottom',
+                           h_offset: 0,
+                           v_offset: 30,
+                           space: 12,
+
+                           hide_onleave: false,
+                           hide_onmobile: true,
+                           hide_under: 0,
+                           hide_over: 500,
+                           hide_delay: true,
+                           hide_delay_mobile: 500
+
+                       },
+                       touch: {
+                           touchenabled: 'on',
+                           touchOnDesktop: "on",
+                           swipe_threshold: 75,
+                           swipe_min_touches: 1,
+                           swipe_direction: 'horizontal',
+                           drag_block_vertical: true
+                       }
+                   },
+                   responsiveLevels: [1240, 1024, 768, 480],
+                   visibilityLevels: [1240, 1024, 768, 480],
+                   gridwidth: [1240, 1024, 768, 480],
+                   gridheight: [930, 850, 900, 850],
+                   /* Lazy Load options are "all", "smart", "single" and "none" */
+                   lazyType: "smart",
+                   spinner: "spinner0",
+                   parallax: {
+                       type: "scroll",
+                       origo: "slidercenter",
+                       speed: 400,
+                       levels: [5, 10, 15, 20, 25, 30, 35, 40, 45, 46, 47, 48, 49, 50, 51, 5],
+                   },
+                   shadow: 0,
+                   shuffle: "off",
+                   fullScreenAutoWidth: "on",
+                   fullScreenAlignForce: "on",
+                   fullScreenOffsetContainer: "nav",
+                   fullScreenOffset: "",
+                   hideThumbsOnMobile: "off",
+                   hideSliderAtLimit: 0,
+                   hideCaptionAtLimit: 0,
+                   hideAllCaptionAtLilmit: 0,
+                   debugMode: false,
+                   fallbacks: {
+                       simplifyAll: "off",
+                       nextSlideOnWindowFocus: "off",
+                       disableFocusListener: false,
+                   }
+               });
+           }
+       }); /*ready*/
+   </script>
 @endpush

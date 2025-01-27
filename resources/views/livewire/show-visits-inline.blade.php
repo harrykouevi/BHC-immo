@@ -94,16 +94,22 @@
 
                         <div class="main-mail-body">
                             <div class="main-mail-from">
-                                {{ $post->visitor_name.' '. $post->visitor_email }}
+
+                            {{-- </div>
+                            <div class="main-mail-subject"> --}}
+                                <h1>Demande ID: 1 <span class="badge badge-success mg-r-5">En attente</span></h1>
                             </div>
                             <div class="main-mail-subject">
-                                <strong>Someone who believes in you</strong> <span>enean commodo li gula eget dolor cum socia eget dolor enean commodo li gula eget dolor cum socia eget dolor</span>
-                            </div>
+                                <p><strong>Nom du Client:</strong>{{ $post->visitor_name}}  <strong>{{ $post->visitor_email }}</strong><br>
+                                <strong>Date et Heure:</strong> {{ $post->visit_date }} {{ $post->scheduled_time }}</p>
 
-                            <div class="btn-group">
-                                <button class="btn btn-primary  mg-r-5 " wire:click="toRemind({{$post->id}})"  ><span class="badge badge-light mg-r-5">{{$post->remind_count}}</span>Envoyé un rappel</button>
-                                <button class="btn btn-light  mg-r-5 " wire:click="toConfirm({{$post->id}})"  >Confirmer</button>
-                                <button class="btn btn-light  mg-r-5 " wire:click="setVisitToDone({{$post->id}})"  >Marquer la visite comme étant faite</button>
+                            </div>
+                            <div class="actions">
+                                <div class="btn-group">
+                                    <button class="btn btn-primary  mg-r-5 " wire:click="toRemind({{$post->id}})"  ><span class="badge badge-light mg-r-5">{{$post->remind_count}}</span>Envoyé un rappel</button>
+                                    <button class="btn btn-light  mg-r-5 " wire:click="toConfirm({{$post->id}})"  >Confirmer</button>
+                                    <button class="btn btn-light  mg-r-5 " wire:click="setVisitToDone({{$post->id}})"  >Marquer la visite comme étant faite</button>
+                                </div>
                             </div>
                         </div>
 
