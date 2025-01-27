@@ -503,7 +503,8 @@
                     <div class="image position-relative">
                         <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->category ? $annonce->category->nom : 'Aucune catégorie' }}</div>
                         <a href="Souscrivez"> <!-- Lien vers l'annonce -->
-                           
+                            <img src="{{ $annonce->images->first() ? asset('storage/' . $annonce->images->first()->path) : 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $annonce->titre }}">
+
                         </a>
                         <div class="col-auto bg-base-color border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">{{ $annonce->type }}</div> <!-- Type de l'annonce (Vente/Location) -->
                     </div>
