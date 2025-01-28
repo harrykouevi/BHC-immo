@@ -212,9 +212,9 @@
             <!-- end navigation -->
         </header>
         <!-- end header -->
-        <div>
-            @yield('content') <!-- Contenu spécifique à chaque page -->
-        </div>
+      
+        @yield('content') <!-- Contenu spécifique à chaque page -->
+       
 
         <!-- start footer -->
         <footer class="footer-light bg-gradient-very-light-gray pb-0">

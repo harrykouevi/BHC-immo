@@ -175,99 +175,95 @@
                             </figcaption>
                         </figure>
                     </div>
-                    <div
-    class="col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start"
-    data-anime='{
-        "translateY": [0, 0],
-        "opacity": [0, 1],
-        "duration": 1200,
-        "delay": 100,
-        "staggervalue": 150,
-        "easing": "easeOutQuad"
-    }'
->
-    <span class="fs-20 d-inline-block mb-15px text-base-color">Retour de nos clients</span>
+                    <div class="col-lg-5 offset-lg-1 col-md-10 text-center text-lg-start"
+                            data-anime='{
+                                "translateY": [0, 0],
+                                "opacity": [0, 1],
+                                "duration": 1200,
+                                "delay": 100,
+                                "staggervalue": 150,
+                                "easing": "easeOutQuad"
+                            }'
+                        >
+                            <span class="fs-20 d-inline-block mb-15px text-base-color">Retour de nos clients</span>
 
-    <h2
-        class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none"
-        data-shadow-animation="true"
-        data-animation-delay="700"
-    >
-        Voici les témoignages
-        <span class="fw-700 text-highlight d-inline-block">
-            de nos
-            <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
-        </span>
-        clients
-    </h2>
+                            <h2  class="alt-font fw-500 text-dark-gray ls-minus-1px shadow-none"
+                                data-shadow-animation="true"
+                                data-animation-delay="700" >
+                                Voici les témoignages
+                                <span class="fw-700 text-highlight d-inline-block">
+                                    de nos
+                                    <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
+                                </span>
+                                clients
+                            </h2>
 
-    <div
-        class="swiper position-relative"
-        data-slider-options='{
-            "autoHeight": true,
-            "loop": true,
-            "allowTouchMove": true,
-            "autoplay": { "delay": 4000, "disableOnInteraction": false },
-            "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" },
-            "effect": "fade"
-        }'
-    >
-        <div class="swiper-wrapper mb-40px">
-            <!-- Start text slider items -->
-            @foreach($avis as $avi)
-                @if ($avi -> approuve == "oui")
-                <div class="swiper-slide review-style-08">
-                    <p class="w-80 lg-w-100">{{ $avi->comment}}</p>
+                            <div
+                                class="swiper position-relative"
+                                data-slider-options='{
+                                    "autoHeight": true,
+                                    "loop": true,
+                                    "allowTouchMove": true,
+                                    "autoplay": { "delay": 4000, "disableOnInteraction": false },
+                                    "navigation": { "nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev" },
+                                    "effect": "fade"
+                                }' >
+                                <div class="swiper-wrapper mb-40px">
+                                    <!-- Start text slider items -->
+                                    @foreach($avis as $avi)
+                                        @if ($avi -> approuve == "oui")
+                                        <div class="swiper-slide review-style-08">
+                                            <p class="w-80 lg-w-100">{{ $avi->comment}}</p>
 
-                    <div class="mt-20px d-flex align-items-center">
-                        {{-- <img
-                            class="rounded-circle w-95px h-95px me-15px"
-                            src="https://via.placeholder.com/148x148"
-                            alt="{{ $reviews->name }}"> --}}
+                                            <div class="mt-20px d-flex align-items-center">
+                                                {{-- <img
+                                                    class="rounded-circle w-95px h-95px me-15px"
+                                                    src="https://via.placeholder.com/148x148"
+                                                    alt="{{ $reviews->name }}"> --}}
 
-                        <div class="d-inline-block align-middle text-start">
-                            <div class="text-dark-gray alt-font fs-20">
-                                <span class="fw-700">{{ $avi->name }}</span>
-                            </div>
+                                                <div class="d-inline-block align-middle text-start">
+                                                    <div class="text-dark-gray alt-font fs-20">
+                                                        <span class="fw-700">{{ $avi->name }}</span>
+                                                    </div>
 
-                            {{-- <div class="review-star-icon fs-18">
-                                <span class="fw-700">{{ $avi->name }}</span>
-                            </div>
+                                                    {{-- <div class="review-star-icon fs-18">
+                                                        <span class="fw-700">{{ $avi->name }}</span>
+                                                    </div>
 
 
-                            <div class="review-star-icon fs-18">
-                            {{--
-                                @for ($i = 1; $i <= 5; $i++)
-                                    @if($i <= $reviews->note?0)
-                                        <i class="bi bi-star-fill text-warning"></i> <!-- Full star -->
-                                    @else
-                                        <i class="bi bi-star text-muted"></i> <!-- Empty star -->
-                                    @endif
-                                @endfor
+                                                    <div class="review-star-icon fs-18">
+                                                    {{--
+                                                        @for ($i = 1; $i <= 5; $i++)
+                                                            @if($i <= $reviews->note?0)
+                                                                <i class="bi bi-star-fill text-warning"></i> <!-- Full star -->
+                                                            @else
+                                                                <i class="bi bi-star text-muted"></i> <!-- Empty star -->
+                                                            @endif
+                                                        @endfor
+                                                        </div>
+
+
+
+                                                    </div>--}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endif
+                                    @endforeach
+                                    <!-- End text slider items -->
                                 </div>
 
-
-
-                            </div>--}}
+                                <!-- Slider navigation -->
+                                <div class="d-flex justify-content-center justify-content-lg-start">
+                                    <div class="slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 border border-color-extra-medium-gray">
+                                        <i class="fa-solid fa-arrow-left icon-small text-dark-gray"></i>
+                                    </div>
+                                    <div class="slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 border border-color-extra-medium-gray">
+                                        <i class="fa-solid fa-arrow-right icon-small text-dark-gray"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                @endif
-            @endforeach
-            <!-- End text slider items -->
-        </div>
-
-        <!-- Slider navigation -->
-        <div class="d-flex justify-content-center justify-content-lg-start">
-            <div class="slider-one-slide-prev-1 swiper-button-prev slider-navigation-style-04 border border-color-extra-medium-gray">
-                <i class="fa-solid fa-arrow-left icon-small text-dark-gray"></i>
-            </div>
-            <div class="slider-one-slide-next-1 swiper-button-next slider-navigation-style-04 border border-color-extra-medium-gray">
-                <i class="fa-solid fa-arrow-right icon-small text-dark-gray"></i>
-            </div>
-        </div>
-    </div>
-</div>
 
                     </div>
                 </div>
