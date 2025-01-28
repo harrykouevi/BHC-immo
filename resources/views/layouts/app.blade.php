@@ -32,6 +32,9 @@
             .text-shadow{
                 text-shadow: 0.5px 0.5px 20px black;
             }
+            #loom-companion-mv3{
+                display:none;
+            }
         </style>
 
     </head>
@@ -323,12 +326,13 @@
             </a>
         </div>
         <!-- end scroll progress -->
+
         <!-- javascript libraries -->
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
-        @stack('scripts') <!-- Définir une stack pour les scripts -->
-        <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+
         @livewireScripts
+        
     </body>
 
 </html>
