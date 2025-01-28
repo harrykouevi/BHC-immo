@@ -316,49 +316,17 @@
                 <!-- end footer content -->
             </div>
         </footer>
-        <!-- end footer -->
-        <!-- start subscription popup -->
-            {{-- <div id="Souscrivez-popup" class="mfp-hide Souscrivez-popup">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-xl-10 col-md-10 bg-white">
-                            <div class="row position-relative box-shadow-quadruple-large">
-                                <div class="col-lg-6 cover-background md-h-400px xs-h-300px" style="background-image:url('https://via.placeholder.com/600x690');"></div>
-                                <div class="col-lg-6 newsletter-popup p-8 lg-p-5 md-p-6 xs-p-8 position-relative">
-                                    <span class="text-base-color mb-10px d-block" style="">Nous offrons une large gamme d'options.</span>
-                                    <h4 class="d-inline-block alt-font text-dark-gray mb-20px">1M+ Propriété prête à<span class="fw-700 d-inline-flex text-highlight">acheter & à louer.<span class="bg-base-color h-10px bottom-8px opacity-3"></span></span></span></h4>
-                                    <p>Abonnez-vous à nos newsletters et recevez des mises à jour sur les propriétés à vendre et à louer.</p>
-                                    <div class="d-inline-block w-100 newsletter-style-05 position-relative mb-20px">
-                                        <form action="email-templates/Souscrivez-newsletter.php" method="post">
-                                            <input class="input-medium w-100 border-radius-4px form-control required mb-15px" type="email" name="email" placeholder="Entrez votre adresse e-mail" />
-                                            <input type="hidden" name="redirect" value="">
-                                            <button type="submit" aria-label="submit" class="btn btn-medium btn-round-edge btn-dark-gray btn-box-shadow w-100 submit">Abonnez-vous maintenant!</button>
-                                            <div class="form-results border-radius-4px mt-10px lh-normal pt-10px pb-10px ps-15px pe-15px fs-16 w-100 text-center position-absolute z-index-1 d-none"></div>
-                                        </form>
-                                    </div>
-                                    <label for="newsletter-off" class="fs-15"><input class="w-auto me-10px position-relative top-1px p-0" type="checkbox" id="newsletter-off" name="newsletter-off">Don't show this popup again</label>
-                                </div>
-                                <button title="Close (Esc)" type="button" class="mfp-close text-dark-gray"></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-        <!-- end subscription popup -->
-            <!-- start scroll progress -->
+        <!-- start scroll progress -->
         <div class="scroll-progress d-none d-xxl-block">
             <a href="#" class="scroll-top" aria-label="scroll">
                 <span class="scroll-text">Scroll</span><span class="scroll-line"><span class="scroll-point"></span></span>
             </a>
         </div>
         <!-- end scroll progress -->
-
         <!-- javascript libraries -->
         <script type="text/javascript" src="{{ asset('js/jquery.js') }}"></script>
         <script type="text/javascript" src="{{ asset('js/vendors.min.js') }}"></script>
-
         @stack('scripts') <!-- Définir une stack pour les scripts -->
-
         <script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
         @livewireScripts
     </body>
