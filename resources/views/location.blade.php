@@ -167,6 +167,7 @@
                             <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
                         </span>
                     </h3>
+                    @if(isset($annonces) && $annonces->isNotEmpty())
                     <!-- Barre de recherche ajoutée ici -->
                     <div class="search-bar mt-4">
                         <form action="{{route('search')}}" method="GET" class="d-flex justify-content-center">
@@ -174,6 +175,7 @@
                             <button type="submit" class="btn btn-primary ms-2 " style="background-color:green;">Rechercher</button>
                         </form>
                     </div>
+                    @endif
                 </div>
             </div>
             <!-- start box item -->
