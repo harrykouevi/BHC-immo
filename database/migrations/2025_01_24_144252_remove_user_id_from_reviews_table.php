@@ -20,7 +20,7 @@ return new class extends Migration
             }
             if (Schema::hasColumn('reviews', 'user_id')) {
                 // Drop the index by its name
-                $table->dropForeign('reviews_user_id_foreign'); // Replace with your actual index name
+                $table->dropForeign(['user_id']) ; // Replace with your actual index name
                 $table->dropColumn('user_id');
             }
         });
