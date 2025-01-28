@@ -291,12 +291,8 @@
                             </div>
                         </div>
                 @endforeach
+
             </div>
-
-            @else
-            <p>Problème de chargement des annonces.</p>
-            @endif
-
 
             <div class="row">
                 <div class="mt-5 xs-mt-10 d-flex justify-content-center" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
@@ -312,6 +308,12 @@
                     <!-- end pagination -->
                 </div>
             </div>
+
+            @else
+                <p>Problème de chargement des annonces.</p>
+            @endif
+
+
         </div>
     </section>
     <!-- end section -->
