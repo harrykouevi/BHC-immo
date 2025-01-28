@@ -16,7 +16,7 @@ return new class extends Migration
                 $table->text('reponse')->nullable();
             }
             if (!Schema::hasColumn('reviews', 'approuve')) {
-                $table->text('approuve')->default('non');
+                $table->string('approuve')->default('non');
             }
             if (Schema::hasColumn('reviews', 'user_id')) {
                 // Drop the index by its name
