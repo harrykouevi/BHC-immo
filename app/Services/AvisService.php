@@ -35,7 +35,7 @@ class AvisService
 
 
 
-    public function getFinded(String $search){
+    public function search(String $search){
         // Query annonces with pagination, optionally filtering by search term
         return Review::where('comment', 'like', '%' . $search . '%')
         ->paginate(9); // Adjust the number of items per page as needed

@@ -4,7 +4,7 @@ use App\Jobs\ProcessImage;
 use Illuminate\Support\Facades\Route;
 use Intervention\Image\Laravel\Facades\Image;
 // use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\ArticleController ;
 use Illuminate\Http\Request;
 use App\Models\Article;
 
@@ -22,7 +22,7 @@ use App\Http\Controllers\PagesController;
 
 /*
 |--------------------------------------------------------------------------
-| Web Routes
+| Front Web Routes
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
@@ -47,56 +47,24 @@ Route::get('/', function () {
     return view('welcome',['articles'=>$posts, 'annonces' => $annonces]);
 })->name('accueil');
 
-Route::get('/blogs', function () {
-   $articleService = new ArticleService();
-   $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
-   return view('blog',['articles' => $articles]);
-})->name('blogs');
+Route::get('/blogs', [ArticleController::class, 'seeArticles'] )->name('blogs');
 
-// Route::get('/blogs', [ArticleController::class, 'view_blog'])->name('blogs');
+Route::get('/blog-single',[ArticleController::class,'detailarticle'] )->name('blog-single') ;
 
-
-Route::get('/contacts', function () {
-    return view('contactus');
-})->name('contact') ;
+Route::get('/contacts', [PagesController::class,"contact"] )->name('contact') ;
 
 Route::get('/location',[PagesController::class,"getAnnonces"])->name('location');
 
 Route::get('/sell',[PagesController::class,"getSellAnnonces"])->name('sell');
 
-
-Route::get('/search',[PagesController::class,"search"])->name('search');
-
 Route::post('/contacts/send_message',[PagesController::class,'sendMessage'])->name('send-message');
-Route::get('/apropos',[PagesController::class,'apropos'])->name('apropos');;
-// Route::get('/blogs', function () {
-//     return view('blog');
-// })->name('blogs.index') ;
 
-Route::get('/posts/{id}', function ($id) {
-    // Créer une instance du service Annonce
-    $annonceService = new AnnonceService();
+Route::get('/apropos',[PagesController::class,'apropos'])->name('apropos');
 
-    // Récupérer les annonces mises en avant
-    $post = $annonceService->get($id);
-    $annonces = $annonceService->getAll();
-
-
-    // Retourner la vue avec les données
-    return view('post-single', [
-        'post' => $post,
-        'annonces' => $annonces,
-    ]);
-})->name('posts.show');
-
+Route::get('/posts/{id}', [PagesController::class,'detailannonce'])->name('posts.show');
 // Route pour soumettre un avis
 Route::post('/posts/{id}/reviews', [ReviewController::class, 'storef'])->name('reviews.store');
 
-Route::get('/blog-single', function () {
-    $articleService = new ArticleService();
-    $articles = $articleService->getAll(); // Utilise la méthode pour récupérer les articles avec leurs catégories
-    return view('blog-single',['articles' => $articles]);
-})->name('blog-single') ;
 
 Route::get('/A7d3F9kL2qX1', function () {
     return view('a-upload');
@@ -126,51 +94,7 @@ Route::post('/A7d3F9kL2qX1-up', function (Request $request) {
 })->name('X1-up');
 
 
-Route::post('/contact-up', function (Request $request) {
-    // Increase memory limit if necessary
-    $validatedData = $request->validate(
-    [
-        'name' => 'required|max:255',
-        'email' => 'required|email',
-        'phone' => 'required|max:15', // Add validation for phone number
-        'subject' => 'required|max:255', // Add validation for subject
-        'message' => 'required|max:1000',
-    ]);
-    // Envoi de l'e-mail
-    Mail::to('koueviharry@gmail.com')->send(new ContactMail(
-        $validatedData['name'],
-        $validatedData['email'],
-        $validatedData['phone'],
-        $validatedData['subject'],
-        $validatedData['message'])
-    );
-
-    // Initialize Google Client
-$client = new Client();
-$client->setAuthConfig('../service-account.json'); // Path to your service account JSON
-$client->addScope(Gmail::GMAIL_SEND);
-$client->setSubject('koueviharry@gmail.com'); // The user you want to impersonate
-
-// Create Gmail service
-$service = new Gmail($client);
-
-// Create email content
-$email = new \Google\Service\Gmail\Message();
-$rawMessageString = "From: ".$validatedData['email']."\r\n";
-$rawMessageString .= "To: koueviharry@gmail.com\r\n";
-$rawMessageString .= "Subject: Test Email\r\n\r\n";
-$rawMessageString .= "This is a test email sent from the Gmail API using PHP.";
-
-// Encode message in base64url format
-$rawMessage = base64_encode($rawMessageString);
-$email->setRaw($rawMessage);
-
-
-    $service->users_messages->send('me', $email);
-
-   return back()->with('success', 'Votre message a été envoyé avec succès !');
-
-})->name('send-me');
+// Route::post('/contact-up',[PagesController::class,'contactMessage']  )->name('send-me');
 
 /*
 |--------------------------------------------------------------------------

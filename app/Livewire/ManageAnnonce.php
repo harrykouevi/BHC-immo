@@ -139,21 +139,19 @@ class ManageAnnonce extends Component
                 ]);
 
                   // Enregistrer les images associées
-                  foreach ($this->photos as $photo) {
+                foreach ($this->photos as $photo) {
                     $path = $photo->store('annonces', 'public');
-
                     $img = $this->annonceService->imgCreate([
                         'annonce_id' => $this->annonceId,
                         'path' => $path,
                     ]);
-
                     $this->images->push($img) ;
                 }
 
                 $this->successMessage = 'annonce mis à jour avec succès.';
             } else {
                 // Create new annonce
-                $annonce = $this->annonceService->create([
+                $a = $this->annonceService->create([
 
                     'titre' => $this->titre,
                     'description' => $this->description,
@@ -174,7 +172,7 @@ class ManageAnnonce extends Component
                     $path = $photo->store('annonces', 'public');
 
                     $this->annonceService->imgCreate([
-                        'annonce_id' => $annonce->id,
+                        'annonce_id' => $a->id,
                         'path' => $path,
                     ]);
                 }
@@ -183,7 +181,7 @@ class ManageAnnonce extends Component
                 $this->successMessage = 'annonce créé avec succès.';
             }
 
-            // Clear error message
+            // // Clear error message
             $this->errorMessage = null;
 
             // Reset fields after saving
@@ -216,16 +214,16 @@ class ManageAnnonce extends Component
         if(!$this->isUpdate){
             $this->titre = '';
             $this->description = '';
-            $this->prix = 0;
+            $this->prix =  0.00;
             $this->adresse = '';
-            $this->content_= '';
-            $this->contacts_= '';
-            $this->phonenumber= '';
             $this->nbpieces= 0;
             $this->nbsalon= 0;
             $this->wcdouche= false;
+            $this->content_= '';
+            $this->contacts_= '';
+            $this->phonenumber= '';
             $this->categoryId = Null ;
-            $this->annonce->user_id = Null ;
+            $this->annonceId = Null ;
         }
 
         $this->photos = Null;

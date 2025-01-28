@@ -11,7 +11,7 @@ class CategoryService
         return Category::all();
     }
 
-    public function getFinded(String $search){
+    public function search(String $search){
         // Query annonces with pagination, optionally filtering by search term
         return Category::where('nom', 'like', '%' . $search . '%')
         ->paginate(9); // Adjust the number of items per page as needed

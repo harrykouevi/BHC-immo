@@ -23,7 +23,7 @@ class ShowAnnoncesCompact extends Component
     public function render()
     {
 
-        $annonces = (new AnnonceService())->getFinded($this->search) ;
+        $annonces = (new AnnonceService())->search($this->search)->paginate(8) ;
 
         return view('livewire.show-annonces-compact', [
             'annonces' => $annonces,

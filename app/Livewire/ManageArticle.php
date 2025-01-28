@@ -15,11 +15,7 @@ class ManageArticle extends Component
     public $titre = '';
     public $contenu = '';
    
-   
-   
-
-   // public $userID ; // ID de l'utilisateur connecté
-   // ID of the annonce for update
+  
     public $categorie_id; // ID of the category for update
     public $articleId;
     public $successMessage; // Public property for success messages
@@ -95,10 +91,7 @@ class ManageArticle extends Component
 
                 ]);
                 $this->successMessage = 'article mis à jour avec succès.';
-                }
-
-                
-            else {
+            }else {
                 // Create new annonce
                 $article = $this->articleService->create([
 
@@ -139,7 +132,7 @@ class ManageArticle extends Component
         if(!$this->isUpdate){
             $this->titre = '';
             $this->contenu = '';
-            $this->category_id = Null ;
+            $this->categorie_id = Null ;
             
         }
 

@@ -9,6 +9,8 @@ use App\Models\Annonce;
 use App\Models\Image;
 use App\Models\Category;
 use App\Models\Review;
+use App\Services\AnnonceService;
+use App\Services\ArticleService;
 
 class PagesController extends Controller
 {
@@ -55,51 +57,101 @@ class PagesController extends Controller
         return redirect('/contacts')->with('status', 'Votre message a été bien envoyé');
     }
 
-    public function search(Request $request)
+    private function search_(Request $request , int $per_page = NULL)
     {
-        $critere = $request->input('critere');
-
+        $critere = $request->has('critere') ? $request->input('critere') : Null;
         // Vérifier que le critère n'est pas vide
-        if (empty($critere)) {
-            return redirect('/location')->with('error', 'Le critère de recherche est requis');
+        if(!$critere) {
+            $results =(new AnnonceService)->getAll(['category', 'images'], $per_page);
+        }else{
+            $results = (new AnnonceService)->search($critere , ['category', 'images'], $per_page);
         }
-
-        $results = Annonce::with(['Category', 'images']) // Chargement des relations
-    ->where('titre', 'LIKE', "%{$critere}%")
-    ->orWhere('description', 'LIKE', "%{$critere}%")
-    ->orWhere('adresse', 'LIKE', "%{$critere}%")
-    ->orWhere('prix', 'LIKE', "%{$critere}%")
-    ->orWhere('surface', 'LIKE', "%{$critere}%")
-    ->orWhere('wcdouche', 'LIKE', "%{$critere}%")
-    ->orWhere('nbpieces', 'LIKE', "%{$critere}%")
-    ->orWhere('nbsalon', 'LIKE', "%{$critere}%")
-    ->orWhereHas('Category', function ($query) use ($critere) {
-        $query->where('nom', 'LIKE', "%{$critere}%");
-    })
-    ->get();
-        // Vérification des résultats
-        if ($results->isEmpty()) {
-            return redirect('/location')->with('error', 'Aucune annonce trouvée pour ce critère');
-        }
-
-        // Rediriger avec les résultats
-        return redirect('/location')->with('results', $results);
+        // retourner les résultats
+        return $results ;
     }
+
     public function apropos(){
         $avis = Review::all();
-
-
         return view('apropos', compact('avis'));
     }
 
-    public function getAnnonces(){
-        $annonces = Annonce::with(['Category', 'images'])->get();
+
+    public function getAnnonces(Request $request){
+        $annonces = $this->search_($request, 3);
         return view('location', compact('annonces'));
     }
 
-    public function getSellAnnonces(){
-        $annonces = Annonce::with(['Category', 'images'])->get();
+    public function getSellAnnonces(Request $request){
+        $annonces = $this->search_($request ,3);
         return view('sell', compact('annonces'));
     }
 
+   
+    public  function detailannonce($id) {
+        // Créer une instance du service Annonce
+        $annonceService = new AnnonceService();
+    
+        // Récupérer les annonces mises en avant
+        $post = $annonceService->get($id);
+        $annonces = $annonceService->getAll();
+    
+    
+        // Retourner la vue avec les données
+        return view('post-single', [
+            'post' => $post,
+            'annonces' => $annonces,
+        ]);
+    }
+
+  
+    public  function contact() {
+        return view('contactus');
+    }
+
+
+    // public  function contactMessage(Request $request) {
+    //     // Increase memory limit if necessary
+    //     $validatedData = $request->validate(
+    //     [
+    //         'name' => 'required|max:255',
+    //         'email' => 'required|email',
+    //         'phone' => 'required|max:15', // Add validation for phone number
+    //         'subject' => 'required|max:255', // Add validation for subject
+    //         'message' => 'required|max:1000',
+    //     ]);
+    //     // Envoi de l'e-mail
+    //     Mail::to('koueviharry@gmail.com')->send(new ContactMail(
+    //         $validatedData['name'],
+    //         $validatedData['email'],
+    //         $validatedData['phone'],
+    //         $validatedData['subject'],
+    //         $validatedData['message'])
+    //     );
+    
+    //     // Initialize Google Client
+    //     $client = new Client();
+    //     $client->setAuthConfig('../service-account.json'); // Path to your service account JSON
+    //     $client->addScope(Gmail::GMAIL_SEND);
+    //     $client->setSubject('koueviharry@gmail.com'); // The user you want to impersonate
+    
+    //     // Create Gmail service
+    //     $service = new Gmail($client);
+    
+    //     // Create email content
+    //     $email = new \Google\Service\Gmail\Message();
+    //     $rawMessageString = "From: ".$validatedData['email']."\r\n";
+    //     $rawMessageString .= "To: koueviharry@gmail.com\r\n";
+    //     $rawMessageString .= "Subject: Test Email\r\n\r\n";
+    //     $rawMessageString .= "This is a test email sent from the Gmail API using PHP.";
+    
+    //     // Encode message in base64url format
+    //     $rawMessage = base64_encode($rawMessageString);
+    //     $email->setRaw($rawMessage);
+    
+    
+    //     $service->users_messages->send('me', $email);
+    
+    //    return back()->with('success', 'Votre message a été envoyé avec succès !');
+    
+    // }
 }

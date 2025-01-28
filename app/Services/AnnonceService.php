@@ -6,18 +6,58 @@ use App\Models\FeaturedAnnonce;
 use App\Models\Annonce;
 use App\Models\AnnonceHistory;
 use App\Models\Image;
+use Illuminate\Database\Eloquent\Builder ;
+use InvalidArgumentException;
 
 class AnnonceService
 {
-    public function getAll()
+    
+    public function getAll(Array $relation = [], int $perPage = Null)
     {
-        return Annonce::with('category')->get();
+        $annonce_builder =Annonce::query()->orderBy('id', 'asc') ;// Order by ;
+        if(!empty($relation)){
+            $annonce_builder = $this->getRelation( $annonce_builder ,$relation) ;
+        }
+        if($perPage){
+            return  $annonce_builder->paginate($perPage);
+        }else{
+            return  $annonce_builder->get() ;
+        }
     }
 
-    public function getFinded(String $search){
+    public function search(String $search , Array $relation = [], int $perPage = Null)  {
         // Query annonces with pagination, optionally filtering by search term
-        return Annonce::where('titre', 'like', '%' . $search . '%')
-        ->paginate(9); // Adjust the number of items per page as needed
+        $annonce_builder = Annonce::where('titre', 'like', '%' . $search . '%')
+                ->where('titre', 'LIKE', "%{$search}%")
+                ->orWhere('description', 'LIKE', "%{$search}%")
+                ->orWhere('adresse', 'LIKE', "%{$search}%")
+                ->orWhere('prix', 'LIKE', "%{$search}%")
+                ->orWhere('surface', 'LIKE', "%{$search}%")
+                ->orWhere('wcdouche', 'LIKE', "%{$search}%")
+                ->orWhere('nbpieces', 'LIKE', "%{$search}%")
+                ->orWhere('nbsalon', 'LIKE', "%{$search}%")
+                ->orWhereHas('Category', function ($query) use ($search) {
+                    $query->where('nom', 'LIKE', "%{$search}%");
+                }) ;
+
+        if(!empty($relation)){
+            $annonce_builder = $this->getRelation( $annonce_builder,$relation) ;
+        }
+        if($perPage){
+            return  $annonce_builder->paginate($perPage);
+        } else {
+            return  $annonce_builder->get() ;
+        }
+    }
+
+    private function getRelation(Builder $builder , Array $relations=[]) : Builder
+    {
+        foreach($relations as $relation){
+            if (!is_string($relation)) {
+                throw new InvalidArgumentException('All elements in relations must be strings.');
+            }
+        }
+        return $builder->with($relations);
     }
 
     public function get($id,Array $relations=[])

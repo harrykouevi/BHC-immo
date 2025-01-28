@@ -24,7 +24,7 @@ class ShowAvisCompact extends Component
     {
 
       //$lesavis = $this->getAvis();
-      $lesavis = (new AvisService())->getFinded($this->search) ;
+      $lesavis = (new AvisService())->search($this->search) ;
 
         return view('livewire.show-avis-compact', [
             'lesavis' => $lesavis,

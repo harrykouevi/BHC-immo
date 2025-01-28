@@ -167,77 +167,20 @@
                             <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
                         </span>
                     </h3>
-                    @if(isset($annonces) && $annonces->isNotEmpty())
+                    @if(isset($annonces) && $annonces->isNotEmpty())gg
                     <!-- Barre de recherche ajoutée ici -->
                     <div class="search-bar mt-4">
-                        <form action="{{route('search')}}" method="GET" class="d-flex justify-content-center">
+                        <form action="{{route('location')}}" method="GET" class="d-flex justify-content-center">
                             <input type="text" name="critere" class="form-control w-50" placeholder="Rechercher par prix, description, titre..." required />
-                            <button type="submit" class="btn btn-primary ms-2 " style="background-color:green;">Rechercher</button>
+                            <button type="submit" class="btn btn-primary ms-2 " style="background-color:#00AF6B; border-radius:5px;">Rechercher</button>
                         </form>
                     </div>
                     @endif
                 </div>
             </div>
             <!-- start box item -->
-            @if(session('results') && session('results')->isNotEmpty())
-            <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
-                <!-- Boucle sur les résultats -->
-                @foreach(session('results') as $result)
-                    <div class="col mb-30px">
-                        <div class="border-radius-6px overflow-hidden box-shadow-large">
-                            <div class="image position-relative">
-                                <a href="#">
-                                    <!-- Image Dynamique ou Placeholder -->
-                                    <img src="{{ $result->images->first() ? asset('storage/' . $result->images->first()->path) : 'https://via.placeholder.com/600x415' }}" alt="Image de {{ $result->titre }}">
-                                </a>
-                                <div class="col-auto bg-orange border-radius-50px ps-15px pe-15px text-uppercase alt-font fw-600 text-white fs-12 lh-24 position-absolute left-20px top-20px">Rent</div>
-                            </div>
-                            <div class="bg-white">
-                                <div class="content ps-40px pe-40px pt-35px pb-35px md-p-25px border-bottom border-color-transparent-dark-very-light">
-                                    <div class="d-flex align-items-center">
-                                        <!-- Titre Dynamique -->
-                                        <a href="#" class="alt-font text-dark-gray fw-700 fs-22 me-10px">{{ $result->titre }}</a>
-                                    </div>
-                                    <!-- Adresse Dynamique -->
-                                    <p class="mb-20px">{{ $result->adresse }}</p>
-                                    <div class="row g-0">
-                                                <div class="col">
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="images/demo-real-estate-icon-bed-small.svg" class="me-5px h-20px" alt="">
-                                                        <span class="fw-600 alt-font text-dark-gray">{{ $result->nb_pieces }} </span>
-                                                    </div>
-                                                    <span class="d-block lh-18 fs-15">Chambres</span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="images/demo-real-estate-icon-bath-small.svg" class="me-5px h-20px" alt="">
-                                                        <span class="fw-600 alt-font text-dark-gray">{{ $result->wc_douche }}</span>
-                                                    </div>
-                                                    <span class="d-block lh-18 fs-15">WC douche</span>
-                                                </div>
-                                                <div class="col">
-                                                    <div class="d-flex align-items-center">
-                                                        <img src="images/demo-real-estate-icon-size-small.svg" class="me-5px h-20px" alt="">
-                                                        <span class="fw-600 alt-font text-dark-gray">{{ $result->surface }}m<sup>2</sup></span>
-                                                    </div>
-                                                    <span class="d-block lh-18 fs-15">Living area</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                <div class="row ps-35px pe-35px pt-20px pb-20px md-ps-25px md-pe-25px align-items-center">
-                                    <div class="col">
-                                        <a href="#" class="btn btn-dark-gray btn-very-small btn-round-edge fw-600">Détails</a>
-                                    </div>
-                                    <div class="col text-end">
-                                        <span class="fs-24 alt-font text-dark-gray fw-700 mb-0">${{ $result->prix }}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-            @elseif(isset($annonces) && $annonces->isNotEmpty())
+          
+            @if(isset($annonces) && $annonces->isNotEmpty())
             <div class="row row-cols-1 row-cols-xl-3 row-cols-md-2 justify-content-center" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }'>
                 @foreach($annonces as $annonce) <!-- Boucle sur les annonces -->
                     <div class="col mb-30px">
@@ -299,20 +242,13 @@
             <div class="row">
                 <div class="mt-5 xs-mt-10 d-flex justify-content-center" data-anime='{ "translateY": [0, 0], "opacity": [0,1], "duration": 1200, "delay": 100, "staggervalue": 150, "easing": "easeOutQuad" }'>
                     <!-- start pagination -->
-                    <ul class="pagination pagination-style-01 fs-13 alt-font fw-600 mb-0">
-                        <li class="page-item"><a class="page-link" href="#"><i class="feather icon-feather-arrow-left fs-18 d-xs-none"></i></a></li>
-                        <li class="page-item"><a class="page-link" href="#">01</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">02</a></li>
-                        <li class="page-item"><a class="page-link" href="#">03</a></li>
-                        <li class="page-item"><a class="page-link" href="#">04</a></li>
-                        <li class="page-item"><a class="page-link" href="#"><i class="feather icon-feather-arrow-right fs-18 d-xs-none"></i></a></li>
-                    </ul>
+                    {!! $annonces->links('pagination') !!}
                     <!-- end pagination -->
                 </div>
             </div>
 
             @else
-                <p>Problème de chargement des annonces.</p>
+                <p>Aucune annonce disponible</p>
             @endif
 
 

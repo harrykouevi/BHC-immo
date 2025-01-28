@@ -23,7 +23,7 @@ class ShowArticleCompact extends Component
     public function render()
     {
 
-        $articles = (new ArticleService())->getFinded($this->search) ;
+        $articles = (new ArticleService())->search($this->search) ;
 
         // $articles =[{ 'nom':'ffffffff','id':1},
         // { 'nom':'ffffffff'}
