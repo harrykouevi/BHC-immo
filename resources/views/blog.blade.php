@@ -27,10 +27,23 @@
             </div>
         </section>
         <!-- end page title -->
+          <!-- start section -->
+          <section class="overflow-hidden position-relative p-0">
+            <div class="container-fluid">
+                <div class="row overlap-height">
+                    <div class="col-12 p-0 position-relative overlap-gap-section">
+                        <img src="{{ asset('img/banner-001 - Copie.jpg') }}" alt="" class="w-100">
+                        <div class="alt-font fw-600 fs-350 lg-fs-275 md-fs-250 xs-fs-160 ls-minus-5px xs-ls-minus-2px position-absolute right-minus-50px lg-right-minus-0px bottom-minus-80px md-bottom-minus-60px xs-bottom-minus-50px text-white text-outline text-outline-width-3px" data-bottom-top="transform: translate3d(80px, 0px, 0px);" data-top-bottom="transform: translate3d(-280px, 0px, 0px);">Blog</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- end section -->
         <section class="pb-2 overlap-height sm-pb-50px">
             <div class="container overlap-gap-section">
                 <div class="row">
                     <div class="col-12">
+                        @if(isset($articles) && $articles->isNotEmpty())
                         <ul class="blog-classic blog-wrapper grid-loading grid grid-4col xl-grid-4col lg-grid-3col md-grid-2col sm-grid-2col xs-grid-1col gutter-extra-large" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 200, "easing": "easeOutQuad" }'>
                             <li class="grid-sizer"></li>
                             <!-- start blog items -->
@@ -72,10 +85,13 @@
                         <div class="row">
                             <div class="col-12 mt-2 d-flex justify-content-center">
                                 <!-- start pagination -->
-                                {{-- {{ $articles->links('vendor.pagination.bootstrap-4') }} --}}
+                                {!! $articles->links('pagination') !!}
                                 <!-- end pagination -->
                             </div>
                         </div>
+                        @else
+                            <p>Aucune annonce article</p>
+                        @endif
                     </div>
                 </div>
             </div>

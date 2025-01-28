@@ -167,7 +167,7 @@
                             <span class="bg-base-color h-10px bottom-10px opacity-3 separator-animation"></span>
                         </span>
                     </h3>
-                    @if(isset($annonces) && $annonces->isNotEmpty())gg
+                    @if(isset($annonces) && $annonces->isNotEmpty())
                     <!-- Barre de recherche ajoutée ici -->
                     <div class="search-bar mt-4">
                         <form action="{{route('location')}}" method="GET" class="d-flex justify-content-center">

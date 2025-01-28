@@ -5,6 +5,7 @@ namespace App\Services;
 use App\Models\FeaturedArticle;
 use App\Models\Review;
 use App\Models\Annonce;
+use InvalidArgumentException;
 
 class ArticleService
 {
@@ -85,10 +86,10 @@ class ArticleService
      *
      * @return \Illuminate\Database\Eloquent\Collection
      */
-    public function getFeatured()
-    {
-        return FeaturedArticle::with('Category')->get();
-    }
+    // public function getFeatured()
+    // {
+    //     return FeaturedArticle::with('Category')->get();
+    // }
 
     /**
      * Ajouter un article à la une.

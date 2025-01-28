@@ -11,6 +11,7 @@ use InvalidArgumentException;
 
 class AnnonceService
 {
+    use ServiceTrait ;
     
     public function getAll(Array $relation = [], int $perPage = Null)
     {
@@ -50,16 +51,7 @@ class AnnonceService
         }
     }
 
-    private function getRelation(Builder $builder , Array $relations=[]) : Builder
-    {
-        foreach($relations as $relation){
-            if (!is_string($relation)) {
-                throw new InvalidArgumentException('All elements in relations must be strings.');
-            }
-        }
-        return $builder->with($relations);
-    }
-
+  
     public function get($id,Array $relations=[])
     {
         return Annonce::with('images')->findOrFail($id);

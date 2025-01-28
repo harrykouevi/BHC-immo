@@ -9,9 +9,19 @@ use InvalidArgumentException;
 
 class ArticleService
 {
-    public function getAll()
+    use ServiceTrait ;
+    
+    public function getAll(Array $relation = [], int $perPage = Null)
     {
-        return Article::with('category')->get();
+        $annonce_builder =Article::query()->orderBy('id', 'asc') ;// Order by ;
+        if(!empty($relation)){
+            $annonce_builder = $this->getRelation( $annonce_builder ,$relation) ;
+        }
+        if($perPage){
+            return  $annonce_builder->paginate($perPage);
+        }else{
+            return  $annonce_builder->get() ;
+        }
     }
 
     public function get($id, array $relations = [])
