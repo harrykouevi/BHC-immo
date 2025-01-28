@@ -12,15 +12,15 @@
         <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
         <div class="swiper full-screen md-h-600px sm-h-500px swiper-number-pagination-style-01 magic-cursor drag-cursor" data-slider-options='{ "slidesPerView": 1, "loop": true, "pagination": { "el": ".swiper-number", "clickable": true }, "navigation": { "nextEl": ".slider-one-slide-next-1", "prevEl": ".slider-one-slide-prev-1" }, "autoplay": { "delay": 64000, "disableOnInteraction": false },  "keyboard": { "enabled": true, "onlyInViewport": true }, "effect": "slide" }' data-number-pagination="1">
             <div class="swiper-wrapper">
-                @foreach($annonces as $annonce)
+                @if($annonces && $annonces->isNotEmpty())
                 @foreach($annonces as $annonce)
                 <!-- start slider item -->
                 <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
                     <div class="container h-100">
                         <div class="row align-items-center h-100">
                             <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: inherite /*rgba(59, 56, 56, 0.5); /* Noir avec 50% de transparence */
-    color: white; /* Couleur du texte */
-    padding: 20px;">
+                                        color: white; /* Couleur du texte */
+                                        padding: 20px;">
                                 <span class="fs-20 d-block mb-15px ">{{ $annonce->adresse }}</span>
                                 <div class="alt-font fs-110 lg-fs-90 lh-90 lg-lh-80 mb-45px sm-mb-25px w-100 xs-w-100 ls-minus-2px"> <span class="fw-700">{{ $annonce->titre }}</span></div>
                                 <a href="#" class="btn btn-white btn-large border-1 btn-round-edge btn-box-shadow me-15px xs-mt-10px xs-mb-10px">Planifiez une visite</a>
@@ -56,7 +56,31 @@
                 </div>
                 <!-- end slider item -->
                 @endforeach
-                @endforeach
+                @else
+                      <!-- start slider item -->
+                <div class="swiper-slide cover-background" style="background-image:url('{{ asset('img/banner-001.jpg') }}');">
+                    <div class="container h-100">
+                        <div class="row align-items-center h-100">
+                            <div class="col-md-8 position-relative text-white" data-anime='{ "el": "childs", "translateY": [30, 0], "opacity": [0,1], "duration": 600, "delay": 0, "staggervalue": 300, "easing": "easeOutQuad" }' style=" background-color: inherite /*rgba(59, 56, 56, 0.5); /* Noir avec 50% de transparence */
+                                        color: white; /* Couleur du texte */
+                                        padding: 20px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="position-absolute col-xxl-5 col-lg-6 right-0px bottom-0px pt-50px pb-40px ps-40px pe-40px lg-p-35px d-none d-lg-inline-block bg-white border-radius-left-8px" data-anime='{ "translateX": [50, 0], "translateY": [0, 0], "opacity": [0,1], "duration": 600, "delay": 300, "staggervalue": 300, "easing": "easeOutQuad" }'>
+                        <div class="row justify-content-center">
+                            <div class="col-xl-7 lg-mb-25px">
+                                <div class="row">
+
+                                </div>
+                            </div>
+                            <div class="col-xl-5 ps-35px lg-ps-15px text-center text-xl-start">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end slider item -->
+                @endif
             </div>
             <!-- start slider pagination -->
             <div class="container">
